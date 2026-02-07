@@ -7,6 +7,8 @@ public class PlayerStateMachine : MonoBehaviour
 
     public enum PlayerStates { active, dormant, attacking, stunned};
     private PlayerStates currentState;
+
+    private PlayerEventManager playerEventManager;
     
     void Awake()
     {
@@ -16,6 +18,7 @@ public class PlayerStateMachine : MonoBehaviour
     public void ChangeState(PlayerStates newState)
     {
         currentState = newState;
+        playerEventManager.stateChanged.Invoke(currentState);
         switch (currentState)
         {
             case PlayerStates.active:
@@ -34,9 +37,5 @@ public class PlayerStateMachine : MonoBehaviour
             break;
         }
     }
-
-    public PlayerStates GetCurrentState()
-    {
-        return currentState;
-    }
+    
 }
