@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAttacks : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerAttacks : MonoBehaviour
     private AttackMechanic useAttack;
 
     public bool currentlyAttacking = false;
+
+    [SerializeField] private InputActionReference attack;
     
     
     
@@ -26,16 +29,18 @@ public class PlayerAttacks : MonoBehaviour
         useAttack = UseComboAttacks;
     }
 
+    void OnEnable()
+    {
+        attack.action.started += UseCurrentAttack;
+    }
+    void OnDisable()
+    {
+        attack.action.started -= UseCurrentAttack;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (!currentlyAttacking && playerAnimator != null)
-        {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                useAttack();
-            }
-        }
 
         if(currentComboAttack > 0 && comboTimer < Time.time)
         {
@@ -63,6 +68,16 @@ public class PlayerAttacks : MonoBehaviour
     {
         // When we do not have a spear, we replace the useAttack() delegate with this.
     }
+
+    public void UseCurrentAttack(InputAction.CallbackContext context)
+    {
+        if (!currentlyAttacking && playerAnimator != null)
+        {
+            useAttack();
+        }
+    }
+
+
 }
 
 

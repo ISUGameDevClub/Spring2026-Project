@@ -444,7 +444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5111070950753326809, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: comboWindow
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: m_Name
