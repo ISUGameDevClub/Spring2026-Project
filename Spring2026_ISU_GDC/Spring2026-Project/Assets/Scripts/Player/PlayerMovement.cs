@@ -318,7 +318,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isJumping = true;
-        Debug.Log("Jump");
+       // Debug.Log("Jump");
     }
 
     private void Walljump()
