@@ -5,41 +5,65 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 15;
-    [SerializeField] private float acceleration = 7;
-    [SerializeField] private float decceleration = 7;
-    [SerializeField] private float velPower = 0.9f;
+    [SerializeField] [Tooltip("Player's top speed.")]
+    private float moveSpeed = 15;
+    [SerializeField] [Tooltip("How fast player speeds up.")]
+    private float acceleration = 7;
+    [SerializeField] [Tooltip("How fast player slows down.")]
+    private float decceleration = 7;
+    [SerializeField] [Tooltip("Determines how acceleration works.\n< 1: Acceleration starts strong and then becomes weaker.\n1: Linear acceleration.\n> 1: Starts slow then becomes strong.")]
+    private float velPower = 0.9f;
     [Space]
-    [SerializeField] private float frictionAmount = 0.2f;
+    [SerializeField] [Tooltip("How much the player slows down when grounded and not pressing any movement input.")]
+    private float frictionAmount = 0.2f;
 
     [Header("Jump")]
-    [SerializeField] private float jumpForce = 20;
-    [SerializeField] [Range(0, 1)] private float jumpCutMultiplier = 0.5f;
-    [SerializeField] private float jumpCoyoteTime = 0.15f;
-    [SerializeField] private float jumpBufferTime = 0.1f;
-    [SerializeField] private float jumpHangGravityMult = 0.9f;
-    [SerializeField] private float jumpHangThreshold = 1.5f;
+    [SerializeField] [Tooltip("How much force the player's jump has.")]
+    private float jumpForce = 20;
+    [SerializeField] [Range(0, 1)] [Tooltip("How much the upwards velocity from a jump decreases when the jump input is released early.")]
+    private float jumpCutMultiplier = 0.5f;
+    [SerializeField] [Tooltip("How much time a player still has to jump after walking off an edge.")]
+    private float jumpCoyoteTime = 0.15f;
+    [SerializeField] [Tooltip("How much time a player can press the jump button before landing and still jump.")]
+    private float jumpBufferTime = 0.1f;
+    [SerializeField] [Tooltip("How much the player's gravity is multiplied by when jump height peak is reached.")]
+    private float jumpHangGravityMult = 0.9f;
+    [SerializeField] [Tooltip("What minimum velocity the player's jump needs to hit to activate the jump hang gravity multiplier.")]
+    private float jumpHangThreshold = 1.5f;
 
     [Space]
 
-    [SerializeField] private int numWallJumps = 1;
-    [SerializeField] private float wallJumpForce = 15;
-    [SerializeField] [Range(0, 1)] private float wallJumpHeightMult = 0.8f;
-    [SerializeField] [Range(0, 1)] private float wallJumpMovementMult = 0.1f;
-    [SerializeField] private float wallJumpMovementTime = 0.3f;
+    [SerializeField] [Tooltip("How many walljumps the player can do before having to touch the ground. Set to 0 to disable wall jumps.")]
+    private int numWallJumps = 1;
+    [SerializeField] [Tooltip("If enabled, overrides \"numWalJumps\" and gives the player unlimited wall jumps.")]
+    private bool infWallJumps = true;
+    [SerializeField] [Tooltip("The horizontal force that gets applied to the player when they wall jump.")]
+    private float wallJumpForce = 15;
+    [SerializeField] [Range(0, 1)] [Tooltip("The multiplier applied to jumps when performed off a wall.")]
+    private float wallJumpHeightMult = 0.8f;
+    [SerializeField] [Range(0, 1)] [Tooltip("How much the player's input movement is multiplied by after performing a wall jump.\nDesigned to make it so the player can't immediately return to the same wall for infinite wall jumps.")]
+    private float wallJumpMovementMult = 0.1f;
+    [SerializeField] [Tooltip("How long the player's movement is affected after a wall jump.")]
+    private float wallJumpMovementTime = 0.3f;
+    [SerializeField] [Tooltip("Maximum speed a player falls when pressed against a wall.")]
+    private float wallSlidingSpeed = 2;
 
     [Space]
 
-    [SerializeField] private float fallGravityMultiplier = 2;
+    [SerializeField] [Tooltip("How much the gravity is mutiplied by when falling.")]
+    private float fallGravityMultiplier = 2;
 
     [Space]
 
-    [SerializeField] private float topFallingSpeedRelease = 20;
-    [SerializeField] private float topFallingSpeedHold = 17;
+    [SerializeField] [Tooltip("The top falling speed a player can reach while not holding the jump button.")]
+    private float topFallingSpeedRelease = 20;
+    [SerializeField] [Tooltip("The top falling speed a player can reach while holding the jump button.")]
+    private float topFallingSpeedHold = 17;
 
     [Space]
 
-    [SerializeField] private int numDoubleJumps = 0;
+    [SerializeField] [Tooltip("How many double jumps the player can perform. Set to 0 to disable double jumps.")]
+    private int numDoubleJumps = 0;
 
     [HideInInspector]
     [Header("Camera")]
@@ -48,16 +72,17 @@ public class PlayerMovement : MonoBehaviour
     private float fallSpeedyDampingChangeThreshold;
 
     [Header("Other")]
-    [SerializeField] private bool infWallJumps = true;
-    [SerializeField] private float distanceFromFloor = 1.02f;
-    [SerializeField] private float wallSlidingSpeed = 2;
-    [SerializeField] private float distanceFromWall = 0.6f;
+    [SerializeField]
+    [Tooltip("The minimum distance from the center of the player downwards to detect the ground. Used for determining when the player is grounded.")]
+    private float distanceFromFloor = 1.02f;
+    [SerializeField] [Tooltip("The minimum distance from the center of the player outwards to detect a wall. Used for detecting when the player is pressed up against a wall.")]
+    private float distanceFromWall = 0.6f;
 
     [Header("Private")]
     Rigidbody2D rb;
     private float accelerationDefault;
     private float deccelerationDefault;
-    [SerializeField] private float lastGroundedTime;
+    private float lastGroundedTime;
     private float lastJumpTime;
     private float gravityScale;
     private bool isJumping;
