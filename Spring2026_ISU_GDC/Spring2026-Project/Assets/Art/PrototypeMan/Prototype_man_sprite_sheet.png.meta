@@ -1,0 +1,1726 @@
+fileFormatVersion: 2
+guid: a1891793c14897d4e8f53b8d7efb48d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6205484832271266801
+    second: Prototype_man_sprite_sheet_0
+  - first:
+      213: -377620837988035808
+    second: Prototype_man_sprite_sheet_1
+  - first:
+      213: -4726872685864723926
+    second: Prototype_man_sprite_sheet_2
+  - first:
+      213: -2539508085682209612
+    second: Prototype_man_sprite_sheet_3
+  - first:
+      213: 6731414881626783703
+    second: Prototype_man_sprite_sheet_4
+  - first:
+      213: 6344074220865208267
+    second: Prototype_man_sprite_sheet_5
+  - first:
+      213: 347658501867399957
+    second: Prototype_man_sprite_sheet_6
+  - first:
+      213: -195240677879233209
+    second: Prototype_man_sprite_sheet_7
+  - first:
+      213: -2445479044029379685
+    second: Prototype_man_sprite_sheet_8
+  - first:
+      213: -7157137069735545771
+    second: Prototype_man_sprite_sheet_9
+  - first:
+      213: -4532328839814141608
+    second: Prototype_man_sprite_sheet_10
+  - first:
+      213: 6360021104209443618
+    second: Prototype_man_sprite_sheet_11
+  - first:
+      213: -781928540280895571
+    second: Prototype_man_sprite_sheet_12
+  - first:
+      213: 2469132246169340722
+    second: Prototype_man_sprite_sheet_13
+  - first:
+      213: -8483750173811355761
+    second: Prototype_man_sprite_sheet_14
+  - first:
+      213: 4795907052742960517
+    second: Prototype_man_sprite_sheet_15
+  - first:
+      213: -9103264629221258485
+    second: Prototype_man_sprite_sheet_16
+  - first:
+      213: 1387591872004215372
+    second: Prototype_man_sprite_sheet_17
+  - first:
+      213: 4568817445306507022
+    second: Prototype_man_sprite_sheet_18
+  - first:
+      213: -3411198810171432285
+    second: Prototype_man_sprite_sheet_19
+  - first:
+      213: -4475506315838780523
+    second: Prototype_man_sprite_sheet_20
+  - first:
+      213: -8813798349469221906
+    second: Prototype_man_sprite_sheet_21
+  - first:
+      213: -7402925157018283033
+    second: Prototype_man_sprite_sheet_22
+  - first:
+      213: -4131860314832724669
+    second: Prototype_man_sprite_sheet_23
+  - first:
+      213: -7817581200130938221
+    second: Prototype_man_sprite_sheet_24
+  - first:
+      213: 1045508324082018951
+    second: Prototype_man_sprite_sheet_25
+  - first:
+      213: -1502893542752159324
+    second: Prototype_man_sprite_sheet_26
+  - first:
+      213: 6023415789056387306
+    second: Prototype_man_sprite_sheet_27
+  - first:
+      213: -4257793022118027641
+    second: Prototype_man_sprite_sheet_28
+  - first:
+      213: -8126056763745425815
+    second: Prototype_man_sprite_sheet_29
+  - first:
+      213: 9040801643588927668
+    second: Prototype_man_sprite_sheet_30
+  - first:
+      213: -1601049991754378818
+    second: Prototype_man_sprite_sheet_31
+  - first:
+      213: -5690054849220550725
+    second: Prototype_man_sprite_sheet_32
+  - first:
+      213: 2735045798779529531
+    second: Prototype_man_sprite_sheet_33
+  - first:
+      213: -6155458642184985999
+    second: Prototype_man_sprite_sheet_34
+  - first:
+      213: 479137616152034003
+    second: Prototype_man_sprite_sheet_35
+  - first:
+      213: -3722824193664939907
+    second: Prototype_man_sprite_sheet_36
+  - first:
+      213: -8894408534607314432
+    second: Prototype_man_sprite_sheet_37
+  - first:
+      213: 1382238784728416261
+    second: Prototype_man_sprite_sheet_38
+  - first:
+      213: -1590861360151742381
+    second: Prototype_man_sprite_sheet_39
+  - first:
+      213: 1746661896905951727
+    second: Prototype_man_sprite_sheet_40
+  - first:
+      213: -4991449955922489493
+    second: Prototype_man_sprite_sheet_41
+  - first:
+      213: -381832355947900015
+    second: Prototype_man_sprite_sheet_42
+  - first:
+      213: -994885100312124391
+    second: Prototype_man_sprite_sheet_43
+  - first:
+      213: -8660671690110194094
+    second: Prototype_man_sprite_sheet_44
+  - first:
+      213: -3609570241211284311
+    second: Prototype_man_sprite_sheet_45
+  - first:
+      213: -1978343698166171418
+    second: Prototype_man_sprite_sheet_46
+  - first:
+      213: 2954300562091855786
+    second: Prototype_man_sprite_sheet_47
+  - first:
+      213: 6883242136080170530
+    second: Prototype_man_sprite_sheet_48
+  - first:
+      213: -4788190659448234996
+    second: Prototype_man_sprite_sheet_49
+  - first:
+      213: -6578767380660884026
+    second: Prototype_man_sprite_sheet_50
+  - first:
+      213: 1267917023067088639
+    second: Prototype_man_sprite_sheet_51
+  - first:
+      213: -5371846466402220613
+    second: Prototype_man_sprite_sheet_52
+  - first:
+      213: 9033193896862031256
+    second: Prototype_man_sprite_sheet_53
+  - first:
+      213: -445398223558473291
+    second: Prototype_man_sprite_sheet_54
+  - first:
+      213: -4589270538316860333
+    second: Prototype_man_sprite_sheet_55
+  - first:
+      213: -3923036636294101075
+    second: Prototype_man_sprite_sheet_56
+  - first:
+      213: 4372852603259285511
+    second: Prototype_man_sprite_sheet_57
+  - first:
+      213: 4908226601952039512
+    second: Prototype_man_sprite_sheet_58
+  - first:
+      213: -6979420918392222494
+    second: Prototype_man_sprite_sheet_59
+  - first:
+      213: 984875223037293624
+    second: Prototype_man_sprite_sheet_60
+  - first:
+      213: -4268652261103981912
+    second: Prototype_man_sprite_sheet_61
+  - first:
+      213: -6951681841766077470
+    second: Prototype_man_sprite_sheet_62
+  - first:
+      213: 2433854719540979849
+    second: Prototype_man_sprite_sheet_63
+  - first:
+      213: -6854337396750154959
+    second: Prototype_man_sprite_sheet_64
+  - first:
+      213: 1724071097910279663
+    second: Prototype_man_sprite_sheet_65
+  - first:
+      213: -966979445434667060
+    second: Prototype_man_sprite_sheet_66
+  - first:
+      213: -2522154861763400817
+    second: Prototype_man_sprite_sheet_67
+  - first:
+      213: 2183072945199381337
+    second: Prototype_man_sprite_sheet_68
+  - first:
+      213: 4066087154133823266
+    second: Prototype_man_sprite_sheet_69
+  - first:
+      213: -5148625351591343730
+    second: Prototype_man_sprite_sheet_70
+  - first:
+      213: -5076326409687074915
+    second: Prototype_man_sprite_sheet_71
+  - first:
+      213: -1141342299381057463
+    second: Prototype_man_sprite_sheet_72
+  - first:
+      213: 3865966322874370527
+    second: Prototype_man_sprite_sheet_73
+  - first:
+      213: 4743512945871437101
+    second: Prototype_man_sprite_sheet_74
+  - first:
+      213: -7106620924986042302
+    second: Prototype_man_sprite_sheet_75
+  - first:
+      213: 1482901094865947914
+    second: Prototype_man_sprite_sheet_76
+  - first:
+      213: -2177925349011255193
+    second: Prototype_man_sprite_sheet_77
+  - first:
+      213: 1110176907137161151
+    second: Prototype_man_sprite_sheet_78
+  - first:
+      213: 8885336740210689921
+    second: Prototype_man_sprite_sheet_79
+  - first:
+      213: -5077350040387529938
+    second: Prototype_man_sprite_sheet_80
+  - first:
+      213: -4716575646096023426
+    second: Prototype_man_sprite_sheet_81
+  - first:
+      213: 23484831627410085
+    second: Prototype_man_sprite_sheet_82
+  - first:
+      213: -7919813239548858262
+    second: Prototype_man_sprite_sheet_83
+  - first:
+      213: -8272492269397187269
+    second: Prototype_man_sprite_sheet_84
+  - first:
+      213: -2626161494270034332
+    second: Prototype_man_sprite_sheet_85
+  - first:
+      213: 5353513259896849241
+    second: Prototype_man_sprite_sheet_86
+  - first:
+      213: -8555566223519811886
+    second: Prototype_man_sprite_sheet_87
+  - first:
+      213: 8480984745155522814
+    second: Prototype_man_sprite_sheet_88
+  - first:
+      213: 966966575031052217
+    second: Prototype_man_sprite_sheet_89
+  - first:
+      213: 6215427882233354109
+    second: Prototype_man_sprite_sheet_90
+  - first:
+      213: 1388141956710330675
+    second: Prototype_man_sprite_sheet_91
+  - first:
+      213: 253423849918446801
+    second: Prototype_man_sprite_sheet_92
+  - first:
+      213: 8323471873705395869
+    second: Prototype_man_sprite_sheet_93
+  - first:
+      213: -6208365771910267681
+    second: Prototype_man_sprite_sheet_94
+  - first:
+      213: 4575427863307277232
+    second: Prototype_man_sprite_sheet_95
+  - first:
+      213: 47404953929526735
+    second: Prototype_man_sprite_sheet_96
+  - first:
+      213: 2993672701317227257
+    second: Prototype_man_sprite_sheet_97
+  - first:
+      213: 2576554852419786870
+    second: Prototype_man_sprite_sheet_98
+  - first:
+      213: 5672755644690490092
+    second: Prototype_man_sprite_sheet_99
+  - first:
+      213: -1721798502416694639
+    second: Prototype_man_sprite_sheet_100
+  - first:
+      213: 3782735773120464270
+    second: Prototype_man_sprite_sheet_101
+  - first:
+      213: -5565713639601048999
+    second: Prototype_man_sprite_sheet_102
+  - first:
+      213: -8662033758460400417
+    second: Prototype_man_sprite_sheet_103
+  - first:
+      213: -8276573628110908425
+    second: Prototype_man_sprite_sheet_104
+  - first:
+      213: 1320162907040188060
+    second: Prototype_man_sprite_sheet_105
+  - first:
+      213: 2225781514879491600
+    second: Prototype_man_sprite_sheet_106
+  - first:
+      213: 3455806466484225594
+    second: Prototype_man_sprite_sheet_107
+  - first:
+      213: 2475221474221002983
+    second: Prototype_man_sprite_sheet_108
+  - first:
+      213: -6942311756306453776
+    second: Prototype_man_sprite_sheet_109
+  - first:
+      213: 166985618775866112
+    second: Prototype_man_sprite_sheet_110
+  - first:
+      213: 1141860034685677347
+    second: Prototype_man_sprite_sheet_111
+  - first:
+      213: 5723208321041886255
+    second: Prototype_man_sprite_sheet_112
+  - first:
+      213: -6494727542956497109
+    second: Prototype_man_sprite_sheet_113
+  - first:
+      213: -7126242372801469847
+    second: Prototype_man_sprite_sheet_114
+  - first:
+      213: -8817593457521485385
+    second: Prototype_man_sprite_sheet_115
+  - first:
+      213: 7173499411109771812
+    second: Prototype_man_sprite_sheet_116
+  - first:
+      213: 1214296028986390264
+    second: Prototype_man_sprite_sheet_117
+  - first:
+      213: -1444246354358861933
+    second: Prototype_man_sprite_sheet_118
+  - first:
+      213: -5503382469310604869
+    second: Prototype_man_sprite_sheet_119
+  - first:
+      213: 2170059486529920482
+    second: Prototype_man_sprite_sheet_120
+  - first:
+      213: -32362403488624404
+    second: Prototype_man_sprite_sheet_121
+  - first:
+      213: 7922358640663514394
+    second: Prototype_man_sprite_sheet_122
+  - first:
+      213: 3861775354565797593
+    second: Prototype_man_sprite_sheet_123
+  - first:
+      213: -3828623007845176205
+    second: Prototype_man_sprite_sheet_124
+  - first:
+      213: 3934008273376192314
+    second: Prototype_man_sprite_sheet_125
+  - first:
+      213: 1644407807623419443
+    second: Prototype_man_sprite_sheet_126
+  - first:
+      213: 8253481793312862893
+    second: Prototype_man_sprite_sheet_127
+  - first:
+      213: 5669947088796453652
+    second: Prototype_man_sprite_sheet_128
+  - first:
+      213: 2777438280725723894
+    second: Prototype_man_sprite_sheet_129
+  - first:
+      213: -1141698030907259606
+    second: Prototype_man_sprite_sheet_130
+  - first:
+      213: 7802573284841314388
+    second: Prototype_man_sprite_sheet_131
+  - first:
+      213: 1425400317534379653
+    second: Prototype_man_sprite_sheet_132
+  - first:
+      213: -2907996176367017697
+    second: Prototype_man_sprite_sheet_133
+  - first:
+      213: 6545493069958938515
+    second: Prototype_man_sprite_sheet_134
+  - first:
+      213: 7756931478946517049
+    second: Prototype_man_sprite_sheet_135
+  - first:
+      213: -2155720550528254061
+    second: Prototype_man_sprite_sheet_136
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c85615c60b1e9a0800000000000000
+      internalID: -6205484832271266801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02310fb39db62caf0800000000000000
+      internalID: -377620837988035808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a59841656c66eb0800000000000000
+      internalID: -4726872685864723926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcfda8d9dad1ccd0800000000000000
+      internalID: -2539508085682209612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df74279b2aca6d50800000000000000
+      internalID: 6731414881626783703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf326b34edaa0850800000000000000
+      internalID: 6344074220865208267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b63f2c09123d400800000000000000
+      internalID: 347658501867399957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7454d4d43ad5a4df0800000000000000
+      internalID: -195240677879233209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b87f224c9ef0ed0800000000000000
+      internalID: -2445479044029379685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554f1a551cdbcac90800000000000000
+      internalID: -7157137069735545771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859ae99feeee911c0800000000000000
+      internalID: -4532328839814141608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b34685f75534850800000000000000
+      internalID: 6360021104209443618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da741dca2280625f0800000000000000
+      internalID: -781928540280895571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bc26422be144220800000000000000
+      internalID: 2469132246169340722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fc0de6a2aa34a80800000000000000
+      internalID: -8483750173811355761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585e88efd0c7e8240800000000000000
+      internalID: 4795907052742960517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b83e60d05baa180800000000000000
+      internalID: -9103264629221258485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2516
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42d700b477b14310800000000000000
+      internalID: 1387591872004215372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f1a178243b76f30800000000000000
+      internalID: 4568817445306507022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a22f7561ccf8a0d0800000000000000
+      internalID: -3411198810171432285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b896ec7bec3e1c0800000000000000
+      internalID: -4475506315838780523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb76f149191fa580800000000000000
+      internalID: -8813798349469221906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e35f15cac6834990800000000000000
+      internalID: -7402925157018283033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d9cd86feea8a6c0800000000000000
+      internalID: -4131860314832724669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a6c6b515f528390800000000000000
+      internalID: -7817581200130938221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a6f9a0844628e00800000000000000
+      internalID: 1045508324082018951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3848
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a977091946a42be0800000000000000
+      internalID: -1502893542752159324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae86f292fb8779350800000000000000
+      internalID: 6023415789056387306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 4144
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e948d1ec749e4c0800000000000000
+      internalID: -4257793022118027641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 4292
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9662b445d627a3f80800000000000000
+      internalID: -8126056763745425815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 4440
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0c2e2d131677d70800000000000000
+      internalID: 9040801643588927668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 4588
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb196d5e38de7c9e0800000000000000
+      internalID: -1601049991754378818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 4736
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf58b7034dd801b0800000000000000
+      internalID: -5690054849220550725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 4884
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39ada0c9a5d4f520800000000000000
+      internalID: 2735045798779529531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 5032
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172a4fa5afa639aa0800000000000000
+      internalID: -6155458642184985999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 5180
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3daf4419f1d36a600800000000000000
+      internalID: 479137616152034003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 5328
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d780f57ce1fd55cc0800000000000000
+      internalID: -3722824193664939907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 5476
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0024787ff86b09480800000000000000
+      internalID: -8894408534607314432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 5624
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500418ee9d2be2310800000000000000
+      internalID: 1382238784728416261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 5772
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358b24d85002ce9e0800000000000000
+      internalID: -1590861360151742381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 5920
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe90ac3bdb36d3810800000000000000
+      internalID: 1746661896905951727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 6068
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fc91ff5becabab0800000000000000
+      internalID: -4991449955922489493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 6216
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19399fbce7573baf0800000000000000
+      internalID: -381832355947900015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 6364
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914219bb5457132f0800000000000000
+      internalID: -994885100312124391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 6512
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e23baebfc1fc780800000000000000
+      internalID: -8660671690110194094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 6660
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4c7cc6dfa38edc0800000000000000
+      internalID: -3609570241211284311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e83c2363e28b84e0800000000000000
+      internalID: -1978343698166171418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 6956
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafc83b65b8cff820800000000000000
+      internalID: 2954300562091855786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 7104
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e3f08f040368f50800000000000000
+      internalID: 6883242136080170530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 7252
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c9eb2d6fdec8db0800000000000000
+      internalID: -4788190659448234996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 7400
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cde7cf4ce583b4a0800000000000000
+      internalID: -6578767380660884026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prototype_man_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 7548
+        y: 0
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6a59490db889110800000000000000
+      internalID: 1267917023067088639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1b92c50c748440d499e4a1be593265d6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":148.0,"y":104.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Prototype_man_sprite_sheet_0: -6205484832271266801
+      Prototype_man_sprite_sheet_1: -377620837988035808
+      Prototype_man_sprite_sheet_10: -4532328839814141608
+      Prototype_man_sprite_sheet_11: 6360021104209443618
+      Prototype_man_sprite_sheet_12: -781928540280895571
+      Prototype_man_sprite_sheet_13: 2469132246169340722
+      Prototype_man_sprite_sheet_14: -8483750173811355761
+      Prototype_man_sprite_sheet_15: 4795907052742960517
+      Prototype_man_sprite_sheet_16: -9103264629221258485
+      Prototype_man_sprite_sheet_17: 1387591872004215372
+      Prototype_man_sprite_sheet_18: 4568817445306507022
+      Prototype_man_sprite_sheet_19: -3411198810171432285
+      Prototype_man_sprite_sheet_2: -4726872685864723926
+      Prototype_man_sprite_sheet_20: -4475506315838780523
+      Prototype_man_sprite_sheet_21: -8813798349469221906
+      Prototype_man_sprite_sheet_22: -7402925157018283033
+      Prototype_man_sprite_sheet_23: -4131860314832724669
+      Prototype_man_sprite_sheet_24: -7817581200130938221
+      Prototype_man_sprite_sheet_25: 1045508324082018951
+      Prototype_man_sprite_sheet_26: -1502893542752159324
+      Prototype_man_sprite_sheet_27: 6023415789056387306
+      Prototype_man_sprite_sheet_28: -4257793022118027641
+      Prototype_man_sprite_sheet_29: -8126056763745425815
+      Prototype_man_sprite_sheet_3: -2539508085682209612
+      Prototype_man_sprite_sheet_30: 9040801643588927668
+      Prototype_man_sprite_sheet_31: -1601049991754378818
+      Prototype_man_sprite_sheet_32: -5690054849220550725
+      Prototype_man_sprite_sheet_33: 2735045798779529531
+      Prototype_man_sprite_sheet_34: -6155458642184985999
+      Prototype_man_sprite_sheet_35: 479137616152034003
+      Prototype_man_sprite_sheet_36: -3722824193664939907
+      Prototype_man_sprite_sheet_37: -8894408534607314432
+      Prototype_man_sprite_sheet_38: 1382238784728416261
+      Prototype_man_sprite_sheet_39: -1590861360151742381
+      Prototype_man_sprite_sheet_4: 6731414881626783703
+      Prototype_man_sprite_sheet_40: 1746661896905951727
+      Prototype_man_sprite_sheet_41: -4991449955922489493
+      Prototype_man_sprite_sheet_42: -381832355947900015
+      Prototype_man_sprite_sheet_43: -994885100312124391
+      Prototype_man_sprite_sheet_44: -8660671690110194094
+      Prototype_man_sprite_sheet_45: -3609570241211284311
+      Prototype_man_sprite_sheet_46: -1978343698166171418
+      Prototype_man_sprite_sheet_47: 2954300562091855786
+      Prototype_man_sprite_sheet_48: 6883242136080170530
+      Prototype_man_sprite_sheet_49: -4788190659448234996
+      Prototype_man_sprite_sheet_5: 6344074220865208267
+      Prototype_man_sprite_sheet_50: -6578767380660884026
+      Prototype_man_sprite_sheet_51: 1267917023067088639
+      Prototype_man_sprite_sheet_6: 347658501867399957
+      Prototype_man_sprite_sheet_7: -195240677879233209
+      Prototype_man_sprite_sheet_8: -2445479044029379685
+      Prototype_man_sprite_sheet_9: -7157137069735545771
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
