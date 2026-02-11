@@ -18,7 +18,6 @@ public class PlayerStateMachine : MonoBehaviour
     public void ChangeState(PlayerStates newState)
     {
         currentState = newState;
-        playerEventManager.stateChanged.Invoke(currentState);
         switch (currentState)
         {
             case PlayerStates.active:
