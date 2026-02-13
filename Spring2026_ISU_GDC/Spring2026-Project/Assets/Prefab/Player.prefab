@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 441347286873950702}
   - component: {fileID: 866894367945178312}
   - component: {fileID: 5915114662108560871}
+  - component: {fileID: 2497859468115165051}
   - component: {fileID: 5111070950753326809}
   - component: {fileID: 5292229908231098266}
   - component: {fileID: 3707601236527096181}
@@ -306,6 +307,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b326e02e6eebd34e891db5dbf4e010a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  cameraFollow: {fileID: 0}
+--- !u!114 &2497859468115165051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681619109718579405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60fc8b7050c510f47927d2b3415b5485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementConstants
   moveSpeed: 15
   acceleration: 7
   decceleration: 7
@@ -328,7 +342,6 @@ MonoBehaviour:
   topFallingSpeedRelease: 20
   topFallingSpeedHold: 17
   numDoubleJumps: 0
-  cameraFollow: {fileID: 0}
   distanceFromFloor: 1.02
   distanceFromWall: 0.6
 --- !u!114 &5111070950753326809
