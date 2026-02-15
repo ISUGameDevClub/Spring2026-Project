@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.79
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -404,7 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611939618}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spear Throw Direction Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,6 +596,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 611939618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &756199001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5744527006584943622, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+  m_PrefabInstance: {fileID: 855229412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &855229412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,6 +649,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1098605144623898972, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098605144623898972, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988537290915428132, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988537290915428132, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5111070950753326809, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: test
       value: 
@@ -660,11 +681,28 @@ PrefabInstance:
       propertyPath: aimIndicator
       value: 
       objectReference: {fileID: 611939617}
+    - target: {fileID: 5744527006584943622, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744527006584943622, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6393349716855626738, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 517885810015686614, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
@@ -697,12 +735,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f929683b474dbeb49b8f9fb55f3bb615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpearThrow
-  aimIndicator: {fileID: 611939617}
+  aimIndicatorHolder: {fileID: 611939617}
   aimIndicatorObject: {fileID: 697191253}
   playerCam: {fileID: 61723850}
-  aimingSpear: 0
-  direction: {x: 0, y: 0}
   Spear: {fileID: 5302348069854232140, guid: 8b3dd079695c01442a7eb1c4923cc74f, type: 3}
+  SpearInHand: {fileID: 756199001}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

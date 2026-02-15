@@ -20,8 +20,7 @@ public class PlayerAttacks : MonoBehaviour
     public bool currentlyAttacking = false;
 
     [SerializeField] private InputActionReference attack;
-    
-    
+
     
     
     void Awake()
