@@ -23,10 +23,12 @@ public class PlayerAttacks : MonoBehaviour
     
     
     
+    
     void Awake()
     {
         playerAnimator = GetComponent<Animator>();
         useAttack = UseComboAttacks;
+
     }
 
     void OnEnable()
@@ -41,7 +43,7 @@ public class PlayerAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         if(currentComboAttack > 0 && comboTimer < Time.time)
         {
             currentComboAttack = 0;
@@ -68,6 +70,10 @@ public class PlayerAttacks : MonoBehaviour
     {
         // When we do not have a spear, we replace the useAttack() delegate with this.
     }
+    
+   
+ 
+
 
     public void UseCurrentAttack(InputAction.CallbackContext context)
     {
