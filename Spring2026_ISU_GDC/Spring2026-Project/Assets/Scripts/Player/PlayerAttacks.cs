@@ -20,11 +20,18 @@ public class PlayerAttacks : MonoBehaviour
     public bool currentlyAttacking = false;
 
     [SerializeField] private InputActionReference attack;
+
+    private PlayerEventManager playerEvents;
     
     
     
     void Awake()
     {
+        playerEvents = GetComponent<PlayerEventManager>();
+        if (playerEvents != null)
+        {
+            playerEvents.spearEquipped.AddListener(()=> useAttack = UseComboAttacks);
+        }
         playerAnimator = GetComponent<Animator>();
         useAttack = UseComboAttacks;
     }
