@@ -129,6 +129,38 @@ Transform:
   - {fileID: 7233253533185142473}
   m_Father: {fileID: 517885810015686614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2070394534020528229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6253550147629403823}
+  m_Layer: 0
+  m_Name: PlayerStates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6253550147629403823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070394534020528229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5648956151672653827}
+  m_Father: {fileID: 517885810015686614}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6681619109718579405
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +202,7 @@ Transform:
   m_Children:
   - {fileID: 1712270964012392158}
   - {fileID: 4139452135079056685}
+  - {fileID: 6253550147629403823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8039059425857322619
@@ -376,6 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStateMachine
   movement: {fileID: 5915114662108560871}
   attacks: {fileID: 5111070950753326809}
+  PlayerStatesParent: {fileID: 2070394534020528229}
 --- !u!114 &3707601236527096181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +438,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   leaveGround:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerStateChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!95 &3536687048401306626
@@ -534,6 +571,68 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &6702410588215574469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5648956151672653827}
+  - component: {fileID: 6436815176418729241}
+  - component: {fileID: 2480484062426557420}
+  m_Layer: 0
+  m_Name: RoamingWithSpearState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5648956151672653827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702410588215574469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6253550147629403823}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6436815176418729241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702410588215574469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da5d7263a61c654eb79b9257bc7d0e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoamingWithSpearState
+  basicComboAttack: {fileID: 2480484062426557420}
+--- !u!114 &2480484062426557420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702410588215574469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc0dac9dd9f4a64ba4664cb832e1554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicComboAttack
+  comboWindow: 1.5
+  basicAttacks:
+  - {fileID: 7400000, guid: 5d3d105df60048546a3c782cb9d79f7a, type: 2}
+  - {fileID: 7400000, guid: 76e474c266a231c4cac28b8ce59cb015, type: 2}
 --- !u!1001 &445031289507121738
 PrefabInstance:
   m_ObjectHideFlags: 0

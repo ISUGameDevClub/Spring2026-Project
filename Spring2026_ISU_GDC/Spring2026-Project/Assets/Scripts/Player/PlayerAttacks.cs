@@ -1,4 +1,5 @@
 using System.Linq;
+using ISUGameDev.SpearGame;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,69 +15,66 @@ public class PlayerAttacks : MonoBehaviour
     [SerializeField] AnimationClip[] basicAttacks;
     private int currentComboAttack = 0;
 
-    private delegate void AttackMechanic();
-    private AttackMechanic useAttack;
+    
+    private AttackMechanic currentPrimaryAttack;
 
     public bool currentlyAttacking = false;
 
     [SerializeField] private InputActionReference attack;
+
+    /// <summary>
+    /// The PlayerEventManager associated with this Player
+    /// </summary>
+    private PlayerEventManager playerEventManager;
     
     
     
     void Awake()
     {
         playerAnimator = GetComponent<Animator>();
-        useAttack = UseComboAttacks;
+        playerEventManager = GetComponent<PlayerEventManager>();
+
+
+        //subscribe ChangeCurrentAttackSubscriptionFromState to OnPlayerStateChanged event
+        playerEventManager.OnPlayerStateChanged.AddListener(ChangeCurrentAttackSubscriptionFromState);
     }
 
+    // Jake TODO: Unify this with single source of truth input system later
     void OnEnable()
     {
-        attack.action.started += UseCurrentAttack;
+        attack.action.started += UseCurrentPrimaryAttack;
     }
     void OnDisable()
     {
-        attack.action.started -= UseCurrentAttack;
+        attack.action.started -= UseCurrentPrimaryAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-
-        if(currentComboAttack > 0 && comboTimer < Time.time)
-        {
-            currentComboAttack = 0;
-        }
+        //unsubscribe OnDestroy
+        playerEventManager.OnPlayerStateChanged.RemoveListener(ChangeCurrentAttackSubscriptionFromState);
     }
 
-    //  Used for when the player attacks while equipped with the spear.
-    private void UseComboAttacks()
-    {
-        playerAnimator.Play(basicAttacks[currentComboAttack].name);
-        if (currentComboAttack < basicAttacks.Count() - 1)
-        {
-            currentComboAttack += 1;
-            comboTimer = Time.time + comboWindow;
-        }
-        else
-        {
-            // Reset the attacks back to the start of the combo.
-            currentComboAttack = 0;
-        }
-    }
-
-    private void LungeToSpear()
-    {
-        // When we do not have a spear, we replace the useAttack() delegate with this.
-    }
-
-    public void UseCurrentAttack(InputAction.CallbackContext context)
+    /// <summary>
+    /// Calls the currentPrimaryAttack function pointer.
+    /// </summary>
+    /// <param name="context"></param>
+    public void UseCurrentPrimaryAttack(InputAction.CallbackContext context)
     {
         if (!currentlyAttacking && playerAnimator != null)
         {
-            useAttack();
+            currentPrimaryAttack();
         }
     }
 
+    /// <summary>
+    /// Changes the planned attack the player will use when 'Attack' input action is triggered. 
+    /// </summary>
+    /// <param name="newAttackSubscription">The new attack delegate our currentAttack pointer will be subscribed to</param>
+    public void ChangeCurrentAttackSubscriptionFromState(BasePlayerState newState)
+    {
+        currentPrimaryAttack = newState.GetPrimaryAttackMechanicForState();
+    }
 
 }
 
