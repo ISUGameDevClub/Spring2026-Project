@@ -13,14 +13,29 @@ public class EnemyHealth : MonoBehaviour
     public void DamageEnemy(float damageValue, float knockback, float stunDuration, GameObject attacker)
     {
         currentEnemyHealth -= damageValue;
+        Debug.Log(damageValue + "damage taken");
         if (currentEnemyHealth <= 0f)
         {
             Destroy(gameObject);
         }
-        Debug.Log(damageValue + " taken");
-
-
 
 
     }
+
+    public void HealEnemy(float healValue)
+    {
+        if (healValue == -1)
+        {
+            currentEnemyHealth = startEnemyHealth;
+            Debug.Log("Full heal");
+        }
+        else
+        {
+            currentEnemyHealth += healValue;
+            Debug.Log(healValue + " health gained");
+        }
+        
+
+    }
+
 }
