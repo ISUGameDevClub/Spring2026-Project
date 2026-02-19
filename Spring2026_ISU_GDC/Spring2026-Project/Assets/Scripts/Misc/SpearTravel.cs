@@ -35,7 +35,15 @@ public class SpearTravel : MonoBehaviour
         {
             Destroy(gameObject);
             SpearThrow.isSpearInHand = true;
+            hitWall = false;
+            SpearThrow.travellingToSpear = false;
         }
+        /*
+        if(col.gameObject.tag == "Enemy")
+        {
+            //deal damage & knockback to enemy
+        }
+        */
     }
     private void OnBecameInvisible()
     {

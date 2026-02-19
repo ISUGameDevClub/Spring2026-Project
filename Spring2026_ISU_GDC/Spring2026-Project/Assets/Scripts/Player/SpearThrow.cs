@@ -14,6 +14,9 @@ public class SpearThrow : MonoBehaviour
     public GameObject SpearInHand;
     public static bool isSpearInHand;
 
+    public float TravelToSpearSpeed;
+    public static bool travellingToSpear;
+
     void Start()
     {
         PA = GetComponent<PlayerAttacks>();
@@ -24,23 +27,40 @@ public class SpearThrow : MonoBehaviour
     }
 
     // Update is called once per frame
-    
+    Vector2 playerDirection;
     void Update()
     {
-        if (isSpearInHand)
+        
+        CapsuleCollider2D playerHitbox = gameObject.GetComponent<CapsuleCollider2D>();
+        
+        if (!travellingToSpear)
         {
-            giveSpear();
-            AimSpear();
+            playerHitbox.isTrigger = false;
+            if (isSpearInHand)
+            {
+                giveSpear();
+                AimSpear();
+            }
+            else if (Input.GetMouseButton(0) && SpearTravel.hitWall)//replace mouse0 with input systems
+            {
+                travellingToSpear = true;
+                playerDirection = new Vector2((spawnedSpear.transform.position.x - gameObject.transform.position.x)*TravelToSpearSpeed, (spawnedSpear.transform.position.y - gameObject.transform.position.y)*TravelToSpearSpeed);
+                travelToSpear(playerDirection);
+            }
+        }
+        else
+        {
+            playerHitbox.isTrigger = true;//pass through walls when dashing to spear
+            travelToSpear(playerDirection);
         }
     }
-    
        private void AimSpear()
     {
-        if (Input.GetMouseButton(0)) // if left click is held, update the arrow indicator
+        if (Input.GetMouseButton(0)) // if input is held, update the arrow indicator. replace with input systems
         {
             PA.enabled = false;
-            PM.enabled = false;
-            aimingSpear =true;
+            PM.enabled = false;//disable movement and attacks when aiming
+            aimingSpear = true;
             aimIndicatorObject.SetActive(true);
             Vector3 mousePosition;
             mousePosition = Input.mousePosition;
@@ -61,10 +81,10 @@ public class SpearThrow : MonoBehaviour
             aimIndicatorObject.SetActive(false);
         }
     }
-
+    GameObject spawnedSpear;
     private void ThrowSpear()
     {
-        GameObject spawnedSpear = Instantiate(Spear);
+        spawnedSpear = Instantiate(Spear);
         spawnedSpear.transform.position = gameObject.transform.position;
         spawnedSpear.transform.up = direction;
         spawnedSpear.transform.Rotate(0f,0f,90f);
@@ -83,4 +103,17 @@ public class SpearThrow : MonoBehaviour
         isSpearInHand = true;
         PA.enabled = true;
     }
-}
+    public void travelToSpear(Vector2 playerDirection)
+    {
+        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = playerDirection;
+    }
+    /*
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (travellingToSpear&&col.gameObject.tag=="Enemy")
+        {
+            //deal damage & knockback to any enemies in path
+        }
+    */
+    }
