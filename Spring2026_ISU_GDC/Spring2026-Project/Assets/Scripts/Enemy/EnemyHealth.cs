@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public StunScript stunScript;
     [SerializeField] float startEnemyHealth = 100;
     private float currentEnemyHealth;
 
@@ -12,6 +13,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void DamageEnemy(float damageValue, float knockback, float stunDuration, GameObject attacker)
     {
+
+        //Damage
         currentEnemyHealth -= damageValue;
         Debug.Log(damageValue + "damage taken");
         if (currentEnemyHealth <= 0f)
@@ -19,6 +22,13 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
 
+        //Knockback
+
+
+
+
+        //Stun
+        stunScript.InflictStun(stunDuration);
 
     }
 
