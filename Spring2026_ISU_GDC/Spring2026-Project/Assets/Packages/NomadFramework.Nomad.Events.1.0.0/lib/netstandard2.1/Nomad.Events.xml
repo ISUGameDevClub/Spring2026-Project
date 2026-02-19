@@ -1,0 +1,784 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nomad.Events</name>
+    </assembly>
+    <members>
+        <member name="T:Nomad.Events.Private.EventKey">
+            <summary>
+            Represents a game event's unique identifier.
+            </summary>
+        </member>
+        <member name="P:Nomad.Events.Private.EventKey.Name">
+            <summary>
+            The event's name. Used for generating the hashkey.
+            </summary>
+        </member>
+        <member name="P:Nomad.Events.Private.EventKey.NameSpace">
+            <summary>
+            The event's namespace. Used for generating the hashkey.
+            </summary>
+        </member>
+        <member name="P:Nomad.Events.Private.EventKey.ArgsType">
+            <summary>
+            The struct packet argument system type. Used for generating the hashkey.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.EventKey.#ctor(Nomad.Core.Util.InternString,Nomad.Core.Util.InternString,System.Type)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="nameSpace"></param>
+             <param name="argsType"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.EventKey.Equals(Nomad.Events.Private.EventKey)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.EventKey.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.EventKey.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Events.Private.GameEvent`1">
+            <summary>
+            <para>Generic class for managing an event.</para>
+            <para>Inherit from this class to pass data between modules and events, if not needed, simply name the event, then publish it.</para>
+            </summary>
+        </member>
+        <member name="P:Nomad.Events.Private.GameEvent`1.DebugName">
+            <summary>
+            The name of the event.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.#ctor(Nomad.Core.Util.InternString,Nomad.Core.Util.InternString,Nomad.Core.Logger.ILoggerService,Nomad.Core.Events.EventFlags)">
+            <summary>
+            Creates a new GameEvent object with the debugging alias of <paramref name="name"/>.
+            </summary>
+            <param name="nameSpace"></param>
+            <param name="name">The name of the event, should be unique.</param>
+            <param name="logger"></param>
+            <param name="flags"></param>
+            <exception cref="T:System.ArgumentException">Thrown if name is null or empty.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.Equals(Nomad.Core.Events.IGameEvent)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.Publish(`0@)">
+            <summary>
+            
+            </summary>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.PublishAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="eventArgs"></param>
+            <param name="ct"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.Subscribe(Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="callback">The lambda or method to call when the event is triggered.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.SubscribeAsync(Nomad.Core.Events.AsyncEventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="callback">The lambda or method to call when the event is triggered.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.Subscribe(System.Object,Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+            <param name="callback">The lambda or method to call when the event is triggered.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.SubscribeAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+            <param name="callback">The lambda or method to call when the event is triggered.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.Unsubscribe(System.Object,Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+            <param name="callback">The lambda or method to remove from the subscription list.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.UnsubscribeAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+            <param name="callback">The lambda or method to remove from the subscription list.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.UnsubscribeAll(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.GameEvent`1.CleanupSubscriptions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Events.Private.SubscriptionCache`1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.#ctor(Nomad.Core.Logger.ILoggerService)">
+             <summary>
+            
+             </summary>
+             <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.Add(Nomad.Events.Private.SubscriptionEntry{`0})">
+             <summary>
+            
+             </summary>
+             <param name="entry"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.RemoveAt(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="index"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.RemoveAllOwnedBy(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.CleanupFull">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionCache`1.CleanupIncremental(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="maxSteps"></param>
+        </member>
+        <member name="T:Nomad.Events.Private.SubscriptionEntry`1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.#ctor(System.WeakReference{System.Object},Nomad.Core.Events.EventCallback{`0},Nomad.Core.Events.AsyncEventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+             <param name="callback"></param>
+             <param name="asyncCallback"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.Create(System.Object,Nomad.Core.Events.EventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+             <param name="callback"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.CreateAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+             <param name="callback"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.TryGetCallback(Nomad.Core.Events.EventCallback{`0}@)">
+             <summary>
+            
+             </summary>
+             <param name="callback"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.TryGetAsyncCallback(Nomad.Core.Events.AsyncEventCallback{`0}@)">
+             <summary>
+            
+             </summary>
+             <param name="callback"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.Matches(System.Object,Nomad.Core.Events.EventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+             <param name="callback"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.MatchesAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+             <param name="callback"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionEntry`1.OwnerMatches(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="owner"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Events.Private.SubscriptionSets.ISubscriptionSet`1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1">
+            <summary>
+            A completely lock free subscription set, this is meant for extremely low-latency high performance event pumping. This is explicitly meant to run single-threaded.
+            </summary>
+            <remarks>
+            DO NOT MULTITHREAD THIS, YOU WILL GET RACE CONDITIONS!!!
+            </remarks>
+        </member>
+        <member name="F:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1._cleanupInterval">
+            <summary>
+            The number of pumps before initiating a purge.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.#ctor(Nomad.Core.Events.IGameEvent{`0},Nomad.Core.Logger.ILoggerService,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="eventData"></param>
+             <param name="logger"></param>
+             <param name="cleanupInterval"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.Dispose">
+            <summary>
+            Clears all the subscriptions within this set.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.BindEventFriend(Nomad.Core.Events.IGameEvent)">
+            <summary>
+            Binds the provided event to the owned event in a "friendship".
+            </summary>
+            <param name="friend"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.AddSubscription(System.Object,Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            Adds a callback method to the subscriptions list.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback">The method that is called whenever the event triggers.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.AddSubscriptionAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+             <param name="callback"></param>
+             <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.RemoveSubscription(System.Object,Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            Removes the provided <paramref name="callback"/> from the event's subscription list.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback">The callback to remove from the subscription list.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the returned index from <see cref="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.ContainsCallback(System.Object,Nomad.Core.Events.EventCallback{`0},System.Int32@)"/> is invalid.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.RemoveSubscriptionAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+             <param name="callback"></param>
+             <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.RemoveAllForSubscriber(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.Pump(`0@)">
+            <summary>
+            "Publishes" an event to all subscribers with thread-safety.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.PumpAsync(`0,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <param name="ct"></param>
+             <returns></returns>
+             <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.ContainsCallback(System.Object,Nomad.Core.Events.EventCallback{`0},System.Int32@)">
+            <summary>
+            Public method that acquires the read lock and checks for callback existence.
+            </summary>s
+            <param name="subscriber"></param>
+            <param name="callback"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.ContainsCallbackAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0},System.Int32@)">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+             <param name="callback"></param>
+             <param name="index"></param>
+             <returns></returns>
+             <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.LockFreeSubscriptionSet`1.CleanupSubscriptions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1._cleanupInterval">
+            <summary>
+            The number of pumps before initiating a purge.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.#ctor(Nomad.Core.Events.IGameEvent{`0},Nomad.Core.Logger.ILoggerService,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="eventData"></param>
+             <param name="logger"></param>
+             <param name="cleanupInterval"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.Dispose">
+            <summary>
+            Clears all the subscriptions within this set.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.BindEventFriend(Nomad.Core.Events.IGameEvent)">
+            <summary>
+            Binds the provided event to the owned event in a "friendship".
+            </summary>
+            <param name="friend"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.AddSubscription(System.Object,Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            Adds a callback method to the subscriptions list.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback">The method that is called whenever the event triggers.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.AddSubscriptionAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+            <summary>
+            Adds a callback method to the subscriptions list.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback">The method that is called whenever the event triggers.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.RemoveSubscription(System.Object,Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            Removes the provided <paramref name="callback"/> from the event's subscription list.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback">The callback to remove from the subscription list.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the returned index from <see cref="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.ContainsCallback(System.Object,Nomad.Core.Events.EventCallback{`0},System.Int32@)"/> is invalid.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.RemoveSubscriptionAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0})">
+            <summary>
+            Removes the provided <paramref name="callback"/> from the event's subscription list.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback">The callback to remove from the subscription list.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="callback"/> is null.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if the returned index from <see cref="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.ContainsCallback(System.Object,Nomad.Core.Events.EventCallback{`0},System.Int32@)"/> is invalid.</exception>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.RemoveAllForSubscriber(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.Pump(`0@)">
+            <summary>
+            "Publishes" an event to all subscribers with thread-safety.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.PumpAsync(`0,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <param name="ct"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.ContainsCallback(System.Object,Nomad.Core.Events.EventCallback{`0},System.Int32@)">
+            <summary>
+            Public method that acquires the read lock and checks for callback existence.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.ContainsCallbackAsync(System.Object,Nomad.Core.Events.AsyncEventCallback{`0},System.Int32@)">
+            <summary>
+            Public method that acquires the read lock and checks for callback existence.
+            </summary>
+            <param name="subscriber"></param>
+            <param name="callback"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSets.SubscriptionSet`1.CleanupSubscriptions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Events.Private.SubscriptionSetBase`2">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.#ctor(Nomad.Core.Events.IGameEvent{`0},Nomad.Core.Logger.ILoggerService)">
+             <summary>
+            
+             </summary>
+             <param name="eventData"></param>
+             <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.AddSubscription(System.Object,`1)">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+             <param name="callback"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.RemoveSubscription(System.Object,`1)">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+             <param name="callback"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.RemoveAllForSubscriber(System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="subscriber"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.Pump(`0@)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.PumpAsync(`0,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <param name="ct"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.Cleanup">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.CleanupIncremental(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="maxSteps"></param>
+        </member>
+        <member name="M:Nomad.Events.Private.SubscriptionSetBase`2.EnsureThread">
+             <summary>
+            
+             </summary>
+             <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Nomad.Events.Private.EventQueue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Private.EventQueue.Publish(Nomad.Core.Events.IGameEvent,Nomad.Events.EventPriority)">
+            <summary>
+            Publish an event with different priority than it was assigned at creation.
+            </summary>
+            <param name="event"></param>
+            <param name="priority"></param>
+        </member>
+        <member name="T:Nomad.Events.GameEventRegistry">
+            <summary>
+            Handles event registration and lookup.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.#ctor(Nomad.Core.Logger.ILoggerService)">
+             <summary>
+            
+             </summary>
+             <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.ClearEventsInNamespace(System.String)">
+            <summary>
+            Releases all events in the naming space of <paramref name="nameSpace"/>.
+            </summary>
+            <param name="nameSpace"></param>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.GetEvent``1(System.String,System.String,Nomad.Core.Events.EventFlags)">
+            <summary>
+            Registers a <see cref="T:Nomad.Core.Events.IGameEvent"/> with argument parameters <typeparamref name="TArgs"/> and id <paramref name="name"/>.
+            </summary>
+            <typeparam name="TArgs">The type of struct payload used with the event.</typeparam>
+            <param name="nameSpace"></param>
+            <param name="name">Name of the event to register.</param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.TryGetEvent``1(System.String,System.String,Nomad.Core.Events.IGameEvent{``0}@)">
+            <summary>
+            Attempts to retrieve an existing event by name and namespace.
+            </summary>
+            <typeparam name="TArgs">The struct type containing event data.</typeparam>
+            <param name="name">The name of the event.</param>
+            <param name="nameSpace">The namespace the event belongs to.</param>
+            <param name="gameEvent">
+            When this method returns, contains the event if found; otherwise <c>null</c>.
+            </param>
+            <returns><c>true</c> if the event exists; otherwise <c>false</c>.</returns>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.TryRemoveEvent``1(System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="TArgs"></typeparam>
+             <param name="nameSpace"></param>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.CleanupAllEvents">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.CleanupNamespace(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="nameSpace"></param>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.ClearAllEvents">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.GameEventRegistry.GetAllEvents">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Events.AsyncSubscriptionHandle`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.AsyncSubscriptionHandle`1.#ctor(System.Object,Nomad.Events.Private.SubscriptionSets.ISubscriptionSet{`0},Nomad.Core.Events.AsyncEventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+            <param name="set"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:Nomad.Events.AsyncSubscriptionHandle`1.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.AsyncSubscriptionHandle`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Events.DisposableSubscription`1">
+            <summary>
+            An automated disposable subscription.
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.DisposableSubscription`1.#ctor(Nomad.Core.Events.IGameEvent{`0},Nomad.Core.Events.EventCallback{`0})">
+             <summary>
+            
+             </summary>
+             <param name="handler"></param>
+             <param name="callback"></param>
+        </member>
+        <member name="M:Nomad.Events.DisposableSubscription`1.Finalize">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.DisposableSubscription`1.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Events.EventPriority">
+            <summary>
+            Defines the priority levels for event handling.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.VeryLow">
+            <summary>
+            Very low priority.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.Low">
+            <summary>
+            Low priority.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.Normal">
+            <summary>
+            Normal priority.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.High">
+            <summary>
+            High priority.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.VeryHigh">
+            <summary>
+            Very high priority.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.Critical">
+            <summary>
+            Critical priority.
+            </summary>
+        </member>
+        <member name="F:Nomad.Events.EventPriority.Count">
+            <summary>
+            Number of priority levels.
+            </summary>
+        </member>
+        <member name="T:Nomad.Events.EventBootstrapper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Events.EventBootstrapper.Initialize(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+             <summary>
+            
+             </summary>
+             <param name="registry"></param>
+             <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.Events.EventBootstrapper.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Events.Exceptions.InvalidEventRegistrationException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.Exceptions.InvalidEventRegistrationException.#ctor(System.String,System.Type,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="eventName"></param>
+            <param name="eventType"></param>
+            <param name="structType"></param>
+        </member>
+        <member name="T:Nomad.Events.SubscriptionHandle`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.SubscriptionHandle`1.#ctor(System.Object,Nomad.Events.Private.SubscriptionSets.ISubscriptionSet{`0},Nomad.Core.Events.EventCallback{`0})">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+            <param name="set"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:Nomad.Events.SubscriptionHandle`1.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Events.SubscriptionHandle`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
