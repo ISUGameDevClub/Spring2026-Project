@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 3707601236527096181}
   - component: {fileID: 3536687048401306626}
   - component: {fileID: 844016365402956465}
+  - component: {fileID: 1671436609477479709}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -521,6 +522,18 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1671436609477479709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681619109718579405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764b2fb0ef04910469f974b38150eab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerKnockback
 --- !u!1001 &445031289507121738
 PrefabInstance:
   m_ObjectHideFlags: 0
