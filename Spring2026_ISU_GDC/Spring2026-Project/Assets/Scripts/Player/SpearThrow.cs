@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// NOTE: This class is deprecated. It used to be the prototype for the spear throw->dash behavior. It has been refactored into two scripts,
+///  SpearThrowAttack.cs and SpearDashAttack.cs
+/// </summary>
 public class SpearThrow : MonoBehaviour
 {
      public GameObject aimIndicatorHolder;//empty object ontop of the player
@@ -41,7 +45,7 @@ public class SpearThrow : MonoBehaviour
                 giveSpear();
                 AimSpear();
             }
-            else if (Input.GetMouseButton(0) && SpearTravel.hitWall)//replace mouse0 with input systems
+            else if (Input.GetMouseButton(0)/* && SpearTravel.hitWall*/)//replace mouse0 with input systems
             {
                 travellingToSpear = true;
                 playerDirection = new Vector2((spawnedSpear.transform.position.x - gameObject.transform.position.x)*TravelToSpearSpeed, (spawnedSpear.transform.position.y - gameObject.transform.position.y)*TravelToSpearSpeed);

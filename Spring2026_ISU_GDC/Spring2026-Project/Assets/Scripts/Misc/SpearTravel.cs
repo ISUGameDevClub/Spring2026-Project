@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpearTravel : MonoBehaviour
@@ -6,7 +7,7 @@ public class SpearTravel : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed;
     private float rot;
-    public static bool hitWall;
+    public bool hitWall;
     private float xAngle;
     private float yAngle;
 
@@ -21,22 +22,27 @@ public class SpearTravel : MonoBehaviour
     void Update()
     {
         if (hitWall == false)
+        {
             rb.linearVelocity = new Vector2(xAngle * moveSpeed, yAngle * moveSpeed);
+        }
         else
+        {
             rb.linearVelocity = new Vector2(0f, 0f);
+        }   
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
             hitWall = true;
+            FindFirstObjectByType<PlayerEventManager>().OnPlayerSpearStuckInWall.Invoke(this.gameObject);
         }
         if(hitWall&&col.gameObject.tag=="Player")
         {
-            Destroy(gameObject);
+            /*Destroy(gameObject);
             SpearThrow.isSpearInHand = true;
             hitWall = false;
-            SpearThrow.travellingToSpear = false;
+            SpearThrow.travellingToSpear = false;*/
         }
         /*
         if(col.gameObject.tag == "Enemy")

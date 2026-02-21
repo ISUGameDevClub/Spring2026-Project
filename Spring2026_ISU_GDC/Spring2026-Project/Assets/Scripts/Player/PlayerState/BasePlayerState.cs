@@ -15,7 +15,7 @@ namespace ISUGameDev.SpearGame
         {
             None,
             RoamingWithSpear,
-            ThrowingSpear,
+            AimingSpear,
             RoamingWithoutSpear,
             DashingTowardsSpear,
             InDialogue,
@@ -53,7 +53,8 @@ namespace ISUGameDev.SpearGame
         /// </summary>
         public virtual void ApplyMovementModiferForState(PlayerMovement playerMovement)
         {
-            //by default, make no changes to player movement
+            //by default, make no changes to player movement and make sure movement is enabled
+            playerMovement.enabled = true;
             return;
         }
     }

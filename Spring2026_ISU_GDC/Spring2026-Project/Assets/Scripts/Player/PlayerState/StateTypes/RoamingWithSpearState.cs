@@ -15,6 +15,11 @@ public class RoamingWithSpearState : BasePlayerState
     /// </summary>
     [SerializeField] private BasicComboAttack basicComboAttack;
 
+    /// <summary>
+    /// The secondary attack for this state is the spear throw attack
+    /// </summary>
+    [SerializeField] private SpearThrowAttack spearThrowAttack;
+
     private void Awake()
     {
         this.playerStateType = PlayerStateType.RoamingWithSpear;
@@ -30,8 +35,7 @@ public class RoamingWithSpearState : BasePlayerState
 
     public override AttackMechanic GetSecondaryAttackMechanicForState()
     {
-        // TODO: Return the spear throw logic once ready
-        return null;
+        return spearThrowAttack.GetAttackImplementation();
     }
 
 }

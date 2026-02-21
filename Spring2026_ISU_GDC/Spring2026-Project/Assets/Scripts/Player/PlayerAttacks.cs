@@ -17,10 +17,11 @@ public class PlayerAttacks : MonoBehaviour
 
     
     private AttackMechanic currentPrimaryAttack;
+    private AttackMechanic currentSecondaryAttack;
 
-    public bool currentlyAttacking = false;
 
-    [SerializeField] private InputActionReference attack;
+    [SerializeField] private InputActionReference primaryAttack;
+    [SerializeField] private InputActionReference secondaryAttack;
 
     /// <summary>
     /// The PlayerEventManager associated with this Player
@@ -42,11 +43,13 @@ public class PlayerAttacks : MonoBehaviour
     // Jake TODO: Unify this with single source of truth input system later
     void OnEnable()
     {
-        attack.action.started += UseCurrentPrimaryAttack;
+        primaryAttack.action.started += UseCurrentPrimaryAttack;
+        secondaryAttack.action.started += UseCurrentSecondaryAttack;
     }
     void OnDisable()
     {
-        attack.action.started -= UseCurrentPrimaryAttack;
+        primaryAttack.action.started -= UseCurrentPrimaryAttack;
+        secondaryAttack.action.started -= UseCurrentSecondaryAttack;
     }
 
     private void OnDestroy()
@@ -61,11 +64,24 @@ public class PlayerAttacks : MonoBehaviour
     /// <param name="context"></param>
     public void UseCurrentPrimaryAttack(InputAction.CallbackContext context)
     {
-        if (!currentlyAttacking && playerAnimator != null)
+        if (playerAnimator != null)
         {
-            currentPrimaryAttack();
+            currentPrimaryAttack?.Invoke();
         }
     }
+
+    /// <summary>
+    /// Calls the currentSecondaryAttack function pointer.
+    /// </summary>
+    /// <param name="context"></param>
+    public void UseCurrentSecondaryAttack(InputAction.CallbackContext context)
+    {
+        if (playerAnimator != null)
+        {
+            currentSecondaryAttack?.Invoke();
+        }
+    }
+
 
     /// <summary>
     /// Changes the planned attack the player will use when 'Attack' input action is triggered. 
@@ -74,6 +90,7 @@ public class PlayerAttacks : MonoBehaviour
     public void ChangeCurrentAttackSubscriptionFromState(BasePlayerState newState)
     {
         currentPrimaryAttack = newState.GetPrimaryAttackMechanicForState();
+        currentSecondaryAttack = newState.GetSecondaryAttackMechanicForState();
     }
 
 }
