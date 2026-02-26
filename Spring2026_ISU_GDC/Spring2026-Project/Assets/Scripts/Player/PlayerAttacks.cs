@@ -1,4 +1,5 @@
 using System.Linq;
+using ISUGameDev.SpearGame;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,69 +15,83 @@ public class PlayerAttacks : MonoBehaviour
     [SerializeField] AnimationClip[] basicAttacks;
     private int currentComboAttack = 0;
 
-    private delegate void AttackMechanic();
-    private AttackMechanic useAttack;
+    
+    private AttackMechanic currentPrimaryAttack;
+    private AttackMechanic currentSecondaryAttack;
 
-    public bool currentlyAttacking = false;
 
-    [SerializeField] private InputActionReference attack;
+    [SerializeField] private InputActionReference primaryAttack;
+    [SerializeField] private InputActionReference secondaryAttack;
+
+    /// <summary>
+    /// The PlayerEventManager associated with this Player
+    /// </summary>
+    private PlayerEventManager playerEventManager;
     
     
     
     void Awake()
     {
         playerAnimator = GetComponent<Animator>();
-        useAttack = UseComboAttacks;
+        playerEventManager = GetComponent<PlayerEventManager>();
+
+
+        //subscribe ChangeCurrentAttackSubscriptionFromState to OnPlayerStateChanged event
+        playerEventManager.OnPlayerStateChanged.AddListener(ChangeCurrentAttackSubscriptionFromState);
     }
 
+    // Jake TODO: Unify this with single source of truth input system later
     void OnEnable()
     {
-        attack.action.started += UseCurrentAttack;
+        primaryAttack.action.started += UseCurrentPrimaryAttack;
+        secondaryAttack.action.started += UseCurrentSecondaryAttack;
     }
     void OnDisable()
     {
-        attack.action.started -= UseCurrentAttack;
+        primaryAttack.action.started -= UseCurrentPrimaryAttack;
+        secondaryAttack.action.started -= UseCurrentSecondaryAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
+        //unsubscribe OnDestroy
+        playerEventManager.OnPlayerStateChanged.RemoveListener(ChangeCurrentAttackSubscriptionFromState);
+    }
 
-        if(currentComboAttack > 0 && comboTimer < Time.time)
+    /// <summary>
+    /// Calls the currentPrimaryAttack function pointer.
+    /// </summary>
+    /// <param name="context"></param>
+    public void UseCurrentPrimaryAttack(InputAction.CallbackContext context)
+    {
+        if (playerAnimator != null)
         {
-            currentComboAttack = 0;
+            currentPrimaryAttack?.Invoke();
         }
     }
 
-    //  Used for when the player attacks while equipped with the spear.
-    private void UseComboAttacks()
+    /// <summary>
+    /// Calls the currentSecondaryAttack function pointer.
+    /// </summary>
+    /// <param name="context"></param>
+    public void UseCurrentSecondaryAttack(InputAction.CallbackContext context)
     {
-        playerAnimator.Play(basicAttacks[currentComboAttack].name);
-        if (currentComboAttack < basicAttacks.Count() - 1)
+        if (playerAnimator != null)
         {
-            currentComboAttack += 1;
-            comboTimer = Time.time + comboWindow;
-        }
-        else
-        {
-            // Reset the attacks back to the start of the combo.
-            currentComboAttack = 0;
+            currentSecondaryAttack?.Invoke();
         }
     }
 
-    private void LungeToSpear()
-    {
-        // When we do not have a spear, we replace the useAttack() delegate with this.
-    }
 
-    public void UseCurrentAttack(InputAction.CallbackContext context)
+    /// <summary>
+    /// Changes the planned attack the player will use when 'Attack' input action is triggered. 
+    /// </summary>
+    /// <param name="newAttackSubscription">The new attack delegate our currentAttack pointer will be subscribed to</param>
+    public void ChangeCurrentAttackSubscriptionFromState(BasePlayerState newState)
     {
-        if (!currentlyAttacking && playerAnimator != null)
-        {
-            useAttack();
-        }
+        currentPrimaryAttack = newState.GetPrimaryAttackMechanicForState();
+        currentSecondaryAttack = newState.GetSecondaryAttackMechanicForState();
     }
-
 
 }
 
