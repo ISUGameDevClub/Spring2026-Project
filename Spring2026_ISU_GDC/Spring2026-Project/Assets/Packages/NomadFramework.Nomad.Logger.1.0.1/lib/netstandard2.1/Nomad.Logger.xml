@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nomad.Logger</name>
+    </assembly>
+    <members>
+        <member name="T:Nomad.Logger.Private.LoggerCategory">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.Private.LoggerCategory.#ctor(System.String,Nomad.Core.Logger.LogLevel,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="level"></param>
+             <param name="enabled"></param>
+        </member>
+        <member name="M:Nomad.Logger.Private.LoggerCategory.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.Private.LoggerCategory.AddSink(Nomad.Core.Logger.ILoggerSink@)">
+             <summary>
+            
+             </summary>
+             <param name="sink"></param>
+        </member>
+        <member name="M:Nomad.Logger.Private.LoggerCategory.RemoveSink(Nomad.Core.Logger.ILoggerSink@)">
+             <summary>
+            
+             </summary>
+             <param name="sink"></param>
+        </member>
+        <member name="M:Nomad.Logger.Private.LoggerCategory.QueueMessage(System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.Private.LoggerCategory.LoggerThreadAsync">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Logger.Private.MessageBuilder">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.Private.MessageBuilder.FormatMessage(Nomad.Core.Logger.ILoggerCategory@,Nomad.Core.Logger.LogLevel,System.String@,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="level"></param>
+             <param name="message"></param>
+             <param name="addLine"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Logger.Private.MessageBuilder.FormatLogColorBegin(Nomad.Core.Logger.LogLevel)">
+             <summary>
+            
+             </summary>
+             <param name="level"></param>
+             <returns></returns>
+             <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Nomad.Logger.Private.MessageBuilder.FormatLogColorEnd(Nomad.Core.Logger.LogLevel)">
+             <summary>
+            
+             </summary>
+             <param name="level"></param>
+             <returns></returns>
+             <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Nomad.Logger.Private.Sinks.FileSink">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.Private.Sinks.FileSink.Print(System.String@)">
+            <summary>
+            Writes a string of characters to the file stream asynchronously.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.Private.Sinks.FileSink.Clear">
+            <summary>
+            Clears the file stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.Logger.Private.Sinks.FileSink.Flush">
+            <summary>
+            Flushes the contents of the stream writer to the logfile.
+            </summary>
+        </member>
+        <member name="T:Nomad.Logger.Private.SinkType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Logger.Private.SinkType.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Logger.LoggerBootstrapper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.LoggerBootstrapper.Initialize(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+             <summary>
+            
+             </summary>
+             <param name="serviceRegistry"></param>
+             <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerBootstrapper.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Logger.LoggerService">
+            <summary>
+            Handles the process of logging.
+            </summary>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.CreateCategory(System.String@,Nomad.Core.Logger.LogLevel,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="level"></param>
+             <param name="enabled"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.InitConfig(Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+            <summary>
+            Initializes the logging service.
+            </summary>
+            <param name="locator"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.AddSink(Nomad.Core.Logger.ILoggerSink)">
+            <summary>
+            Adds a sink stream to the global logger service.
+            </summary>
+            <param name="sink"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintMessage(Nomad.Core.Logger.ILoggerCategory@,Nomad.Core.Logger.LogLevel,System.String@,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="level"></param>
+             <param name="message"></param>
+             <param name="addLine"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.Print(System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintLine(System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintDebug(System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintWarning(System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintError(System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.Print(Nomad.Core.Logger.ILoggerCategory@,System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintLine(Nomad.Core.Logger.ILoggerCategory@,System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintDebug(Nomad.Core.Logger.ILoggerCategory@,System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintWarning(Nomad.Core.Logger.ILoggerCategory@,System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.PrintError(Nomad.Core.Logger.ILoggerCategory@,System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="category"></param>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.Logger.LoggerService.Clear">
+            <summary>
+            Clears all sinks.
+            </summary>
+        </member>
+    </members>
+</doc>

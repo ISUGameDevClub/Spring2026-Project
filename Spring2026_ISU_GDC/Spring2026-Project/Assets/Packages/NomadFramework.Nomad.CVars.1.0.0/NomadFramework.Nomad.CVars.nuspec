@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>NomadFramework.Nomad.CVars</id>
+    <version>1.0.0</version>
+    <authors>Noah Van Til</authors>
+    <license type="expression">MPL-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/MPL-2.0</licenseUrl>
+    <icon>NomadFramework.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/SIGAAMDAD/NomadFramework.git</projectUrl>
+    <description>Package Description</description>
+    <tags>dotnet library framework</tags>
+    <repository type="git" url="https://github.com/SIGAAMDAD/NomadFramework.git" commit="0e445df853a050b851eddaa37da17847e1de6315" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="Microsoft.Extensions.Configuration.Ini" version="10.0.2" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Nomad.Core" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Nomad.Events" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Microsoft.Extensions.Configuration.Ini" version="10.0.2" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Nomad.Core" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Nomad.Events" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="10.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="6.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
