@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CheckpointScript : MonoBehaviour
 {
-    Vector3 playerRespawn;
+    
+      public Vector3 playerRespawn;
    
     void Start()
     {
