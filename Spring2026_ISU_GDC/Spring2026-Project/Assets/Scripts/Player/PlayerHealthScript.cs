@@ -28,12 +28,9 @@ public class PlayerHealthScript : MonoBehaviour
         } 
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    public void TakeDamage(int damage)
     {
-        if(collider.gameObject.tag.Equals("Enemy"))
-        {
-            playerHealth--;
-            print("Player Hit!\nHealth = "+ playerHealth);
-        }
+        playerHealth -= damage;
+        print("Player Hit!\nHealth = " + playerHealth);
     }
 }
