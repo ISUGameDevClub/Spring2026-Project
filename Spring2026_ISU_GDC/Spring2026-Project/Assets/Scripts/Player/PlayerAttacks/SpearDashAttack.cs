@@ -25,6 +25,7 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         FindFirstObjectByType<PlayerEventManager>().OnPlayerSpearStuckInWall.AddListener(OnSpearStuckInWall);
     }
 
+
     private void OnSpearStuckInWall(GameObject spearObj)
     {
         //cache the stuck spears location
