@@ -1,40 +1,17 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : HealthBC
 {
-    [SerializeField] float startEnemyHealth = 100;
-    private float currentEnemyHealth;
-
-    void Awake()
+    public override void TakeDamage(int damageValue, float knockback, float stunDuration, GameObject attacker)
     {
-        currentEnemyHealth = startEnemyHealth;
-    }
-
-    public void DamageEnemy(float damageValue, float knockback, float stunDuration, GameObject attacker)
-    {
-        currentEnemyHealth -= damageValue;
-        Debug.Log(damageValue + "damage taken");
-        if (currentEnemyHealth <= 0f)
-        {
-            Destroy(gameObject);
-        }
-
-
-    }
-
-    public void HealEnemy(float healValue)
-    {
-        if (healValue == -1)
-        {
-            currentEnemyHealth = startEnemyHealth;
-            Debug.Log("Full heal");
-        }
-        else
-        {
-            currentEnemyHealth += healValue;
-            Debug.Log(healValue + " health gained");
-        }
-        
+         Debug.Log(damageValue + " damage taken");
+        currentHealth -= damageValue;
+        //Deal knockback
+        //Deal stun
+        //Play visual effects
+        if (currentHealth <= 0)
+            Destroy(gameObject,.2f);
+        //Added a delay to allow for visual effects like hitflash, animations, ect to play first
 
     }
 

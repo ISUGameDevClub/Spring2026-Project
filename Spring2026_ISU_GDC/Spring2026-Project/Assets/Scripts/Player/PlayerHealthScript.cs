@@ -1,39 +1,22 @@
 using UnityEngine;
 
-public class PlayerHealthScript : MonoBehaviour
+public class PlayerHealthScript : HealthBC
 {
-
-    [SerializeField] int playerHealth;
     [SerializeField] CheckpointScript checkpointScript;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void TakeDamage(int damageValue, float knockback, float stunDuration, GameObject attacker)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        currentHealth -= damageValue;
         DeathHandler();
+        
     }
 
     private void DeathHandler()
     {
-        
-       if(playerHealth<=0)
+       if(currentHealth<=0)
         {
             transform.position = checkpointScript.playerRespawn;
-            playerHealth = 3;
+            currentHealth = maxHealth;
         } 
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if(collider.gameObject.tag.Equals("Enemy"))
-        {
-            playerHealth--;
-            print("Player Hit!\nHealth = "+ playerHealth);
-        }
     }
 }
