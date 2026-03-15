@@ -5,9 +5,9 @@ public class FlashHit : MonoBehaviour
 {
 
     bool isHit;
-    void update()
+    void Update()
     {
-        
+    
     }
     void OnTriggerEnter2D(Collider2D collision)
     {

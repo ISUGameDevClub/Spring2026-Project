@@ -26,7 +26,7 @@ public class HitboxProperties : MonoBehaviour
         if (attackActive == true)
         {
             if(hurtEnemies.Count < enemiesInRange.Count) // if we have yet to damage all enemies in range, damage them
-                deal_damage();
+                DealDamage();
         }
         else
         {
@@ -35,14 +35,17 @@ public class HitboxProperties : MonoBehaviour
     }
 
 
-    public void deal_damage()
+    public void DealDamage()
     {
         foreach (GameObject enemy in enemiesInRange)
         {
             if (hurtEnemies.IndexOf(enemy) == -1) // Negative 1 means they are not found in the list
             {
-               enemy.GetComponent<HealthBC>().TakeDamage(damage,hitStun,knockbackX,gameObject); 
-               hurtEnemies.Add(enemy);
+                HealthBC healthRef = enemy.GetComponent<HealthBC>();
+                if(healthRef != null){
+                    enemy.GetComponent<HealthBC>().TakeDamage(damage,hitStun,knockbackX,gameObject); 
+                    hurtEnemies.Add(enemy);
+                }
             }   
         }
     }
