@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
@@ -5,19 +6,31 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject MenuContainer;
     [SerializeField] GameObject SettingsContainer;
     [SerializeField] GameObject ControlContainer;
-    void Update()
+   
+    public event Action OnPauseMenuClosed;
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            MenuContainer.SetActive(true);
-            Time.timeScale = 0f;
-        }
+        OpenMenu();
     }
 
+    public void OpenMenu()
+    {
+        Time.timeScale = 0.0f;
+        MenuContainer.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        Time.timeScale = 1.0f;
+        MenuContainer.SetActive(false);
+        OnPauseMenuClosed?.Invoke();
+        Destroy(gameObject);
+    }
+    
     public void ResumeButton()
     {
-        MenuContainer.SetActive(false);
-        Time.timeScale = 1.0f;
+        CloseMenu();
     }
 
     public void SettingButton()

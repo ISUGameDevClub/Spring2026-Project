@@ -20,7 +20,7 @@ namespace ISUGameDev.SpearGame
             DashingTowardsSpear,
             InDialogue,
             Stunned,
-            Paused
+            GamePaused
         }
 
         /// <summary>
