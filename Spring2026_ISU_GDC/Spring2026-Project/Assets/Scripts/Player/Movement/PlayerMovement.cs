@@ -243,4 +243,12 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(rotator);
         isFacingRight = !isFacingRight;
     }
+
+    /// <summary>
+    /// Used by external scripts to immediately cease all movement/sliding
+    /// </summary>
+    public void StopAllCurrentMovement()
+    {
+        rb.linearVelocity = Vector2.zero;
+    }
 }

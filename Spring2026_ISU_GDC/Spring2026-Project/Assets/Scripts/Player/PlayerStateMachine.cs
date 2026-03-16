@@ -32,6 +32,11 @@ public class PlayerStateMachine : MonoBehaviour
     {
         BasePlayerState newPlayerState = GetRuntimePlayerStateFromChildObjects(newPlayerStateType);
 
+        if (newPlayerState == null)
+        {
+            Debug.LogError("Couldn't find player state with name " + newPlayerStateType.ToString() + "in the scene.");
+        }
+        
         currentState = newPlayerState;
         currentState.ApplyMovementModiferForState(movement);
 

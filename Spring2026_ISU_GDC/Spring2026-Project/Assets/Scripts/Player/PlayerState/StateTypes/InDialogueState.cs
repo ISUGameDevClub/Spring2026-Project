@@ -11,7 +11,8 @@ public class InDialogueState : BasePlayerState
     }
 
     public override void ApplyMovementModiferForState(PlayerMovement playerMovement)
-    {
+    { 
+       playerMovement.StopAllCurrentMovement();
        playerMovement.enabled = false;
     }
 }

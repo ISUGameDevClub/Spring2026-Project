@@ -16,5 +16,5 @@ MonoBehaviour:
   - hello
   - whats up
   - bye
-  characterIcon: {fileID: 0}
-  characterName: 
+  characterIcon: {fileID: -4120460466248913598, guid: 80852cb3de8fa744b86d892181582082, type: 3}
+  characterName: Jeff

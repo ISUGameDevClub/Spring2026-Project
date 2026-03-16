@@ -37,7 +37,7 @@ public class EnemyMovement1 : MonoBehaviour
             {
                 if (enemyPauseTime > 0)
                 {
-                    Debug.Log("I can attack you, but i want you to dodge! I am " + tag + ", and I will attack in : " + pauseTimer.ToString());
+                    //Debug.Log("I can attack you, but i want you to dodge! I am " + tag + ", and I will attack in : " + pauseTimer.ToString());
                     pauseTimer -= Time.deltaTime;
                     if (pauseTimer <= 0f)
                     {
