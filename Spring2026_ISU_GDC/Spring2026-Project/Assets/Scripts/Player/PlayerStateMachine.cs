@@ -12,7 +12,7 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] PlayerAttacks attacks;
     [SerializeField] private GameObject PlayerStatesParent;
 
-    private BasePlayerState currentState;
+    public BasePlayerState currentState {get; private set;}
     private PlayerEventManager playerEventManager;
     
     void Start()

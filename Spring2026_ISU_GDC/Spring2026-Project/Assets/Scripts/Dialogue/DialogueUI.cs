@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using PlayerStateType = ISUGameDev.SpearGame.BasePlayerState.PlayerStateType;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueUI : MonoBehaviour
 {
    //Dialogue menu component references
    [SerializeField] private Canvas dialogueCanvas;
@@ -13,19 +14,16 @@ public class DialogueManager : MonoBehaviour
    [SerializeField] private Image characterIconImage;
    [SerializeField] private float textSpeed = 0.05f;
    
-   //local DialogueManager variables
-   private GameObject player;
-   private PlayerStateType previousState;
+   public event Action OnDialogueUIClosed;
    
-   private void Start()
+   private void Awake()
    {
-      player = GameObject.FindGameObjectWithTag("Player");
+      
       dialogueCanvas.enabled = false;
    }
    
    public void StartDialogue(Dialogue dialogue)
    {
-      player.GetComponent<PlayerStateMachine>().ChangeState(PlayerStateType.InDialogue);
       StartCoroutine(DisplayDialogue(dialogue));
    }
 
@@ -43,8 +41,7 @@ public class DialogueManager : MonoBehaviour
          characterIconImage.sprite = dialogue.characterIcon;
          characterIconImage.gameObject.SetActive(true);
       }
-        
-        
+      
       foreach (string sentence in dialogue.dialogueStrings)
       {
          dialogueText.text = "";
@@ -66,8 +63,6 @@ public class DialogueManager : MonoBehaviour
 
    private void HandleDialogueOver() 
    {
-      player.GetComponent<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
-        
       if (dialogueText != null)
          dialogueText.text = "";
       if (characterNameText != null)
@@ -76,5 +71,7 @@ public class DialogueManager : MonoBehaviour
          characterIconImage.gameObject.SetActive(false);
             
       dialogueCanvas.enabled = false;
+      OnDialogueUIClosed?.Invoke();
+      Destroy(gameObject);
    }
 }

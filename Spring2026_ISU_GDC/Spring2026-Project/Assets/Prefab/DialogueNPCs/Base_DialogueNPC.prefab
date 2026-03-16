@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue: {fileID: 11400000, guid: 49360ac79058741629003afb8cc6859d, type: 2}
+  dialogueUIPrefab: {fileID: 1030786580407506917, guid: b94debb601c10aa4a929d6ac05eeb9e5, type: 3}
+  dialogueState: 5
 --- !u!1 &6843183565237711834
 GameObject:
   m_ObjectHideFlags: 0
