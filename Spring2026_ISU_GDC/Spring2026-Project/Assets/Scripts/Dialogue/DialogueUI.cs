@@ -5,17 +5,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayerStateType = ISUGameDev.SpearGame.BasePlayerState.PlayerStateType;
 
+/// <summary>
+/// Manages the display and interaction of dialogue UI elements in the game.
+/// Responsible for initiating dialogue sequences and signaling when the dialogue UI
+/// is closed to enable further game interactions.
+/// </summary>
 public class DialogueUI : MonoBehaviour
 {
    //Dialogue menu component references
    [SerializeField] private Canvas dialogueCanvas;
+
+   /// <summary>
+   /// A reference to the UI text component responsible for displaying
+   /// the dialogue text during a dialogue sequence. This variable
+   /// is dynamically updated to show the typed-out text corresponding
+   /// to the current dialogue sentence.
+   /// </summary>
    [SerializeField] private TextMeshProUGUI dialogueText;
    [SerializeField] private TextMeshProUGUI characterNameText;
+
+   /// <summary>
+   /// Represents the UI element used to display the character's icon during dialogue sequences.
+   /// Typically shows a visual representation of the character currently speaking in the dialogue.
+   /// </summary>
    [SerializeField] private Image characterIconImage;
    [SerializeField] private float textSpeed = 0.05f;
    
    public event Action OnDialogueUIClosed;
-   
+
+   /// <summary>
+   /// Unity's Awake method is called when the script instance is being loaded.
+   /// Initializes the DialogueUI component by disabling the dialogue canvas at the start,
+   /// ensuring that the dialogue UI is hidden by default.
+   /// </summary>
    private void Awake()
    {
       
@@ -27,6 +49,13 @@ public class DialogueUI : MonoBehaviour
       StartCoroutine(DisplayDialogue(dialogue));
    }
 
+   /// <summary>
+   /// Displays the dialogue sequence on the dialogue UI by iterating through the sentences provided in the
+   /// <see cref="Dialogue"/> object. This method is a coroutine that handles typing out each sentence,
+   /// waits for user input to proceed, and manages the setup and cleanup of the dialogue UI components.
+   /// </summary>
+   /// <param name="dialogue">The <see cref="Dialogue"/> object containing the text, character name, and icon to display.</param>
+   /// <returns>An <see cref="IEnumerator"/> used for coroutine execution to support timed events during dialogue rendering.</returns>
    private IEnumerator DisplayDialogue(Dialogue dialogue)
    {
       dialogueCanvas.enabled = true;
@@ -51,7 +80,16 @@ public class DialogueUI : MonoBehaviour
       }
       HandleDialogueOver();
    }
-    
+
+   /// <summary>
+   /// Types out a given sentence letter by letter in the dialogue text component,
+   /// creating a typewriter effect for the dialogue display.
+   /// </summary>
+   /// <param name="sentence">The sentence to be displayed with a typewriter effect.</param>
+   /// <returns>
+   /// Coroutine enumerator that processes the typewriter effect by gradually
+   /// adding each character of the supplied sentence to the text display.
+   /// </returns>
    IEnumerator TypeSentence(string sentence)
    {
       foreach (char letter in sentence)
@@ -61,6 +99,12 @@ public class DialogueUI : MonoBehaviour
       }
    }
 
+   /// <summary>
+   /// Handles the termination of a dialogue sequence and resets the dialogue UI elements.
+   /// Clears the dialogue text, character name, and character icon, hides the dialogue canvas,
+   /// invokes the OnDialogueUIClosed event to signal that the dialogue UI is closed,
+   /// and destroys the current dialogue UI game object.
+   /// </summary>
    private void HandleDialogueOver() 
    {
       if (dialogueText != null)
