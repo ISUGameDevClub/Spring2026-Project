@@ -63,6 +63,15 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
 
+        if (moveInput < -0.01f || moveInput > 0.01f)
+        {
+            GetComponent<Animator>().SetBool("Running", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Running", false);
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             lastJumpTime = 0;

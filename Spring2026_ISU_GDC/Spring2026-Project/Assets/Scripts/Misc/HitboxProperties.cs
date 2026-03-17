@@ -8,7 +8,7 @@ public class HitboxProperties : MonoBehaviour
     // Type the tag of the target you want to hurt here.
     [SerializeField] string attackTarget;
     [SerializeField] bool attackActive = false;
-    [SerializeField] int damage = 1;
+    private int damage = 1;
 
     [SerializeField] float knockbackX = 0;
     [SerializeField] float knockbackY = 0;
@@ -34,6 +34,11 @@ public class HitboxProperties : MonoBehaviour
         }
     }
 
+    public void SetDamageForHitbox(int damage)
+    {
+        this.damage = damage;
+    }
+    
 
     public void DealDamage()
     {

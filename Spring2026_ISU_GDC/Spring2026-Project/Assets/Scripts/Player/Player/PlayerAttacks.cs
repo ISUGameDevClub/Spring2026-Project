@@ -6,15 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerAttacks : MonoBehaviour
 {
     private Animator playerAnimator;
-    private float comboTimer = 0;
-
-    /*
-    The window of time in seconds that the player has to use the second basic attack. If they use the first basic attack button and then
-    wait longer than the comboWindow time, the next time they use the attack button it will be once again basic attack 1. */
-    [SerializeField] float comboWindow = 1.5f;
-    [SerializeField] AnimationClip[] basicAttacks;
-    private int currentComboAttack = 0;
-
     
     private AttackMechanic currentPrimaryAttack;
     private AttackMechanic currentSecondaryAttack;

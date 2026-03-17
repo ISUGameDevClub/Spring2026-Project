@@ -10,6 +10,7 @@ public class BasicComboAttack : MonoBehaviour, IAttack
     [SerializeField] float comboWindow = 1.5f;
 
     [SerializeField] AnimationClip[] basicAttacks;
+    [SerializeField] private HitboxProperties hitboxForJab;
     private int currentComboAttack = 0;
     private Animator playerAnimator;
     private float comboTimer = 0;
@@ -37,6 +38,9 @@ public class BasicComboAttack : MonoBehaviour, IAttack
     //  Used for when the player attacks while equipped with the spear.
     private void UseComboAttacks()
     {
+        Debug.Log((int)GlobalGameData.Data.basicJabDamage);
+        hitboxForJab.SetDamageForHitbox((int)GlobalGameData.Data.basicJabDamage);
+        
         playerAnimator.Play(basicAttacks[currentComboAttack].name);
         if (currentComboAttack < basicAttacks.Count() - 1)
         {
