@@ -12,6 +12,8 @@ public class EnemyMeleeAttack : MonoBehaviour
     private float lastAttackTime;
     private Sprite cacheSprite;
 
+    bool isAttacking = false;
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
@@ -32,10 +34,12 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         if (Time.time >= lastAttackTime + attackCooldown)
         {
-            cacheSprite = GFX.sprite;
             GFX.sprite = cacheSprite;
-            StopAllCoroutines();
-            StartCoroutine("PlayAttackAnimation");
+
+            if (!isAttacking)
+            {
+                StartCoroutine(PlayAttackAnimation());
+            }
 
             PlayerHealthScript playerHealth = player.GetComponent<PlayerHealthScript>();
 
@@ -48,10 +52,20 @@ public class EnemyMeleeAttack : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        cacheSprite = GFX.sprite;
+    }
+
     IEnumerator PlayAttackAnimation()
     {
-        GFX.sprite = attackingImage; 
+        isAttacking = true;
+
+        GFX.sprite = attackingImage;
         yield return new WaitForSeconds(1f);
+
         GFX.sprite = cacheSprite;
+
+        isAttacking = false;
     }
 }
