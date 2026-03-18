@@ -98,7 +98,7 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         isDashing = true;
     }
 
-    private void PickUpSpear()
+    public void PickUpSpear()
     {
         Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
         transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
@@ -110,7 +110,7 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         spearStuckInWall = false;
         rb.linearVelocity = Vector2.zero;
         FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
-        Destroy(spearObjCache.gameObject);
+        Destroy(spearObjCache?.gameObject);
         Physics2D.IgnoreLayerCollision(transform.root.gameObject.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), false);
         
         giveSpear();

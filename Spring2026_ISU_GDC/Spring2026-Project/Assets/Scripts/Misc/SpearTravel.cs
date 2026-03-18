@@ -53,8 +53,10 @@ public class SpearTravel : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        //TODO: Tie this in with animation and PlayerStateLogic
-        //Destroy(gameObject);
-        //SpearThrow.isSpearInHand = true;
+        //TODO: make this less hacky?
+        FindFirstObjectByType<SpearDashAttack>().PickUpSpear();
+        
+        Destroy(gameObject);
+        
     }
 }
