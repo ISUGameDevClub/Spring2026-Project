@@ -38,7 +38,7 @@ public class BasicComboAttack : MonoBehaviour, IAttack
     //  Used for when the player attacks while equipped with the spear.
     private void UseComboAttacks()
     {
-        Debug.Log((int)GlobalGameData.Data.basicJabDamage);
+        //Debug.Log((int)GlobalGameData.Data.basicJabDamage);
         hitboxForJab.SetDamageForHitbox((int)GlobalGameData.Data.basicJabDamage);
         
         playerAnimator.Play(basicAttacks[currentComboAttack].name);
