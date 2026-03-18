@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private GameObject cameraFollow;
     private float fallSpeedyDampingChangeThreshold;
-
+    
     [Header("Private")]
     private Rigidbody2D rb;
     private PlayerMovementConstants movementConstants;
@@ -62,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
+        
+        float yVel = rb.linearVelocityY;
+        GetComponent<Animator>().SetFloat("PlayerYVelocity", yVel);
 
         if (moveInput < -0.01f || moveInput > 0.01f)
         {
@@ -201,6 +204,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        GetComponent<Animator>().SetTrigger("JustJumped");
+        
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
         rb.AddForce(Vector2.up * movementConstants.JumpForce, ForceMode2D.Impulse);
         isJumping = true;

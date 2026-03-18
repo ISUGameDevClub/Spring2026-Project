@@ -505,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 6502903691621413866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.114, y: 0.161, z: 0}
+  m_LocalPosition: {x: 0.114, y: -0.016, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1121,6 +1121,7 @@ MonoBehaviour:
   aimIndicatorHolder: {fileID: 6676160564688627633}
   aimIndicatorObject: {fileID: 4314850966146697205}
   Spear: {fileID: 5302348069854232140, guid: 8b3dd079695c01442a7eb1c4923cc74f, type: 3}
+  playerAimSpearClip: {fileID: 7400000, guid: 05c2dd5d50eeeb34fa26a086378d3423, type: 2}
   SpearInHand: {fileID: 5744527006584943622}
 --- !u!1 &7977142353510913768
 GameObject:
@@ -1224,8 +1225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e398ef3790fc294890588781f3694cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpearDashAttack
+  playerIdleWithSpearClip: {fileID: 7400000, guid: 19a5ea99255aa1042876b07d1318665a, type: 2}
+  playerDashTowardsSpearClip: {fileID: 7400000, guid: e6aca3112a4bb204bb228f82585dbe9b, type: 2}
   SpearInHand: {fileID: 5744527006584943622}
-  travelSpeed: 15
+  travelSpeed: 25
   pickUpDistance: 1
 --- !u!1001 &445031289507121738
 PrefabInstance:

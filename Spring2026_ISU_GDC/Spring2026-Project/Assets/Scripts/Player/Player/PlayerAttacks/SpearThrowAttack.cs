@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using PlayerStateType = ISUGameDev.SpearGame.BasePlayerState.PlayerStateType;
 
@@ -14,6 +15,8 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
     private bool aimingSpear;
     private Vector2 direction;
     public GameObject Spear;
+    [SerializeField] private AnimationClip playerAimSpearClip;
+    private Animator playerAnimator;
 
     public GameObject SpearInHand;
     public static bool isSpearInHand;
@@ -23,6 +26,11 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
     /// </summary>
     private bool currentlyAimingSpear;
 
+
+    private void Awake()
+    {
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+    }
 
     public AttackMechanic GetAttackImplementation()
     {
@@ -57,6 +65,8 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
         //TODO: make this use Input System
         if (Input.GetMouseButton(1)) // if input is held, update the arrow indicator. replace with input systems
         {
+            playerAnimator.Play(playerAimSpearClip.name);
+            
             //playerAttacks.enabled = false;
             //playerMovement.enabled = false;//disable movement and attacks when aiming
             aimingSpear = true;
@@ -83,6 +93,8 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
     GameObject spawnedSpear;
     private void ThrowSpear()
     {
+        playerAnimator.SetBool("HoldingSpear", false);
+        
         spawnedSpear = Instantiate(Spear);
         spawnedSpear.transform.position = gameObject.transform.position;
         spawnedSpear.transform.up = direction;

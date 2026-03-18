@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using static ISUGameDev.SpearGame.BasePlayerState;
 
@@ -10,10 +11,18 @@ public class SpearDashAttack : MonoBehaviour, IAttack
     private bool spearStuckInWall;
     private bool isDashing;
     private Vector2 dashDirection;
+    private Animator playerAnimator;
+    [SerializeField] private AnimationClip playerIdleWithSpearClip;
+    [SerializeField] private AnimationClip playerDashTowardsSpearClip;
     public GameObject SpearInHand;
 
     [SerializeField] private float travelSpeed = 10f;
     [SerializeField] private float pickUpDistance = 0.3f;
+
+    private void Awake()
+    {
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+    }
 
     public AttackMechanic GetAttackImplementation()
     {
@@ -43,12 +52,16 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         //stop dashing when close enough to spear
         if (Vector3.Distance(transform.root.position, spearObjCache.transform.position) < pickUpDistance)
         {
+            playerAnimator.SetBool("HoldingSpear", true);
+            playerAnimator.Play(playerIdleWithSpearClip.name);
+            
             isDashing = false;
             spearStuckInWall = false;
             rb.linearVelocity = Vector2.zero;
             FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
             Destroy(spearObjCache.gameObject);
             giveSpear();
+            
             return;
         }
 
@@ -61,6 +74,7 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         if (!spearStuckInWall) { return; }
         if (isDashing) { return; }
 
+        playerAnimator.Play(playerDashTowardsSpearClip.name);
         FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.DashingTowardsSpear);
 
         Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;

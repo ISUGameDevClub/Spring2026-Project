@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpearTravel
   rb: {fileID: 3152479753251847387}
-  moveSpeed: 15
+  moveSpeed: 25
+  hitWall: 0
+  st: {fileID: 0}
 --- !u!50 &3152479753251847387
 Rigidbody2D:
   serializedVersion: 5
