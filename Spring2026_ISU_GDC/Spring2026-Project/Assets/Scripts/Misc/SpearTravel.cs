@@ -53,7 +53,8 @@ public class SpearTravel : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        Destroy(gameObject);
-        SpearThrow.isSpearInHand = true;
+        //TODO: Tie this in with animation and PlayerStateLogic
+        //Destroy(gameObject);
+        //SpearThrow.isSpearInHand = true;
     }
 }

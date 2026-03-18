@@ -15,6 +15,7 @@ public class SpearDashAttack : MonoBehaviour, IAttack
     private Animator playerAnimator;
     [SerializeField] private AnimationClip playerIdleWithSpearClip;
     [SerializeField] private AnimationClip playerDashTowardsSpearClip;
+    [SerializeField] private LayerMask wallLayer;
     public GameObject SpearInHand;
 
     [SerializeField] private float travelSpeed = 10f;
@@ -57,7 +58,9 @@ public class SpearDashAttack : MonoBehaviour, IAttack
             return;
         }
 
-        rb.linearVelocity = dashDirection;
+        //recalculate direction each frame so player tracks the spear's actual position
+        Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;
+        rb.linearVelocity = new Vector2(dir.x, dir.y);
     }
 
     private void DashTowardsSpear()
@@ -88,6 +91,9 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         }
         playerObj.transform.rotation = Quaternion.Euler(0, yAngle, zAngle);
         
+        //temporarily disable player collision with walls
+        Physics2D.IgnoreLayerCollision(playerObj.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), true);
+        
         //set update logic in motion for dashing
         isDashing = true;
     }
@@ -105,6 +111,8 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         rb.linearVelocity = Vector2.zero;
         FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
         Destroy(spearObjCache.gameObject);
+        Physics2D.IgnoreLayerCollision(transform.root.gameObject.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), false);
+        
         giveSpear();
     }
     

@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7026987523009810120}
   - component: {fileID: 5915377016828928072}
   m_Layer: 0
-  m_Name: New Tile Palette
+  m_Name: MuspelheimTilePalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

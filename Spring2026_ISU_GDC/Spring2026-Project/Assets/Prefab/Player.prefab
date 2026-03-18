@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 5283043742126928752}
   - component: {fileID: 3536687048401306626}
   - component: {fileID: 844016365402956465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1227,6 +1227,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpearDashAttack
   playerIdleWithSpearClip: {fileID: 7400000, guid: 19a5ea99255aa1042876b07d1318665a, type: 2}
   playerDashTowardsSpearClip: {fileID: 7400000, guid: e6aca3112a4bb204bb228f82585dbe9b, type: 2}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 128
   SpearInHand: {fileID: 5744527006584943622}
   travelSpeed: 25
   pickUpDistance: 1
