@@ -284,12 +284,12 @@ GameObject:
   - component: {fileID: 349921936}
   - component: {fileID: 349921935}
   m_Layer: 0
-  m_Name: Dog barking sound trigger
+  m_Name: Glaceon sound trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &349921934
 Transform:
   m_ObjectHideFlags: 0
@@ -366,11 +366,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -113308623
-      Data2: 1263271310
-      Data3: -1391092290
-      Data4: 1919117235
-    Path: event:/TestEvent(Dog Bark)
+      Data1: -1488487460
+      Data2: 1200934005
+      Data3: -2026843237
+      Data4: -2092368083
+    Path: event:/GlaceonCry
   Event: 
   EventPlayTrigger: 5
   EventStopTrigger: 0
@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 1837917852}
   - component: {fileID: 1837917853}
   m_Layer: 0
-  m_Name: Dog barking sound when press P
+  m_Name: Drowzee sound when press P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1294,11 +1294,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundTest
   dogBark:
     Guid:
-      Data1: -113308623
-      Data2: 1263271310
-      Data3: -1391092290
-      Data4: 1919117235
-    Path: event:/TestEvent(Dog Bark)
+      Data1: 2102405609
+      Data2: 1233565963
+      Data3: 498042778
+      Data4: 2032620879
+    Path: event:/DrowzeeCry
 --- !u!1 &1884569264
 GameObject:
   m_ObjectHideFlags: 0
