@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Prototype Scenes/Transitions/TransitionPrototype1.unity
+    guid: a5bea6e8c82d0c4408904e66d6d71597
+  - enabled: 1
+    path: Assets/Scenes/Prototype Scenes/Transitions/TransitionPrototype2.unity
+    guid: e36034edcf23ca84b868460370e05380
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
