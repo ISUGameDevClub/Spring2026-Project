@@ -3256,6 +3256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4508121442728702423, guid: 693a4c2fe36c84346b02f8ec5c0ef265, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5033475531400576398, guid: 693a4c2fe36c84346b02f8ec5c0ef265, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3592,7 +3596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2098604941
 SpriteRenderer:
   serializedVersion: 2
