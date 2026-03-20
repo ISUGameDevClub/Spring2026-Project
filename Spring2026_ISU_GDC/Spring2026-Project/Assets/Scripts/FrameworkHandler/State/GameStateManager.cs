@@ -1,6 +1,7 @@
 using System;
 using Nomad.Core.Events;
 using Nomad.Core.Logger;
+using Nomad.Core.ServiceRegistry.Globals;
 
 namespace FrameworkHandler.State
 {
@@ -58,7 +59,7 @@ namespace FrameworkHandler.State
 		private GameStateManager()
 		{
 			var eventFactory = ServiceLocator.GetService<IGameEventRegistryService>();
-			_stateChanged = eventFactory.GetEvent<GameStateChangedEventArgs>(nameof(GameStateManager), nameof(GameStateChanged));
+			_stateChanged = eventFactory.GetEvent<GameStateChangedEventArgs>(nameof(GameStateChanged), nameof(GameStateManager));
 
 			_logger = ServiceLocator.GetService<ILoggerService>();
 			_category = _logger.CreateCategory(nameof(GameStateManager), LogLevel.Info, true);
@@ -77,10 +78,10 @@ namespace FrameworkHandler.State
 			switch (GameState)
 			{
 				case GameState.TitleScreen:
-					_logger.PrintWarning(in _category, "GameStateManager.PauseGame: attempted to pause game from title screen.");
+					_category.PrintWarning("GameStateManager.PauseGame: attempted to pause game from title screen.");
 					break;
 				case GameState.Paused:
-					_logger.PrintWarning(in _category, "GameStateManager.PauseGame: game is already paused.");
+					_category.PrintWarning("GameStateManager.PauseGame: game is already paused.");
 					break;
 				case GameState.Level:
 					SetGameState(GameState.Paused);
@@ -104,10 +105,10 @@ namespace FrameworkHandler.State
 			switch (GameState)
 			{
 				case GameState.TitleScreen:
-					_logger.PrintWarning(in _category, "GameStateManager.UnPauseGame: attempted to unpause game from title screen.");
+					_category.PrintWarning("GameStateManager.UnPauseGame: attempted to unpause game from title screen.");
 					break;
 				case GameState.Level:
-					_logger.PrintWarning(in _category, "GameStateManager.UnPauseGame: game isn't paused, but function is called.");
+					_category.PrintWarning("GameStateManager.UnPauseGame: game isn't paused, but function is called.");
 					break;
 				case GameState.Paused:
 					SetGameState(GameState.Level);
@@ -131,10 +132,10 @@ namespace FrameworkHandler.State
 			switch (GameState)
 			{
 				case GameState.Level:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateTitleScreen: attempted to activate title screen from a level without using the pause menu.");
+					_category.PrintWarning("GameStateManager.ActivateTitleScreen: attempted to activate title screen from a level without using the pause menu.");
 					break;
 				case GameState.TitleScreen:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateTitleScreen: title screen state reactivated.");
+					_category.PrintWarning("GameStateManager.ActivateTitleScreen: title screen state reactivated.");
 					break;
 				case GameState.Paused:
 					SetGameState(GameState.TitleScreen);
@@ -158,10 +159,10 @@ namespace FrameworkHandler.State
 			switch (GameState)
 			{
 				case GameState.Paused:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateLevel: attempted to activate level state from pause menu, use GameStateManager.UnPauseGame instead.");
+					_category.PrintWarning("GameStateManager.ActivateLevel: attempted to activate level state from pause menu, use GameStateManager.UnPauseGame instead.");
 					break;
 				case GameState.Level:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateLevel: level state reactivated.");
+					_category.PrintWarning("GameStateManager.ActivateLevel: level state reactivated.");
 					break;
 				case GameState.TitleScreen:
 					SetGameState(GameState.Level);
@@ -188,10 +189,10 @@ namespace FrameworkHandler.State
 			}
 			else if (GameState == state)
 			{
-				_logger.PrintWarning(in _category, $"GameStateManager.SetGameState: same game state.");
+				_category.PrintWarning($"GameStateManager.SetGameState: same game state.");
 			}
 
-			_logger.PrintLine(in _category, $"GameStateManager.SetState: changing state to '{state}' from '{GameState}...");
+			_category.PrintLine($"GameStateManager.SetState: changing state to '{state}' from '{GameState}...");
 
 			// notify the system
 			TriggerGameStateChange(state);

@@ -10,19 +10,11 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] Slider MusicVolSlider;
     [SerializeField] Slider SFXVolSlider;
     [SerializeField] Button BlindButton;
-    private bool Pressed=false;
-    //private Button myButton;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool Pressed = false;
 
     public void ColorBlindButton()
     {
-        //GameObject buttonGameObject = GameObject.Find("Color Blind Button");
-
-        
+        //GameObject buttonGameObject = GameObject.Find("Color Blind Button");\
         if (Pressed)
         {
             BlindButton.image.color = Color.white;
@@ -44,8 +36,8 @@ public class SettingsMenu : MonoBehaviour
     public void MasterVolumeSlider()
     {
         int vol = (int)MasterVolSlider.value;
-        
-        
+
+
     }
 
     public void EffectVolumeSlider()
