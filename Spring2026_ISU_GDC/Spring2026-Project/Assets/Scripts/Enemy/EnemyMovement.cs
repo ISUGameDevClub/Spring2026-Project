@@ -1,3 +1,4 @@
+using Nomad.Core.Events;
 using UnityEngine;
 
 public class EnemyMovement1 : MonoBehaviour
@@ -15,18 +16,31 @@ public class EnemyMovement1 : MonoBehaviour
     private Rigidbody2D enemyRigid;
     private float playerDist;
     private float timer = 0f;
+    
+    /// <summary>
+    /// A continually updated position that the enemy will move towards
+    /// </summary>
+    private Vector3 targetPosition;
+    
+    /// <summary>
+    /// Event system reference to subscribe OnPlayerMove to event 
+    /// </summary>
+    private IGameEvent<Vector3> _onPlayerMoveEvent;
+    
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRigid = GetComponent<Rigidbody2D>();
         
-        
+        _onPlayerMoveEvent = GameEventRegistry.GetEvent<Vector3>("OnPlayerMoveEvent", nameof(EnemyMovement1));
+        _onPlayerMoveEvent.Subscribe(this, OnPlayerMove);
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerDist = Mathf.Abs(playerTransform.position.x - transform.position.x);
+        //playerDist = Mathf.Abs(playerTransform.position.x - transform.position.x);
+        playerDist = Mathf.Abs(targetPosition.x - transform.position.x);
         if (playerDist > enemyRange)
         {
             Move();
@@ -57,7 +71,7 @@ public class EnemyMovement1 : MonoBehaviour
 
     void Move()
     {
-        float direction = playerTransform.position.x - transform.position.x;
+        float direction = targetPosition.x - transform.position.x;
         // if positive, then enemy is to the left. (needs to move right/positive)
         if (direction > 0)
         {
@@ -80,5 +94,15 @@ public class EnemyMovement1 : MonoBehaviour
         {
             Debug.Log("replace with attack function");
         }
+    }
+
+    /// <summary>
+    /// An event callback that is called when the player moves.
+    /// </summary>
+    /// <param name="playerPos">New position of player upon moving</param>
+    void OnPlayerMove(in Vector3 newPlayerPosition)
+    {
+        Debug.Log("Player moved" + newPlayerPosition);
+        targetPosition = newPlayerPosition;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4048949010135454447}
   - component: {fileID: 4188102199345818002}
   m_Layer: 0
-  m_Name: StabbyStab
+  m_Name: BaseMovingEnemy
   m_TagString: StabEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

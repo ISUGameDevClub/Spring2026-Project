@@ -1,4 +1,5 @@
 using System.Collections;
+using Nomad.Core.Events;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -32,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
     private int numDoubleJumpsDefault;
 
     private float moveInput;
+    
+    /// <summary>
+    /// Event system reference to invoke OnPlayerMove event globally
+    /// </summary>
+    private IGameEvent<Vector3> _onPlayerMoveEvent;
 
     void Start()
     {
@@ -57,11 +63,18 @@ public class PlayerMovement : MonoBehaviour
         isWallSliding = false;
 
         lastJumpTime = 1;
+        
+        
+        //store reference to event system
+        _onPlayerMoveEvent = GameEventRegistry.GetEvent<Vector3>("OnPlayerMoveEvent", nameof(EnemyMovement1));
     }
 
     void Update()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
+        
+        //Notify EventSystem that player moved
+        _onPlayerMoveEvent.Publish(transform.position);
         
         float yVel = rb.linearVelocityY;
         GetComponent<Animator>().SetFloat("PlayerYVelocity", yVel);
