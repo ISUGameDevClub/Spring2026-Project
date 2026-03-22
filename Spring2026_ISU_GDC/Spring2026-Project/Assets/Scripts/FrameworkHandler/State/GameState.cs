@@ -8,9 +8,9 @@ namespace FrameworkHandler.State {
 	public enum GameState : byte
 	{
 		/// <summary>
-		/// We're in the title screen.
+		/// We're in the menu system.
 		/// </summary>
-		TitleScreen,
+		Menu,
 
 		/// <summary>
 		/// We're in a level.
@@ -21,8 +21,6 @@ namespace FrameworkHandler.State {
 		/// The game's pause menu is being shown, and we've completely halted the main game loop.
 		/// </summary>
 		Paused,
-
-		UpgradeMenu,
 
 		Count
 	}

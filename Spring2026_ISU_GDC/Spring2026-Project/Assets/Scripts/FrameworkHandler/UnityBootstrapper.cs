@@ -1,23 +1,18 @@
 using UnityEngine;
 using Nomad.Core;
-using Nomad.Core.ServiceRegistry.Interfaces;
-using Nomad.Core.ServiceRegistry.Services;
 using Nomad.Core.Events;
 using Nomad.Core.Logger;
 using Nomad.Logger;
 using Nomad.Events;
 using Nomad.CVars;
-using Nomad.CVars.Interfaces;
 using Nomad.EngineUtils;
-using Nomad.Core.EngineUtils;
 using Nomad.FileSystem;
+using Nomad.Core.CVars;
+using Nomad.Core.ServiceRegistry.Globals;
 
 public class UnityBootstrapper : MonoBehaviour
 {
 	private static NomadFrameworkBootstrapper _bootstrapper;
-	private static IServiceRegistry _serviceRegistry;
-
-	private static ServiceLocator _serviceLocator;
 
 #if NOMAD_ENABLE_LOGGER
 	private static ILoggerService _logger;
@@ -36,26 +31,15 @@ public class UnityBootstrapper : MonoBehaviour
 	{
 		Debug.Log("Initializing NomadFramework...");
 
-		var collection = new ServiceCollection();
-		var locator = new Nomad.Core.ServiceRegistry.Services.ServiceLocator(collection);
-		_serviceRegistry = collection;
+		var serviceRegistry = ServiceRegistry.Instance;
+		var serviceLocator = ServiceLocator.Instance;
 
-		_serviceRegistry.RegisterSingleton<IEngineService>(new UnityEngineService());
-
-		_serviceLocator = new ServiceLocator(locator);
-		_bootstrapper = new NomadFrameworkBootstrapper(_serviceRegistry, locator)
-#if NOMAD_ENABLE_LOGGER
+		_bootstrapper = new NomadFrameworkBootstrapper(serviceRegistry, serviceLocator)
 			.AddBootstrapper(new LoggerBootstrapper())
-#endif
-			.AddBootstrapper(new FileSystemBootstrapper())
-
-#if NOMAD_ENABLE_EVENTS
 			.AddBootstrapper(new EventBootstrapper())
-#endif
-
-#if NOMAD_ENABLE_CVARS
 			.AddBootstrapper(new CVarBootstrapper())
-#endif
+			.AddBootstrapper(new EngineBootstrapper())
+			.AddBootstrapper(new FileSystemBootstrapper())
 		;
 		_bootstrapper.Bootstrap();
 	}

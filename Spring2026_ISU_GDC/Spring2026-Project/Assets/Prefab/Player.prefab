@@ -96,50 +96,6 @@ MonoBehaviour:
   knockbackX: 0
   knockbackY: 0
   hitStun: 0.33
---- !u!1 &1428921822841735977
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6810011876643249763}
-  - component: {fileID: 2779710512695376059}
-  m_Layer: 0
-  m_Name: GamePausedState
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6810011876643249763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428921822841735977}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6253550147629403823}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2779710512695376059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428921822841735977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1b2f9de983f454a939ff8045e9abb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GamePausedState
 --- !u!1 &1988537290915428132
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +162,6 @@ Transform:
   - {fileID: 5469938477833650181}
   - {fileID: 789554217935763723}
   - {fileID: 3610091436654016972}
-  - {fileID: 6810011876643249763}
   m_Father: {fileID: 517885810015686614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2786707882829956832
@@ -614,14 +569,15 @@ GameObject:
   - component: {fileID: 8039059425857322619}
   - component: {fileID: 441347286873950702}
   - component: {fileID: 866894367945178312}
+  - component: {fileID: 3729384869306514446}
   - component: {fileID: 5915114662108560871}
   - component: {fileID: 2497859468115165051}
   - component: {fileID: 5111070950753326809}
   - component: {fileID: 5292229908231098266}
   - component: {fileID: 3707601236527096181}
-  - component: {fileID: 5283043742126928752}
   - component: {fileID: 3536687048401306626}
   - component: {fileID: 844016365402956465}
+  - component: {fileID: 7325397213317776131}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -773,6 +729,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.04183784, y: -0.049139857}
   m_Size: {x: 0.3445403, y: 0.82090926}
   m_Direction: 0
+--- !u!114 &3729384869306514446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681619109718579405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe8b97c363736541a4a363ea5355ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Player.PlayerController
+  maxHealth: 100
+  moveSpeed: 0
+  _userInterface: {fileID: 7325397213317776131}
 --- !u!114 &5915114662108560871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,21 +861,6 @@ MonoBehaviour:
   OnPlayerSpearTraveledOffCamera:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5283043742126928752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6681619109718579405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b40f4f4ec2b5c54b9fd20e81a53a754, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerPause
-  pauseUIPrefab: {fileID: 4695485198072429817, guid: 58c5b8aaf6097284fba55a0efb7d5214, type: 3}
-  playerPauseState: 7
-  pauseAction: {fileID: -5932086479926093343, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!95 &3536687048401306626
 Animator:
   serializedVersion: 7
@@ -939,7 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1041,6 +997,20 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7325397213317776131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681619109718579405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be8e65cb8a641b4db45fec0b91dc698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Player.HeadsUpDisplay
+  dialogueUIPrefab: {fileID: 1030786580407506917, guid: b94debb601c10aa4a929d6ac05eeb9e5, type: 3}
+  stateMachine: {fileID: 5292229908231098266}
 --- !u!1 &6702410588215574469
 GameObject:
   m_ObjectHideFlags: 0

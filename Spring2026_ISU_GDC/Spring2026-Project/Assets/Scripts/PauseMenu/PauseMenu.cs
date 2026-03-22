@@ -1,56 +1,116 @@
 using System;
+using FrameworkHandler.State;
+using Nomad.Core.Engine.Globals;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject MenuContainer;
-    [SerializeField] GameObject SettingsContainer;
-    [SerializeField] GameObject ControlContainer;
-   
-    public event Action OnPauseMenuClosed;
+    [SerializeField]
+    private GameObject MenuContainer;
 
+    [SerializeField]
+    private GameObject SettingsContainer;
+
+    [SerializeField]
+    private GameObject ControlContainer;
+
+    [SerializeField]
+    private InputActionReference _pauseAction;
+
+    /// <summary>
+    /// 
+    /// </summary>
     private void Start()
     {
-        OpenMenu();
+        GameStateManager.GameStateChanged.Subscribe(OnGameStateChanged);
+        _pauseAction.action.started += OnPauseActionTriggered;
     }
 
-    public void OpenMenu()
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="context"></param>
+	private void OnPauseActionTriggered(InputAction.CallbackContext context)
+    {
+        GameStateManager.Instance.SetGameState(GameState.Paused);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="args"></param>
+	private void OnGameStateChanged(in GameStateChangedEventArgs args)
+    {
+        if (args.NewState == GameState.Paused)
+        {
+            OpenMenu();
+        }
+        else
+        {
+            CloseMenu();
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void OpenMenu()
     {
         Time.timeScale = 0.0f;
         MenuContainer.SetActive(true);
     }
 
-    public void CloseMenu()
+    /// <summary>
+    /// 
+    /// </summary>
+    private void CloseMenu()
     {
         Time.timeScale = 1.0f;
         MenuContainer.SetActive(false);
-        OnPauseMenuClosed?.Invoke();
+        GameStateManager.Instance.SetGameState(GameState.Level);
         Destroy(gameObject);
     }
     
-    public void ResumeButton()
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ResumeButton()
     {
         CloseMenu();
     }
 
-    public void SettingButton()
+    /// <summary>
+    /// 
+    /// </summary>
+    private void SettingButton()
     {
         MenuContainer.SetActive(false);
         SettingsContainer.SetActive(true);
     }
 
-    public void ControlButton()
+    /// <summary>
+    /// 
+    /// </summary>
+    private void ControlButton()
     {
         MenuContainer.SetActive(false);
         ControlContainer.SetActive(true);
     }
-    public void MainMenuButton()
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void MainMenuButton()
     {
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("");
+        GameStateManager.Instance.SetGameState(GameState.Menu);
     }
 
-    public void DeskTopButton()
+    /// <summary>
+    /// 
+    /// </summary>
+    private void DesktopButton()
     {
-        
+        EngineService.Quit();
     }
 }

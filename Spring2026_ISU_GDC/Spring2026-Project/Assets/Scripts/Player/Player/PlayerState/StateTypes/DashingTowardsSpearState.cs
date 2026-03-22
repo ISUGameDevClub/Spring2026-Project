@@ -1,15 +1,17 @@
-using ISUGameDev.SpearGame;
-using UnityEngine;
+using ISUGameDev.SpearGame.Player.Movement;
 
-public class DashingTowardsSpearState : BasePlayerState
+namespace ISUGameDev.SpearGame.Player.PlayerState.StateTypes
 {
-    private void Awake()
+    public class DashingTowardsSpearState : BasePlayerState
     {
-        this.playerStateType = PlayerStateType.DashingTowardsSpear;
-    }
+        private void Awake()
+        {
+            playerStateType = PlayerStateType.DashingTowardsSpear;
+        }
 
-    public override void ApplyMovementModiferForState(PlayerMovement playerMovement)
-    {
-        playerMovement.enabled = false;
+        public override void ApplyMovementModiferForState(PlayerMovement playerMovement)
+        {
+            playerMovement.enabled = false;
+        }
     }
 }

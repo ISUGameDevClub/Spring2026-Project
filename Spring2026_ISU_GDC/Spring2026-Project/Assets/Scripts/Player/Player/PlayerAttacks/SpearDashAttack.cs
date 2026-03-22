@@ -1,131 +1,131 @@
-using System;
+using ISUGameDev.SpearGame.Player.PlayerState;
 using UnityEngine;
-using static ISUGameDev.SpearGame.BasePlayerState;
 
-/// <summary>
-/// Class to represent the attack for a player dashing to an already thrown spear. Must validate the spear is thrown before executing dash
-/// </summary>
-public class SpearDashAttack : MonoBehaviour, IAttack
+namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 {
-    private GameObject spearObjCache;
-    private Vector3 playerRotCache;
-    private bool spearStuckInWall;
-    private bool isDashing;
-    private Vector2 dashDirection;
-    private Animator playerAnimator;
-    [SerializeField] private AnimationClip playerIdleWithSpearClip;
-    [SerializeField] private AnimationClip playerDashTowardsSpearClip;
-    [SerializeField] private LayerMask wallLayer;
-    public GameObject SpearInHand;
-
-    [SerializeField] private float travelSpeed = 10f;
-    [SerializeField] private float pickUpDistance = 0.3f;
-
-    private void Awake()
+    /// <summary>
+    /// Class to represent the attack for a player dashing to an already thrown spear. Must validate the spear is thrown before executing dash
+    /// </summary>
+    public class SpearDashAttack : MonoBehaviour, IAttack
     {
-        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-    }
+        private GameObject spearObjCache;
+        private Vector3 playerRotCache;
+        private bool spearStuckInWall;
+        private bool isDashing;
+        private Vector2 dashDirection;
+        private Animator playerAnimator;
+        [SerializeField] private AnimationClip playerIdleWithSpearClip;
+        [SerializeField] private AnimationClip playerDashTowardsSpearClip;
+        [SerializeField] private LayerMask wallLayer;
+        public GameObject SpearInHand;
 
-    public AttackMechanic GetAttackImplementation()
-    {
-        return DashTowardsSpear;
-    }
+        [SerializeField] private float travelSpeed = 10f;
+        [SerializeField] private float pickUpDistance = 0.3f;
 
-    private void Start()
-    {
-        FindFirstObjectByType<PlayerEventManager>().OnPlayerSpearStuckInWall.AddListener(OnSpearStuckInWall);
-    }
-
-    private void OnSpearStuckInWall(GameObject spearObj)
-    {
-        //cache the stuck spears location
-        spearObjCache = spearObj;
-        
-        //record that spear was stuck
-        spearStuckInWall = true;
-    }
-
-    private void Update()
-    {
-        if (!isDashing) return;
-
-        Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
-
-        //stop dashing when close enough to spear
-        if (Vector3.Distance(transform.root.position, spearObjCache.transform.position) < pickUpDistance)
+        private void Awake()
         {
-            PickUpSpear();
-            return;
+            playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         }
 
-        //recalculate direction each frame so player tracks the spear's actual position
-        Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;
-        rb.linearVelocity = new Vector2(dir.x, dir.y);
-    }
-
-    private void DashTowardsSpear()
-    {
-        //validate that spear is stuck in wall before executing attack
-        if (!spearStuckInWall) { return; }
-        if (isDashing) { return; }
-
-        //cache players rotation
-        var playerObj = playerAnimator.gameObject;
-        playerRotCache = playerObj.transform.rotation.eulerAngles;
-        
-        playerAnimator.Play(playerDashTowardsSpearClip.name);
-        FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.DashingTowardsSpear);
-
-        //get dash direction
-        Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;
-        dashDirection = new Vector2(dir.x, dir.y);
-        
-        //rotate player to point towards spear
-        float zAngle = Mathf.Atan2(spearObjCache.transform.position.y - transform.root.position.y, 
-            spearObjCache.transform.position.x - transform.root.position.x) * Mathf.Rad2Deg - 90f;
-        float yAngle = 0;
-        if (spearObjCache.transform.position.x < playerObj.transform.position.x)
+        public AttackMechanic GetAttackImplementation()
         {
-            yAngle = 180;
-            zAngle = -zAngle;
+            return DashTowardsSpear;
         }
-        playerObj.transform.rotation = Quaternion.Euler(0, yAngle, zAngle);
-        
-        //temporarily disable player collision with walls
-        Physics2D.IgnoreLayerCollision(playerObj.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), true);
-        
-        //set update logic in motion for dashing
-        isDashing = true;
-    }
 
-    public void PickUpSpear()
-    {
-        Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
-        transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
-        
-        playerAnimator.SetBool("HoldingSpear", true);
-        playerAnimator.Play(playerIdleWithSpearClip.name);
-            
-        isDashing = false;
-        spearStuckInWall = false;
-        rb.linearVelocity = Vector2.zero;
-        FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
-        Destroy(spearObjCache?.gameObject);
-        Physics2D.IgnoreLayerCollision(transform.root.gameObject.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), false);
-        
-        giveSpear();
-    }
-    
+        private void Start()
+        {
+            FindFirstObjectByType<PlayerEventManager>().OnPlayerSpearStuckInWall.AddListener(OnSpearStuckInWall);
+        }
 
-    public void travelToSpear(Vector2 playerDirection)
-    {
-        Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = playerDirection;
-    }
+        private void OnSpearStuckInWall(GameObject spearObj)
+        {
+            //cache the stuck spears location
+            spearObjCache = spearObj;
 
-    public void giveSpear()
-    {
-        SpearInHand.SetActive(true);
-    }
+            //record that spear was stuck
+            spearStuckInWall = true;
+        }
 
+        private void Update()
+        {
+            if (!isDashing) return;
+
+            Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
+
+            //stop dashing when close enough to spear
+            if (Vector3.Distance(transform.root.position, spearObjCache.transform.position) < pickUpDistance)
+            {
+                PickUpSpear();
+                return;
+            }
+
+            //recalculate direction each frame so player tracks the spear's actual position
+            Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;
+            rb.linearVelocity = new Vector2(dir.x, dir.y);
+        }
+
+        private void DashTowardsSpear()
+        {
+            //validate that spear is stuck in wall before executing attack
+            if (!spearStuckInWall) { return; }
+            if (isDashing) { return; }
+
+            //cache players rotation
+            var playerObj = playerAnimator.gameObject;
+            playerRotCache = playerObj.transform.rotation.eulerAngles;
+
+            playerAnimator.Play(playerDashTowardsSpearClip.name);
+            FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.DashingTowardsSpear);
+
+            //get dash direction
+            Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;
+            dashDirection = new Vector2(dir.x, dir.y);
+
+            //rotate player to point towards spear
+            float zAngle = Mathf.Atan2(spearObjCache.transform.position.y - transform.root.position.y,
+                spearObjCache.transform.position.x - transform.root.position.x) * Mathf.Rad2Deg - 90f;
+            float yAngle = 0;
+            if (spearObjCache.transform.position.x < playerObj.transform.position.x)
+            {
+                yAngle = 180;
+                zAngle = -zAngle;
+            }
+            playerObj.transform.rotation = Quaternion.Euler(0, yAngle, zAngle);
+
+            //temporarily disable player collision with walls
+            Physics2D.IgnoreLayerCollision(playerObj.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), true);
+
+            //set update logic in motion for dashing
+            isDashing = true;
+        }
+
+        public void PickUpSpear()
+        {
+            Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
+            transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
+
+            playerAnimator.SetBool("HoldingSpear", true);
+            playerAnimator.Play(playerIdleWithSpearClip.name);
+
+            isDashing = false;
+            spearStuckInWall = false;
+            rb.linearVelocity = Vector2.zero;
+            FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+            Destroy(spearObjCache?.gameObject);
+            Physics2D.IgnoreLayerCollision(transform.root.gameObject.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), false);
+
+            giveSpear();
+        }
+
+        public void travelToSpear(Vector2 playerDirection)
+        {
+            Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = playerDirection;
+        }
+
+        public void giveSpear()
+        {
+            SpearInHand.SetActive(true);
+        }
+    }
 }
