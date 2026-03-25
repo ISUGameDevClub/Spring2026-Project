@@ -20,6 +20,7 @@ public class SpearDashAttack : MonoBehaviour, IAttack
 
     [SerializeField] private float travelSpeed = 10f;
     [SerializeField] private float pickUpDistance = 0.3f;
+    [SerializeField] private ParticleSystem dashParticles;
 
     private void Awake()
     {
@@ -69,12 +70,17 @@ public class SpearDashAttack : MonoBehaviour, IAttack
         if (!spearStuckInWall) { return; }
         if (isDashing) { return; }
 
+        //activate particles
+        dashParticles.Play();
+
         //cache players rotation
         var playerObj = playerAnimator.gameObject;
         playerRotCache = playerObj.transform.rotation.eulerAngles;
         
         playerAnimator.Play(playerDashTowardsSpearClip.name);
         FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.DashingTowardsSpear);
+
+        
 
         //get dash direction
         Vector3 dir = (spearObjCache.transform.position - transform.root.position).normalized * travelSpeed;
