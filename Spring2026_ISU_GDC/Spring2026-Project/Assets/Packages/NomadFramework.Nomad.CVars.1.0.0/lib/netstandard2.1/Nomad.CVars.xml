@@ -1,0 +1,1128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nomad.CVars</name>
+    </assembly>
+    <members>
+        <member name="T:Nomad.CVars.Private.Entities.CVar`1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.Value">
+            <summary>
+            The current value of the CVar.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.DefaultValue">
+            <summary>
+            The default value of the CVar, what it resets to.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.Type">
+            <summary>
+            The CVar's value type.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.Name">
+            <summary>
+            Name of the CVar, should preferrably be prefixed with the system it's tied to, for instance: display.WindowMode
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.Description">
+            <summary>
+            A description of what the CVar does or impacts. Can be empty but preferrably shouldn't be.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.Flags">
+            <summary>
+            The CVar's flags (permissions, abilities, capabilities).
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.IsReadOnly">
+            <summary>
+            Queries if the CVar is marked as "Read-Only". Meaning it cannot change from its <see cref="P:Nomad.CVars.Private.Entities.CVar`1.DefaultValue"/>.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.IsUserCreated">
+            <summary>
+            Queries if the CVar is marked as "User Created". Meaning it was created from a console command.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.IsSaved">
+            <summary>
+            Queries if the CVar is marked as "Archive". Meaning it will be written to the settings configuration file.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.IsHidden">
+            <summary>
+            Queuries if the CVar is allowed to be shown in the console.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Private.Entities.CVar`1.ValueChanged">
+            <summary>
+            Event triggered the <see cref="P:Nomad.CVars.Private.Entities.CVar`1.Value"/> changes.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.#ctor(Nomad.Core.Events.IGameEventRegistryService,Nomad.CVars.ValueObjects.CVarCreateInfo{`0}@)">
+             <summary>
+            
+             </summary>
+             <param name="eventFactory"></param>
+             <param name="createInfo"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.Reset">
+            <summary>
+            Resets the cvar's <see cref="P:Nomad.CVars.Private.Entities.CVar`1.Value"/> to the <see cref="P:Nomad.CVars.Private.Entities.CVar`1.DefaultValue"/>.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.SetFromString(System.String)">
+            <summary>
+            Sets the CVar's <see cref="P:Nomad.CVars.Private.Entities.CVar`1.Value"/>.
+            </summary>
+            <param name="value">The value to set the CVar's <see cref="P:Nomad.CVars.Private.Entities.CVar`1.Value"/> to.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.Set(`0)">
+            <summary>
+            Sets the CVar's <see cref="P:Nomad.CVars.Private.Entities.CVar`1.Value"/> to the given value.
+            </summary>
+            <param name="value">The new value of the CVar.</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.GetDecimalValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.GetIntegerValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.GetUIntegerValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.GetStringValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.GetBooleanValue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.GetValue``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.SetDecimalValue(System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.SetIntegerValue(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.SetUIntegerValue(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.SetBooleanValue(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.SetStringValue(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVar`1.op_Implicit(Nomad.CVars.Private.Entities.CVar{`0})~`0">
+            <summary>
+            An implicit conversion operator to smooth over abstraction when interacting with the CVar API.
+            </summary>
+            <param name="cvar"></param>
+        </member>
+        <member name="T:Nomad.CVars.Private.Entities.CVarConverter`1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.#ctor(Nomad.CVars.ValueObjects.CVarType,`0)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="defaultValue"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.GetStringValue">
+            <summary>
+            Retrieves the CVar's <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> as a string.
+            </summary>
+            <returns>The <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> in string format.</returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.GetUIntegerValue">
+            <summary>
+            Retrieves the CVar's <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> as a 32-bit integer.
+            </summary>
+            <returns>The <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> in 32-bit integer format, 0 by default if int.TryParse failed</returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.GetIntegerValue">
+            <summary>
+            Retrieves the CVar's <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> as a 32-bit integer.
+            </summary>
+            <returns>The <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> in 32-bit integer format, 0 by default if int.TryParse failed</returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.GetDecimalValue">
+            <summary>
+            Retrieves the CVar's <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> as a 32-bit floating-point.
+            </summary>
+            <returns>The <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> in 32-bit floating-point format, 0 by default if float.TryParse failed</returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.GetBooleanValue">
+            <summary>
+            Retrieves the CVar's <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> as an 8-bit boolean.
+            </summary>
+            <returns>The <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> in 8-bit boolean format, false by default if bool.TryParse failed</returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.GetValue``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T1"></typeparam>
+             <returns></returns>
+             <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.SetIntegerValue(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.SetUIntegerValue(System.UInt32)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.SetBooleanValue(System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.SetDecimalValue(System.Single)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.SetStringValue(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.SetValue``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <param name="value"></param>
+            <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Entities.CVarConverter`1.TryConvertStringToType(System.String,System.Type,System.Object@)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <param name="targetType"></param>
+             <param name="result"></param>
+             <returns></returns>
+             <exception cref="T:System.NotSupportedException">Thrown if the provided <paramref name="targetType"/> isn't a valid CVar <see cref="F:Nomad.CVars.Private.Entities.CVarConverter`1._value"/> type.</exception>
+        </member>
+        <member name="T:Nomad.CVars.Private.Repositories.ConfigFileReader">
+            <summary>
+            Loads configuration values from the provided .ini file
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.ConfigFileReader.#ctor(Nomad.Core.FileSystem.IFileSystem,Nomad.Core.Logger.ILoggerService,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileSystem"></param>
+            <param name="logger"></param>
+            <param name="configFile"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.ConfigFileReader.TryGetValue(System.String,System.String@)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="value"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.CVars.Private.Repositories.ConfigFileWriter">
+            <summary>
+            Writes CVars and CVarGroups to a configuration file, specifically in .ini format.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.ConfigFileWriter.#ctor(System.String,Nomad.Core.Logger.ILoggerService,Nomad.CVars.Interfaces.ICVarSystemService,Nomad.Core.FileSystem.IFileSystem,System.Collections.Generic.IEnumerable{Nomad.CVars.Interfaces.ICVar}@)">
+            <summary>
+            
+            </summary>
+            <param name="configFile"></param>
+            <param name="logger"></param>
+            <param name="cvarSystem"></param>
+            <param name="fileSystem"></param>
+            <param name="cvars"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.ConfigFileWriter.WriteHeader">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.ConfigFileWriter.WriteVariable(Nomad.CVars.Interfaces.ICVar@)">
+            <summary>
+            Writes a cvar's value to the configuration file
+            </summary>
+            <param name="cvar">The cvar to serialize</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.ConfigFileWriter.WriteGroup(Nomad.CVars.Private.Repositories.CVarGroup@)">
+             <summary>
+            
+             </summary>
+             <param name="group"></param>
+        </member>
+        <member name="T:Nomad.CVars.Private.Repositories.CVarGroup">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.CVarGroup.#ctor(System.String,Nomad.Core.Logger.ILoggerService,Nomad.CVars.Interfaces.ICVarSystemService)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="logger"></param>
+             <param name="cvarSystem"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.CVarGroup.Add(Nomad.Core.Util.InternString)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+        </member>
+        <member name="T:Nomad.CVars.Private.Repositories.IniLoader">
+            <summary>
+            Loads key-value pairs from .ini files, specifically configuration files
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.IniLoader.#ctor(System.String,Nomad.Core.Logger.ILoggerService,Nomad.Core.FileSystem.IFileSystem)">
+             <summary>
+            
+             </summary>
+             <param name="configFile"></param>
+             <param name="logger"></param>
+             <param name="fileSystem"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.IniLoader.LoadConfigValue(System.String,System.Int32@)">
+            <summary>
+            Loads a configuration value in the form of an integer.
+            </summary>
+            <param name="name">The name of the key of the configuration value</param>
+            <param name="value">The output value</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.IniLoader.LoadConfigValue(System.String,System.Single@)">
+            <summary>
+            Loads a configuration value in the form of a float
+            </summary>
+            <param name="name">The name of the key of the configuration value</param>
+            <param name="value">The output value</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.IniLoader.LoadConfigValue(System.String,System.Boolean@)">
+            <summary>
+            Loads a configuration value in the form of a boolean
+            </summary>
+            <param name="name">The name of the key of the configuration value</param>
+            <param name="value">The output value</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Repositories.IniLoader.LoadConfigValue(System.String,System.String@)">
+            <summary>
+            Loads a configuration value in the form of a string
+            </summary>
+            <param name="name">The name of the key of the configuration value</param>
+            <param name="value">The output value</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarFactory.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.CVars.Private.Services.CVarLocator">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarLocator.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarLocator.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarLocator.CVarExists``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarLocator.CVarExists(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarLocator.GetCVar(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarLocator.GetCVars">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.CVars.Private.Services.CVarSystem">
+            <summary>
+            Global manager for CVars.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.#ctor(Nomad.Core.Events.IGameEventRegistryService,Nomad.Core.FileSystem.IFileSystem,Nomad.Core.Logger.ILoggerService)">
+             <summary>
+            
+             </summary>
+             <param name="eventFactory"></param>
+             <param name="fileSystem"></param>
+             <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Register(Nomad.CVars.Interfaces.ICVar)">
+             <summary>
+            
+             </summary>
+             <param name="cvar"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Register``1(Nomad.CVars.ValueObjects.CVarCreateInfo{``0}@)">
+            <summary>
+            Registers a CVar with the global CVarSystem and adds it to the CVar cache.
+            </summary>
+            <typeparam name="T">The internal type of the cvar's value.</typeparam>
+            <param name="createInfo">The cvar's creation info.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Unregister(Nomad.CVars.Interfaces.ICVar)">
+            <summary>
+            Removes the given CVar from the cache.
+            </summary>
+            <param name="cvar">The cvar to remove</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.AddGroup(Nomad.CVars.Private.Repositories.CVarGroup@)">
+             <summary>
+            
+             </summary>
+             <param name="group"></param>
+             <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Find(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.TryFind``1(System.String,Nomad.CVars.Interfaces.ICVar{``0}@)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="name"></param>
+             <param name="cvar"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Save(System.String)">
+            <summary>
+            Writes all CVars and their corresponding groups to the provided configuration file in .ini format
+            </summary>
+            <param name="configFile">The file to write .ini values tos</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Load(System.String)">
+            <summary>
+            Loads cvar values from the provided configuration file.
+            </summary>
+            <param name="configFile">The file to load .ini values from</param>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GetCVars">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GetCVarsInGroup(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="groupName"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GroupExists(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="groupName"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.Restart">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.CVarExists(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.CVarExists``1(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GetCVar``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="name"></param>
+             <returns></returns>
+             <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GetCVar(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GetCVarsWithValueType``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.Services.CVarSystem.GetCVarGroup(System.String,Nomad.CVars.Private.Repositories.CVarGroup@)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="group"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.CVars.Private.ValueObjects.CVarMetadata">
+            <summary>
+            Holds all a <see cref="T:Nomad.CVars.Interfaces.ICVar"/>'s metadata.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.ValueObjects.CVarMetadata.#ctor(System.String,System.String,Nomad.CVars.ValueObjects.CVarFlags,Nomad.CVars.ValueObjects.CVarType)">
+            <summary>
+            Creates a new CVarMetadata object.
+            </summary>
+            <param name="name">The CVar's name.</param>
+            <param name="description">The CVar's description.</param>
+            <param name="flags">The CVar's flags.</param>
+            <param name="type">The CVar's type.</param>
+        </member>
+        <member name="T:Nomad.CVars.Private.ValueObjects.CVarValidator`1">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Private.ValueObjects.CVarValidator`1.#ctor(System.Func{`0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <param name="validator"></param>
+        </member>
+        <member name="M:Nomad.CVars.Private.ValueObjects.CVarValidator`1.ValidateValue(`0)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.ValueObjects.CVarValidator`1.IsValidName(System.String)">
+            <summary>
+            Ensures the provided <paramref name="name"/> string doesn't contain any invalid non alphanumeric characters
+            </summary>
+            <param name="name">The name to check</param>
+            <returns>Returns true if the name is valid</returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.ValueObjects.CVarValidator`1.ValidateCVarType">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Private.ValueObjects.CVarValidator`1.IsValidNameCharacter(System.Char)">
+             <summary>
+            
+             </summary>
+             <param name="c"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.CVars.CVarBootstrapper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.CVarBootstrapper.Initialize(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+            <summary>
+            Initializes the CVar system.
+            </summary>
+            <param name="registry"></param>
+            <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.CVars.CVarBootstrapper.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.CVars.Events.CVarValueChangedEventArgs`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Nomad.CVars.Events.CVarValueChangedEventArgs`1.OldValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Events.CVarValueChangedEventArgs`1.NewValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Events.CVarValueChangedEventArgs`1.#ctor(`0,`0)">
+            <summary>
+            
+            </summary>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="T:Nomad.CVars.Interfaces.ICVar">
+            <summary>
+            The generic interface for a Configurable-Variable, or CVar. Originates from the Quake engine brought up to .NET standards to make runtime testing much easier for all game developers.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.Name">
+            <summary>
+            The CVar's name.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.Description">
+            <summary>
+            The CVar's description. This is a required element.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.Type">
+            <summary>
+            The CVar's internal data type. This cannot be changed after creation.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.Flags">
+            <summary>
+            The CVar's permission structure. Various flags assigned at creation carry different requirements/responsibilities.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.IsSaved">
+            <summary>
+            <c>true</c> if the cvar will be saved and loaded from the configuration file.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.IsReadOnly">
+            <summary>
+            <c>true</c> if the cvar's value cannot be changed after creation.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.IsUserCreated">
+            <summary>
+            <c>true</c> if the cvar was created from the console or by the user.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar.IsHidden">
+            <summary>
+            <c>true</c> if the cvar cannot be shown in the console.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.GetDecimalValue">
+            <summary>
+            Retrieves the CVar's 32-bit floating point value. If the CVar was not created as a 32-bit floating point value, an <see cref="T:System.InvalidCastException"/> will be thrown.
+            </summary>
+            <returns>The CVar's internal 32-bit floating point value.</returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.GetIntegerValue">
+            <summary>
+            Retrieves the CVar's 32-bit signed integer value. If the CVar was not created as a signed 32-bit integer value, an <see cref="T:System.InvalidCastException"/> will be thrown.
+            </summary>
+            <returns>The CVar's internal 32-bit signed integer value.</returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.GetUIntegerValue">
+            <summary>
+            Retrieves the CVar's 32-bit unsigned integer value. If the CVar was not created as an unsigned 32-bit integer value, an <see cref="T:System.InvalidCastException"/> will be thrown.
+            </summary>
+            <returns>The CVar's internal 32-bit unsigned integer value.</returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.GetStringValue">
+            <summary>
+            Retrieves the CVar's null-terminated string value. If the CVar was not created as null-terminated string value, an <see cref="T:System.InvalidCastException"/> will be thrown.
+            </summary>
+            <returns>The CVar's internal null-terminated string value.</returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.GetBooleanValue">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.GetValue``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.Reset">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.SetFromString(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.SetDecimalValue(System.Single)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.SetIntegerValue(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.SetUIntegerValue(System.UInt32)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.SetBooleanValue(System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVar.SetStringValue(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="value"></param>
+        </member>
+        <member name="T:Nomad.CVars.Interfaces.ICVar`1">
+            <summary>
+            A typed generic CVar interface. Used for referencing CVars in code as seen in the examples provided below.
+            <para>A CVar's type can only be one of the following:</para>
+            <list type="bullet">
+                <item>
+                    <term>Int32</term>
+                    <description>A 32 bit signed integer value.</description>
+                </item>
+                <item>
+                    <term>UInt32</term>
+                    <description>A 32 bit unsigned integer value.</description>
+                </item>
+                <item>
+                    <term>Boolean</term>
+                    <description>An 8 bit boolean true-false value.</description>
+                </item>
+                <item>
+                    <term>Decimal</term>
+                    <description>A 32 bit floating-point value.</description>
+                </item>
+                <item>
+                    <term>String</term>
+                    <description>A null-terminated string value.</description>
+                </item>
+            </list>
+            </summary>
+            <typeparam name="T">The CVar's internal type is limited to the types listed in the <see cref="T:Nomad.CVars.Interfaces.ICVar`1"/>'s documentation.</typeparam>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar`1.Value">
+            <summary>
+            The CVar's current internal value. This can only hold values within the type restrictions of <see cref="T:Nomad.CVars.ValueObjects.CVarType"/>,
+            and whenever this variable changes, the <see cref="P:Nomad.CVars.Interfaces.ICVar`1.ValueChanged"/> event is published.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar`1.DefaultValue">
+            <summary>
+            The value that the CVar was created with. This cannot change.
+            </summary>
+        </member>
+        <member name="P:Nomad.CVars.Interfaces.ICVar`1.ValueChanged">
+            <summary>
+            Event that triggers whenever <see cref="P:Nomad.CVars.Interfaces.ICVar`1.Value"/> changes. Contains the new value and the previous value.
+            </summary>
+        </member>
+        <member name="T:Nomad.CVars.Interfaces.ICVarFactory">
+            <summary>
+            An interface for creating cvars.
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarFactory.Register``1(Nomad.CVars.ValueObjects.CVarCreateInfo{``0}@)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="createInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.CVars.Interfaces.ICVarLocator">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarLocator.GetCVar``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarLocator.GetCVar(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarLocator.CVarExists``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T">The value type of the CVar.</typeparam>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarLocator.CVarExists(System.String)">
+            <summary>
+            Searches the CVar cache for a match of <paramref name="name"/>.
+            </summary>
+            <param name="name">The name of the CVar to search for</param>
+            <returns><b>true</b> if CVar of <paramref name="name"/> exists, <b>false</b> if not.</returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarLocator.GetCVars">
+            <summary>
+            Returns a list of all the currently registered CVars.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.CVars.Interfaces.ICVarSystemService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.Register(Nomad.CVars.Interfaces.ICVar)">
+             <summary>
+            
+             </summary>
+             <param name="cvar"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.Register``1(Nomad.CVars.ValueObjects.CVarCreateInfo{``0}@)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="createInfo"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.Unregister(Nomad.CVars.Interfaces.ICVar)">
+             <summary>
+            
+             </summary>
+             <param name="cvar"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.CVarExists(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.CVarExists``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.GetCVar``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.GetCVar(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.GetCVars">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.GetCVarsWithValueType``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.GetCVarsInGroup(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="groupName"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.GroupExists(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="groupName"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.Restart">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.Load(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="configFile"></param>
+        </member>
+        <member name="M:Nomad.CVars.Interfaces.ICVarSystemService.Save(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="configFile"></param>
+        </member>
+        <member name="T:Nomad.CVars.ValueObjects.CVarCreateInfo`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Name"></param>
+            <param name="DefaultValue"></param>
+            <param name="Description"></param>
+            <param name="Flags"></param>
+            <param name="Validator"></param>
+        </member>
+        <member name="M:Nomad.CVars.ValueObjects.CVarCreateInfo`1.#ctor(System.String,`0,System.String,Nomad.CVars.ValueObjects.CVarFlags,System.Func{`0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Name"></param>
+            <param name="DefaultValue"></param>
+            <param name="Description"></param>
+            <param name="Flags"></param>
+            <param name="Validator"></param>
+        </member>
+        <member name="P:Nomad.CVars.ValueObjects.CVarCreateInfo`1.Name">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.CVars.ValueObjects.CVarCreateInfo`1.DefaultValue">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.CVars.ValueObjects.CVarCreateInfo`1.Description">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.CVars.ValueObjects.CVarCreateInfo`1.Flags">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.CVars.ValueObjects.CVarCreateInfo`1.Validator">
+            <summary></summary>
+        </member>
+        <member name="T:Nomad.CVars.ValueObjects.CVarFlags">
+            <summary>
+            Various flags that can be applied to a <see cref="T:Nomad.CVars.Interfaces.ICVar"/>.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.None">
+            <summary>
+            The default state for a CVar to be in, nothing fancy happens here.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.ReadOnly">
+            <summary>
+            Cannot change after initialization.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.UserCreated">
+            <summary>
+            Created in the console by the user.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.Archive">
+            <summary>
+            Saves the CVar's value to the configuration file (usually settings.ini).
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.Hidden">
+            <summary>
+            Hidden from console auto-completion.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.Developer">
+            <summary>
+            Can only be modified in debug/developer mode.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.Init">
+            <summary>
+            Cannot change from the console at all.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.Reserved1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarFlags.Reserved2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.CVars.ValueObjects.CVarType">
+            <summary>
+            A CVar's internal type.
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarType.UInt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarType.Int">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarType.Decimal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarType.String">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarType.Boolean">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.CVars.ValueObjects.CVarType.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.CVars.ValueObjects.CVarTypeExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.CVars.ValueObjects.CVarTypeExtensions.GetSystemType(Nomad.CVars.ValueObjects.CVarType)">
+            <summary>
+            Gets the system type from a <see cref="T:Nomad.CVars.ValueObjects.CVarType"/>.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Nomad.CVars.ValueObjects.CVarTypeExtensions.GetCVarType(System.Type)">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+    </members>
+</doc>
