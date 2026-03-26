@@ -1,6 +1,7 @@
+using ISUGameDev.SpearGame.Player.Movement;
 using UnityEngine;
 
-namespace ISUGameDev.SpearGame
+namespace ISUGameDev.SpearGame.Player.PlayerState
 {
     /// <summary>
     /// An abstract class representing a PlayerState in game. Sub classes representing states will inherit from this class
@@ -8,21 +9,6 @@ namespace ISUGameDev.SpearGame
     /// </summary>
     public abstract class BasePlayerState : MonoBehaviour
     {
-        /// <summary>
-        /// Represents all types of states a player can be in for combat, dialogue, menu, etc.
-        /// </summary>
-        public enum PlayerStateType
-        {
-            None,
-            RoamingWithSpear,
-            AimingSpear,
-            RoamingWithoutSpear,
-            DashingTowardsSpear,
-            InDialogue,
-            Stunned,
-            GamePaused
-        }
-
         /// <summary>
         /// The player state type for this object. If not defined, returns PlayerStateType.None
         /// </summary>
