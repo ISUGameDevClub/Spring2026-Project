@@ -1,3 +1,9 @@
+using System;
+using Nomad.Core.Engine.Globals;
+using Nomad.Core.Engine.Services;
+using Nomad.Core.Engine.Windowing;
+using Nomad.Core.ServiceRegistry.Globals;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,29 +15,38 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] Slider MasterVolSlider;
     [SerializeField] Slider MusicVolSlider;
     [SerializeField] Slider SFXVolSlider;
-    [SerializeField] Button BlindButton;
+
+    [SerializeField] Dropdown windowModeList;
+    [SerializeField] Toggle vsyncToggle;
+
     private bool Pressed=false;
     //private Button myButton;
     // Update is called once per frame
     void Update()
     {
-        
+        windowModeList.onValueChanged.AddListener(OnWindowModeChanged);
+        vsyncToggle.onValueChanged.AddListener(OnVSyncModeChanged);
     }
 
-    public void ColorBlindButton()
+	private void OnVSyncModeChanged(bool value)
     {
-        //GameObject buttonGameObject = GameObject.Find("Color Blind Button");
+        QualitySettings.vSyncCount = value ? 1 : 0;
+    }
 
-        
-        if (Pressed)
+	private void OnWindowModeChanged(int value)
+    {
+        var windowService = ServiceLocator.GetService<IWindowService>();
+        switch (value)
         {
-            BlindButton.image.color = Color.white;
-            Pressed = false;
-        }
-        else
-        {
-            BlindButton.image.color = Color.gray;
-            Pressed = true;
+            case 0: // windowed
+                windowService.Mode = WindowMode.Windowed;
+                break;
+            case 1: // borderless windowed
+                windowService.Mode = WindowMode.BorderlessWindowed;
+                break;
+            case 2: // fullscreen, technically exclusive fullscreen
+                windowService.Mode = WindowMode.ExclusiveFullscreen;
+                break;
         }
     }
 
@@ -44,8 +59,6 @@ public class SettingsMenu : MonoBehaviour
     public void MasterVolumeSlider()
     {
         int vol = (int)MasterVolSlider.value;
-        
-        
     }
 
     public void EffectVolumeSlider()
