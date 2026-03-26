@@ -1,5 +1,6 @@
 using ISUGameDev.SpearGame.Player;
 using ISUGameDev.SpearGame.Player.PlayerAttacks;
+using FMODUnity;
 using UnityEngine;
 
 public class SpearTravel : MonoBehaviour
@@ -11,6 +12,9 @@ public class SpearTravel : MonoBehaviour
     public bool hitWall;
     private float xAngle;
     private float yAngle;
+
+    [SerializeField] private FMODUnity.EventReference spearbounceSFX;
+
 
     // Update is called once per frame
     void Start()
@@ -36,6 +40,7 @@ public class SpearTravel : MonoBehaviour
         {
             hitWall = true;
             FindFirstObjectByType<PlayerEventManager>().OnPlayerSpearStuckInWall.Invoke(this.gameObject);
+            RuntimeManager.PlayOneShot(spearbounceSFX);
         }
         if(hitWall&&col.gameObject.tag=="Player")
         {

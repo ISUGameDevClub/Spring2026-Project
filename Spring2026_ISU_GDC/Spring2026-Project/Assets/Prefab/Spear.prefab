@@ -182,3 +182,10 @@ MonoBehaviour:
   rb: {fileID: 3152479753251847387}
   moveSpeed: 25
   hitWall: 0
+  spearbounceSFX:
+    Guid:
+      Data1: 692649465
+      Data2: 1294880442
+      Data3: 1715386552
+      Data4: -1786519544
+    Path: event:/spearbounce

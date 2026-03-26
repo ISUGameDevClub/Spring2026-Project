@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 /// <summary>
 /// NOTE: This class is deprecated. It used to be the prototype for the spear throw->dash behavior. It has been refactored into two scripts,
@@ -45,7 +45,7 @@ public class SpearThrow : MonoBehaviour
                 giveSpear();
                 AimSpear();
             }
-            else if (Input.GetMouseButton(0)/* && SpearTravel.hitWall*/)//replace mouse0 with input systems
+            else if (Input.GetMouseButton(0)*//* && SpearTravel.hitWall*//*)//replace mouse0 with input systems
             {
                 travellingToSpear = true;
                 playerDirection = new Vector2((spawnedSpear.transform.position.x - gameObject.transform.position.x)*TravelToSpearSpeed, (spawnedSpear.transform.position.y - gameObject.transform.position.y)*TravelToSpearSpeed);
@@ -113,12 +113,13 @@ public class SpearThrow : MonoBehaviour
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         rb.linearVelocity = playerDirection;
     }
-    /*
+    *//*
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (travellingToSpear&&col.gameObject.tag=="Enemy")
         {
             //deal damage & knockback to any enemies in path
         }
-    */
-    }
+    *//*
+}
+*/
