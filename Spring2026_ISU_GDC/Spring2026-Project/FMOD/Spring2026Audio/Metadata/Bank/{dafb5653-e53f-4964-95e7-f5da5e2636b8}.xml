@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="Bank" id="{dafb5653-e53f-4964-95e7-f5da5e2636b8}">
+		<property name="name">
+			<value>SpearBounceSFX</value>
+		</property>
+		<relationship name="folder">
+			<destination>{98ca9698-7843-4907-b1ab-3a3254ec0a61}</destination>
+		</relationship>
+	</object>
+</objects>

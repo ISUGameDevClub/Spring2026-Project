@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639095614716625339
+  lastModified: 639100694156368343
   FileSizes: []
   Exists: 1
 --- !u!114 &-8687776049601668647
@@ -38,6 +38,33 @@ MonoBehaviour:
     Data4: 2032620879
   Banks:
   - {fileID: 5898916392214339016}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7532521264967121184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/spearbounce
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/spearbounce
+  Guid:
+    Data1: 692649465
+    Data2: 1294880442
+    Data3: 1715386552
+    Data4: -1786519544
+  Banks:
+  - {fileID: -2381810849180272684}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -87,10 +114,28 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639095614716625339
+  lastModified: 639100694156405120
   FileSizes:
   - Name: 
-    Value: 888
+    Value: 974
+  Exists: 1
+--- !u!114 &-2381810849180272684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SpearBounceSFX.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/Desktop/SpearBounceSFX.bank
+  Name: SpearBounceSFX
+  StudioPath: bank:/SpearBounceSFX
+  lastModified: 639100694158724111
+  FileSizes: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -108,21 +153,25 @@ MonoBehaviour:
   - {fileID: -4820269682280054812}
   - {fileID: -8832373105473330866}
   - {fileID: 5898916392214339016}
+  - {fileID: -2381810849180272684}
   EditorEvents:
   - {fileID: -5080122498944163462}
   - {fileID: -8687776049601668647}
+  - {fileID: -7532521264967121184}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8832373105473330866}
   StringsBanks:
   - {fileID: -4820269682280054812}
   cacheVersion: 131858
-  cacheTime: 639095614716625339
+  cacheTime: 639100694158724111
   SerializableEventsDict:
   - key: event:/GlaceonCry
     index: 0
   - key: event:/DrowzeeCry
     index: 1
+  - key: event:/spearbounce
+    index: 2
 --- !u!114 &2067593760226045183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +270,6 @@ MonoBehaviour:
   Path: FMOD/Desktop/PokemonCryTestBank01.bank
   Name: PokemonCryTestBank01
   StudioPath: bank:/PokemonCryTestBank01
-  lastModified: 639095614716625339
+  lastModified: 639100694158050593
   FileSizes: []
   Exists: 1

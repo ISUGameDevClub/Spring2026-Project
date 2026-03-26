@@ -1,0 +1,1233 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nomad.Save</name>
+    </assembly>
+    <members>
+        <member name="T:Nomad.Save.Private.Entities.SaveConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Entities.SaveSectionReader">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.Entities.SaveSectionReader.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.Entities.SaveSectionReader.FieldCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionReader.#ctor(Nomad.Save.Private.Entities.SaveConfig,System.Int32,Nomad.Core.FileSystem.Streams.IMemoryReadStream,Nomad.Core.Logger.ILoggerService)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="index"></param>
+            <param name="reader"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionReader.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionReader.GetField``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fieldName"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionReader.GetString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidCastException"></exception>
+        </member>
+        <member name="T:Nomad.Save.Private.Entities.SaveSectionWriter">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.Entities.SaveSectionWriter.Name">
+            <summary>
+            This section's name.
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.Entities.SaveSectionWriter.FieldCount">
+            <summary>
+            The number of fields in this section.
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionWriter.#ctor(Nomad.Save.Private.Entities.SaveConfig@,Nomad.Core.Logger.ILoggerService,Nomad.Core.Logger.ILoggerCategory,System.String,Nomad.Core.FileSystem.Streams.IMemoryFileWriteStream)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="logger"></param>
+            <param name="category"></param>
+            <param name="name"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionWriter.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionWriter.AddField``1(System.String,``0)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="fieldId"></param>
+             <param name="value"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Entities.SaveSectionWriter.HasField``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="fieldId"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.Registries.SaveCVarRegistry">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Registries.SaveCVarRegistry.RegisterCVars(Nomad.Core.Engine.Services.IEngineService,Nomad.Core.CVars.ICVarSystemService)">
+             <summary>
+            
+             </summary>
+             <param name="engineService"></param>
+             <param name="cvarSystem"></param>
+        </member>
+        <member name="T:Nomad.Save.Private.Repositories.SlotRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Repositories.SlotRepository.#ctor(Nomad.Core.FileSystem.IFileSystem,Nomad.Core.Logger.ILoggerService,Nomad.Save.Private.Entities.SaveConfig)">
+            <summary>
+            
+            </summary>
+            <param name="fileSystem"></param>
+            <param name="logger"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Repositories.SlotRepository.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Repositories.SlotRepository.AddSaveFile(System.String,System.Boolean)">
+            <summary>
+            Checks the save slot cache to see if we already have the slot indexed, if not,
+            it's added.
+            </summary>
+            <param name="name"></param>
+            <param name="autoSave"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Repositories.SlotRepository.GetMetadataList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Repositories.SlotRepository.RefreshSlots">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Repositories.SlotRepository.OnSaveFileChanged(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.BooleanSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.BooleanSerializer.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream,Nomad.Core.Util.Any@)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.BooleanSerializer.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.ByteSerializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.DoubleSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.FieldSerializerRegistry">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.FieldSerializerRegistry.#cctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.FieldSerializerRegistry.Register``1(Nomad.Save.Private.Serialization.FieldSerializers.IFieldSerializer{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="serializer"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.FieldSerializerRegistry.GetSerializer``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+             <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.FieldSerializerRegistry.GetSerializer(System.Type)">
+             <summary>
+            
+             </summary>
+             <param name="type"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.FloatSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.IFieldSerializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.IFieldSerializer`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.IntSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.LongSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.SByteSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.ShortSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.StringSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.StringSerializer.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream,Nomad.Core.Util.Any@)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.StringSerializer.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.UIntSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.UIntSerializer.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream,Nomad.Core.Util.Any@)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Serialization.FieldSerializers.UIntSerializer.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.ULongSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Serialization.FieldSerializers.UShortSerializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Services.AtomicWriterService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.AtomicWriterService.#ctor(Nomad.Core.Engine.Services.IEngineService,Nomad.Core.FileSystem.IFileSystem)">
+             <summary>
+            
+             </summary>
+             <param name="engineService"></param>
+             <param name="fileSystem"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.AtomicWriterService.GetAtomicPathName">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.AtomicWriterService.FinalizeSaveData(System.String,Nomad.Core.FileSystem.Streams.IMemoryFileWriteStream)">
+             <summary>
+            
+             </summary>
+             <param name="fileName"></param>
+             <param name="memoryWriter"></param>
+        </member>
+        <member name="T:Nomad.Save.Private.Services.BackupService">
+            <summary>
+            
+            </summary>
+            <remarks>
+            Every time a new save file is written to, a backup is created of that save file. Which is just a save file with extra header information
+            marking how old it is, what API version it was saved to, and what order it is in the backup chain. If the maximum number of backups is reached
+            when creating a new backup, the oldest backup is deleted.
+            </remarks>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.BackupService.#ctor(Nomad.Save.Private.Entities.SaveConfig,Nomad.Core.FileSystem.IFileSystem)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="fileSystem"></param>
+            <exception cref="T:Nomad.Core.Exceptions.CVarMissing"></exception>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.BackupService.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.BackupService.CreateBackup(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.MigrationService.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Save.Private.Services.SaveDataProvider">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.#ctor(Nomad.Core.Engine.Services.IEngineService,Nomad.Core.Events.IGameEventRegistryService,Nomad.Core.CVars.ICVarSystemService,Nomad.Core.FileSystem.IFileSystem,Nomad.Core.Logger.ILoggerService)">
+            <summary>
+            Creates a new SaveDataProvider object.
+            </summary>
+            <param name="engineService"></param>
+            <param name="eventFactory"></param>
+            <param name="cvarSystem"></param>
+            <param name="fileSystem"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.ListSaveFiles">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.Load(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.Save(System.String,Nomad.Save.ValueObjects.GameVersion)">
+             <summary>
+            
+             </summary>
+             <param name="name"></param>
+             <param name="gameVersion"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.InitConfiguration(Nomad.Core.Engine.Services.IEngineService,Nomad.Core.CVars.ICVarSystemService)">
+             <summary>
+            
+             </summary>
+             <param name="engineService"></param>
+             <param name="cvarSystem"></param>
+             <exception cref="T:Nomad.Core.Exceptions.CVarMissing"></exception>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.OnAutoSaveIntervalChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{System.Int32}@)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveDataProvider.OnAutoSaveEnabledChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{System.Boolean}@)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="T:Nomad.Save.Private.Services.SaveReaderService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveReaderService.#ctor(Nomad.Save.Private.Entities.SaveConfig,Nomad.Save.Private.Repositories.SlotRepository,Nomad.Core.FileSystem.IFileSystem,Nomad.Core.Logger.ILoggerService)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="slotRepository"></param>
+            <param name="fileSystem"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveReaderService.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveReaderService.Nomad#Save#Interfaces#ISaveReaderService#Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveReaderService.FindSection(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.Services.SaveWriterService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveWriterService.#ctor(Nomad.Save.Private.Entities.SaveConfig,Nomad.Save.Private.Services.AtomicWriterService,Nomad.Save.Private.Repositories.SlotRepository,Nomad.Core.FileSystem.IFileSystem,Nomad.Core.Logger.ILoggerService)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="atomicWriter"></param>
+            <param name="slotRepository"></param>
+            <param name="fileSystem"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveWriterService.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveWriterService.Nomad#Save#Interfaces#ISaveWriterService#BeginSave(System.String,Nomad.Save.ValueObjects.GameVersion)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="gameVersion"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveWriterService.Nomad#Save#Interfaces#ISaveWriterService#EndSave(System.String,Nomad.Save.ValueObjects.GameVersion)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="gameVersion"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.Services.SaveWriterService.AddSection(System.String)">
+            <summary>
+            Creates a new section with the id of <paramref name="sectionId"/> and returns it.
+            </summary>
+            <param name="sectionId">The name of the section to add.</param>
+            <returns>The new write-dedicated section.</returns>
+            <exception cref="T:Nomad.Save.Exceptions.DuplicateSectionException">Thrown if <paramref name="sectionId"/> already exists in the section cache.</exception>
+        </member>
+        <member name="T:Nomad.Save.Private.ValueObjects.BackupData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.BackupData.Version">
+            <summary>
+            The API version we used when creating the backup.
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.BackupData.Guid">
+            <summary>
+            The Id of the save file we're backing up.
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.BackupData.CreatedAt">
+            <summary>
+            When the backup was created.
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.BackupData.Number">
+            <summary>
+            The backup's index in the chain.
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.BackupData.#ctor(Nomad.Save.ValueObjects.SaveFileVersion,System.UInt64,System.DateTime,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="version"></param>
+            <param name="guid"></param>
+            <param name="createdAt"></param>
+            <param name="number"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.BackupData.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.BackupData.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.ValueObjects.Checksum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.Checksum.Empty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.Checksum.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.Checksum.#ctor(System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.Checksum.Compute(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.Checksum.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.Checksum.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.Checksum.op_Equality(Nomad.Save.Private.ValueObjects.Checksum,Nomad.Save.Private.ValueObjects.Checksum)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.Checksum.op_Inequality(Nomad.Save.Private.ValueObjects.Checksum,Nomad.Save.Private.ValueObjects.Checksum)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.ValueObjects.SaveField">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveField.#ctor(System.String,Nomad.Core.Util.AnyType,Nomad.Core.Util.Any)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="type"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveField.Write(System.String,Nomad.Save.Private.ValueObjects.SaveField,Nomad.Core.FileSystem.Streams.IWriteStream)">
+            <summary>
+            
+            </summary>
+            <param name="section"></param>
+            <param name="field"></param>
+            <param name="stream"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveField.Read(System.String,System.Int32,Nomad.Core.FileSystem.Streams.IMemoryReadStream)">
+            <summary>
+            Loads a SaveField object into memory from a save file stream.
+            </summary>
+            <param name="section">The section the field is bound to.</param>
+            <param name="index">The index of the field.</param>
+            <param name="stream">The file stream to read from.</param>
+            <returns>A new SaveField object.</returns>
+            <exception cref="T:Nomad.Save.Exceptions.FieldCorruptException">Thrown if the field's data is invalid.</exception>
+        </member>
+        <member name="T:Nomad.Save.Private.ValueObjects.SaveHeader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SaveHeader.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SaveHeader.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SaveHeader.SectionCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SaveHeader.Checksum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveHeader.#ctor(System.String,Nomad.Save.ValueObjects.GameVersion,System.Int32,Nomad.Save.Private.ValueObjects.Checksum)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="version"></param>
+            <param name="sectionCount"></param>
+            <param name="checksum"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveHeader.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream)">
+             <summary>
+            
+             </summary>
+             <param name="writer"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveHeader.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream,System.Boolean@)">
+             <summary>
+            
+             </summary>
+             <param name="reader"></param>
+             <param name="magicMatches"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Private.ValueObjects.SaveSlot">
+            <summary>
+            
+            </summary>
+            <param name="FileName"></param>
+            <param name="Metadata"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SaveSlot.#ctor(System.String,Nomad.Save.ValueObjects.SaveFileMetadata)">
+            <summary>
+            
+            </summary>
+            <param name="FileName"></param>
+            <param name="Metadata"></param>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.SaveSlot.FileName">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.Save.Private.ValueObjects.SaveSlot.Metadata">
+            <summary></summary>
+        </member>
+        <member name="T:Nomad.Save.Private.ValueObjects.SectionHeader">
+            <summary>
+            Represents a save section's header containing the metadata.
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SectionHeader.Name">
+            <summary>
+            The section's name.
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SectionHeader.Checksum">
+            <summary>
+            The section's CRC64.
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SectionHeader.FieldCount">
+            <summary>
+            The amount of written values in the section.
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Private.ValueObjects.SectionHeader.ByteLength">
+            <summary>
+            The total length of the section, used for corruption checking.
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SectionHeader.#ctor(System.String,System.Int32,System.Int32,Nomad.Save.Private.ValueObjects.Checksum)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="byteLength"></param>
+            <param name="fieldCount"></param>
+            <param name="checksum"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SectionHeader.Save(Nomad.Core.FileSystem.Streams.IWriteStream@)">
+             <summary>
+            
+             </summary>
+             <param name="stream"></param>
+        </member>
+        <member name="M:Nomad.Save.Private.ValueObjects.SectionHeader.Load(System.Int32,Nomad.Core.FileSystem.Streams.IMemoryReadStream@)">
+             <summary>
+            
+             </summary>
+             <param name="index"></param>
+             <param name="stream"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Data.EventNames">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Data.EventNames.NAMESPACE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Data.EventNames.SAVE_BEGIN_EVENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Nomad.Save.Data.EventNames.LOAD_BEGIN_EVENT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.Save.Events.LoadBeginEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Events.LoadBeginEventArgs.Reader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Events.LoadBeginEventArgs.#ctor(Nomad.Save.Interfaces.ISaveReaderService)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="T:Nomad.Save.Events.SaveBeginEventArgs">
+            <summary>
+            Event that triggers when <see cref="M:Nomad.Save.Services.ISaveDataProvider.Save(System.String,Nomad.Save.ValueObjects.GameVersion)"/> is called.
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Events.SaveBeginEventArgs.Writer">
+            <summary>
+            The writer service to utilize.
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Events.SaveBeginEventArgs.#ctor(Nomad.Save.Interfaces.ISaveWriterService)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Nomad.Save.Exceptions.DuplicateFieldException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Exceptions.DuplicateFieldException.FieldName">
+            <summary>
+            The field's name.
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Exceptions.DuplicateFieldException.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sectionName"></param>
+            <param name="fieldName"></param>
+        </member>
+        <member name="T:Nomad.Save.Exceptions.DuplicateSectionException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Exceptions.DuplicateSectionException.SectionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Exceptions.DuplicateSectionException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sectionName"></param>
+        </member>
+        <member name="T:Nomad.Save.Exceptions.FieldCorruptException">
+             <summary>
+            
+             </summary>
+             @module Nomad.Save
+        </member>
+        <member name="P:Nomad.Save.Exceptions.FieldCorruptException.SectionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Exceptions.FieldCorruptException.FieldIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Exceptions.FieldCorruptException.#ctor(System.String,System.Int64,System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sectionName"></param>
+            <param name="fieldIndex"></param>
+            <param name="fileOffset"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:Nomad.Save.Exceptions.InvalidFieldTypeException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Exceptions.InvalidFieldTypeException.#ctor(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="attemptedType"></param>
+        </member>
+        <member name="T:Nomad.Save.Exceptions.SaveFileCorruptException">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.Save.Exceptions.SaveFileCorruptException.FileOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Exceptions.SaveFileCorruptException.#ctor(System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileOffset"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:Nomad.Save.Exceptions.SectionCorruptException">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.Save.Exceptions.SectionCorruptException.SectionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Exceptions.SectionCorruptException.SectionIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Exceptions.SectionCorruptException.#ctor(System.String,System.Int64,System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sectionName"></param>
+            <param name="sectionIndex"></param>
+            <param name="fileOffset"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:Nomad.Save.Interfaces.ISaveReaderService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveReaderService.FindSection(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sectionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveReaderService.Load(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:Nomad.Save.Interfaces.ISaveSectionReader">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Interfaces.ISaveSectionReader.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Interfaces.ISaveSectionReader.FieldCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveSectionReader.GetField``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveSectionReader.GetString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Interfaces.ISaveSectionWriter">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.Save.Interfaces.ISaveSectionWriter.Name">
+            <summary>
+            The section's name.
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.Interfaces.ISaveSectionWriter.FieldCount">
+            <summary>
+            The number of fields currently added to the section.
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveSectionWriter.AddField``1(System.String,``0)">
+            <summary>
+            Adds a new field with the data <paramref name="fieldId"/> and <paramref name="value"/>.
+            </summary>
+            <remarks>
+            If a similar field was added to this with the same name and type, a <see cref="T:Nomad.Save.Exceptions.DuplicateFieldException"/> exception will be thrown.
+            </remarks>
+            <example>
+            </example>
+            <typeparam name="T"></typeparam>
+            <param name="fieldId">The field's unique id.</param>
+            <param name="value">The field's value. Must be a valid <see cref="T:Nomad.Core.Util.AnyType"/> to avoid an </param>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveSectionWriter.HasField``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="fieldId"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.Interfaces.ISaveWriterService">
+            <summary>
+            A service for writing persistent game/save data to disk.
+            </summary>
+            <example>
+            Here is an example of how you would utilize this to write some (for example) player data to a save file:
+            
+            </example> 
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveWriterService.AddSection(System.String)">
+            <summary>
+            Creates a new section with the id of <paramref name="sectionId"/> and returns it.
+            </summary>
+            <param name="sectionId">The name of the section to add.</param>
+            <returns>The new write-dedicated section.</returns>
+            <exception cref="T:Nomad.Save.Exceptions.DuplicateSectionException">Thrown if <paramref name="sectionId"/> already exists in the section cache.</exception>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveWriterService.BeginSave(System.String,Nomad.Save.ValueObjects.GameVersion)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="gameVersion"></param>
+        </member>
+        <member name="M:Nomad.Save.Interfaces.ISaveWriterService.EndSave(System.String,Nomad.Save.ValueObjects.GameVersion)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="gameVersion"></param>
+        </member>
+        <member name="T:Nomad.Save.SaveBootstrapper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.Save.SaveBootstrapper.Initialize(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+             <summary>
+            
+             </summary>
+             <param name="registry"></param>
+             <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.Save.SaveBootstrapper.Shutdown">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.Save.Services.ISaveDataProvider">
+             <summary>
+             The interface contract to interacting with the save system module. Handles loading, saving, and general management of persistent game state.
+             </summary>
+             <remarks>
+             This is meant to be multithreaded, so make sure you are taking the proper precautions around state management and loading the data from disk.
+            
+             NOTE: this is v1.0.0, expect changes in the future as the framework matures.
+             </remarks>
+        </member>
+        <member name="M:Nomad.Save.Services.ISaveDataProvider.Save(System.String,Nomad.Save.ValueObjects.GameVersion)">
+            <summary>
+            Writes the current game state to the provided save file given by <paramref name="filepath"/> to disk.
+            </summary>
+            <remarks>
+            Executes on a dedicated worker thread to ensure zero blockage of the UI. However also ensure that when you write the data to the disk
+            that you are locking your persistent data as to not cause a dirty read.
+            </remarks>
+            <param name="filepath">The file to write the persistent game state to.</param>
+            <param name="gameVersion"></param>
+        </member>
+        <member name="M:Nomad.Save.Services.ISaveDataProvider.Load(System.String)">
+            <summary>
+            Reads a save file and loads the information into memory to be then read and processed as the new state. This save file is provided through <paramref name="filepath"/>.
+            </summary>
+            <remarks>
+            Executes on a dedicated worker thread to ensure zero blockage of the UI so that you can put something like a loading screen for the wait down. Ensure that you are
+            properly locking persistent variables to ensure you aren't getting race conditions or doing unsafe things with threads.
+            </remarks>
+            <param name="filepath">The file to read the persistent game data from.</param>
+        </member>
+        <member name="M:Nomad.Save.Services.ISaveDataProvider.ListSaveFiles">
+            <summary>
+            Returns a list of all the currently available save data files in the save system.
+            </summary>
+            <remarks>
+            This is not thread safe.
+            </remarks>
+            <returns>The complete list of save files found in the save system's data path.</returns>
+        </member>
+        <member name="T:Nomad.Save.ValueObjects.GameVersion">
+            <summary>
+            Represents the serialized game version in integer format. This only supports a Major, Minor, and Patch version, all 32-bit unsigned integers.
+            </summary>
+            <remarks>
+            The first two bits are for the major version, next 3 bits are the minor, the rest is dedicated to the patch number.
+            </remarks>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.GameVersion.Major">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.GameVersion.Minor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.GameVersion.Patch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.GameVersion.#ctor(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="major"></param>
+            <param name="minor"></param>
+            <param name="patch"></param>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.GameVersion.ToInt">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.GameVersion.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream)">
+            <summary>
+            Writes the GameVersion to disk.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.GameVersion.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            Reads the GameVersion from disk.
+            </summary>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.Save.ValueObjects.SaveFileMetadata">
+            <summary>
+            The metadata of a persistent game state file. Stores relevant information for debugging, listing, and/or sorting.
+            </summary>
+            <remarks>
+            Retrieving the metadata for all the save files currently available can be done with <see cref="M:Nomad.Save.Services.ISaveDataProvider.ListSaveFiles"/>.
+            </remarks>
+            <param name="SaveName">The save file's name. This is not the actual name, just the user-provided identification.</param>
+            <param name="FileSize">The size of the save file in bytes.</param>
+            <param name="LastAccessYear">The year the save file was last accessed.</param>
+            <param name="LastAccessMonth">The month the save file was last accessed.</param>
+            <param name="LastAccessDay">The day the save file was last accessed.</param>
+            <param name="CreationYear"></param>
+            <param name="CreationMonth"></param>
+            <param name="CreationDay"></param>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.SaveFileMetadata.#ctor(System.String,System.Int64,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            The metadata of a persistent game state file. Stores relevant information for debugging, listing, and/or sorting.
+            </summary>
+            <remarks>
+            Retrieving the metadata for all the save files currently available can be done with <see cref="M:Nomad.Save.Services.ISaveDataProvider.ListSaveFiles"/>.
+            </remarks>
+            <param name="SaveName">The save file's name. This is not the actual name, just the user-provided identification.</param>
+            <param name="FileSize">The size of the save file in bytes.</param>
+            <param name="LastAccessYear">The year the save file was last accessed.</param>
+            <param name="LastAccessMonth">The month the save file was last accessed.</param>
+            <param name="LastAccessDay">The day the save file was last accessed.</param>
+            <param name="CreationYear"></param>
+            <param name="CreationMonth"></param>
+            <param name="CreationDay"></param>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.SaveName">
+            <summary>The save file's name. This is not the actual name, just the user-provided identification.</summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.FileSize">
+            <summary>The size of the save file in bytes.</summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.LastAccessYear">
+            <summary>The year the save file was last accessed.</summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.LastAccessMonth">
+            <summary>The month the save file was last accessed.</summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.LastAccessDay">
+            <summary>The day the save file was last accessed.</summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.CreationYear">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.CreationMonth">
+            <summary></summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileMetadata.CreationDay">
+            <summary></summary>
+        </member>
+        <member name="T:Nomad.Save.ValueObjects.SaveFileVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileVersion.Major">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileVersion.Minor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.Save.ValueObjects.SaveFileVersion.Patch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.SaveFileVersion.#ctor(System.UInt32,System.UInt32,System.UInt64)">
+            <summary>
+            
+            </summary>
+            <param name="major"></param>
+            <param name="minor"></param>
+            <param name="patch"></param>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.SaveFileVersion.Serialize(Nomad.Core.FileSystem.Streams.IWriteStream)">
+            <summary>
+            Writes the version data to a <see cref="T:Nomad.Core.FileSystem.Streams.IWriteStream"/>.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+        </member>
+        <member name="M:Nomad.Save.ValueObjects.SaveFileVersion.Deserialize(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
