@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 070a244648a35604982d264a51c1bfd6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3470957564056196685
+    second: MuspelheimGlowMask_0
+  - first:
+      213: -4426386432544022793
+    second: MuspelheimGlowMask_1
+  - first:
+      213: -2309131910360402424
+    second: MuspelheimGlowMask_2
+  - first:
+      213: 8017027549694192277
+    second: MuspelheimGlowMask_3
+  - first:
+      213: -8808093349691246251
+    second: MuspelheimGlowMask_4
+  - first:
+      213: 4378727309107909115
+    second: MuspelheimGlowMask_5
+  - first:
+      213: 7275498577771579594
+    second: MuspelheimGlowMask_6
+  - first:
+      213: -1884054377943038391
+    second: MuspelheimGlowMask_7
+  - first:
+      213: -4688069092760039902
+    second: MuspelheimGlowMask_8
+  - first:
+      213: 7221099672922487182
+    second: MuspelheimGlowMask_9
+  - first:
+      213: -2957961210814355570
+    second: MuspelheimGlowMask_10
+  - first:
+      213: 1089490597212447827
+    second: MuspelheimGlowMask_11
+  - first:
+      213: 6914504767593001172
+    second: MuspelheimGlowMask_12
+  - first:
+      213: -425683078717137125
+    second: MuspelheimGlowMask_13
+  - first:
+      213: 7971867998636573162
+    second: MuspelheimGlowMask_14
+  - first:
+      213: -7344351124530246526
+    second: MuspelheimGlowMask_15
+  - first:
+      213: 1524226450668784173
+    second: MuspelheimGlowMask_16
+  - first:
+      213: -4784366450087252571
+    second: MuspelheimGlowMask_17
+  - first:
+      213: 6826467499645797194
+    second: MuspelheimGlowMask_18
+  - first:
+      213: -5720892000420025546
+    second: MuspelheimGlowMask_19
+  - first:
+      213: -4589029493533264796
+    second: MuspelheimGlowMask_20
+  - first:
+      213: -1797373118647849173
+    second: MuspelheimGlowMask_21
+  - first:
+      213: 3823034175972928140
+    second: MuspelheimGlowMask_22
+  - first:
+      213: -3006356708741240011
+    second: MuspelheimGlowMask_23
+  - first:
+      213: -7115263370231351515
+    second: MuspelheimGlowMask_24
+  - first:
+      213: 4569602339053808535
+    second: MuspelheimGlowMask_25
+  - first:
+      213: 6309276941253622917
+    second: MuspelheimGlowMask_26
+  - first:
+      213: 1111009401008841399
+    second: MuspelheimGlowMask_27
+  - first:
+      213: -1883044348430855643
+    second: MuspelheimGlowMask_28
+  - first:
+      213: 7815241838023717001
+    second: MuspelheimGlowMask_29
+  - first:
+      213: -3051088587153563816
+    second: MuspelheimGlowMask_30
+  - first:
+      213: -7835136592915626970
+    second: MuspelheimGlowMask_31
+  - first:
+      213: 1267846089861149440
+    second: MuspelheimGlowMask_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9a9f34c7ea4dfc0800000000000000
+      internalID: -3470957564056196685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7feda99ddf05292c0800000000000000
+      internalID: -4426386432544022793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806f27703c054ffd0800000000000000
+      internalID: -2309131910360402424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59aea069414324f60800000000000000
+      internalID: 8017027549694192277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5593c2704cd53c580800000000000000
+      internalID: -8808093349691246251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1dda3c94d54cc30800000000000000
+      internalID: 4378727309107909115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac84fe3c863c7f460800000000000000
+      internalID: 7275498577771579594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9468f21868e7ad5e0800000000000000
+      internalID: -1884054377943038391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MuspelheimGlowMask_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ecc83aff1a0feb0800000000000000
+      internalID: -4688069092760039902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e86f74a63eadd5944ae2f7e011ca2ebb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MuspelheimGlowMask_0: -3470957564056196685
+      MuspelheimGlowMask_1: -4426386432544022793
+      MuspelheimGlowMask_2: -2309131910360402424
+      MuspelheimGlowMask_3: 8017027549694192277
+      MuspelheimGlowMask_4: -8808093349691246251
+      MuspelheimGlowMask_5: 4378727309107909115
+      MuspelheimGlowMask_6: 7275498577771579594
+      MuspelheimGlowMask_7: -1884054377943038391
+      MuspelheimGlowMask_8: -4688069092760039902
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+Spring2026_ISU_GDC/Spring2026-Project/.vscode/settings.json
+Spring2026_ISU_GDC/Spring2026-Project/.vscode/launch.json
+Spring2026_ISU_GDC/Spring2026-Project/.vscode/extensions.json
+Spring2026_ISU_GDC/Spring2026-Project/Spring2026-Project.slnx
+
+# Never ignore DLLs in the FMOD subfolder.
+!/[Aa]ssets/Plugins/FMOD/**/lib/*
+
+# Don't ignore images and gizmos used by FMOD in the Unity Editor.
+!/[Aa]ssets/Gizmos/FMOD/*
+!/[Aa]ssets/Editor Default Resources/FMOD/*
+
+# Ignore the Cache folder since it is updated locally.
+/[Aa]ssets/Plugins/FMOD/Cache/*
+
+# Ignore bank files in the StreamingAssets folder.
+/[Aa]ssets/StreamingAssets/**/*.bank
+/[Aa]ssets/StreamingAssets/**/*.bank.meta
+
+# If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
+# Log files can be ignored.
+fmod_editor.log

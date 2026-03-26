@@ -446,6 +446,14 @@ PrefabInstance:
       propertyPath: comboWindow
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5111070950753326809, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: currentSpear
+      value: 
+      objectReference: {fileID: 1161681439}
+    - target: {fileID: 5111070950753326809, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: travelToSpearSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: m_Name
       value: Player
@@ -455,6 +463,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+--- !u!1 &1161681439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5744527006584943622, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+  m_PrefabInstance: {fileID: 855229412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
