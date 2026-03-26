@@ -1,0 +1,2064 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nomad.FileSystem</name>
+    </assembly>
+    <members>
+        <member name="T:Nomad.FileSystem.Private.BaseStream">
+            <summary>
+            Base implementation of a data stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.BaseStream.Length">
+            <summary>
+            Gets the length of the stream in bytes.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.BaseStream.Position">
+            <summary>
+            Gets or sets the current position within the stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.BaseStream.CanRead">
+            <summary>
+            Gets a value indicating whether the stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.BaseStream.CanWrite">
+            <summary>
+            Gets a value indicating whether the stream supports writing.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.BaseStream.CanSeek">
+            <summary>
+            Gets a value indicating whether the stream supports seeking.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.BaseStream.isDisposed">
+            <summary>
+            The disposal flag.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.BaseStream.Dispose">
+            <summary>
+            Disposes the stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.BaseStream.DisposeAsync">
+            <summary>
+            Asynchronously disposes the stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.BaseStream.Flush">
+            <summary>
+            Clears all buffers for this stream and causes any buffered data to be written.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.BaseStream.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously clears all buffers for this stream and causes any buffered data to be written.
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.BaseStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Sets the position within the current stream.
+            </summary>
+            <param name="offset"></param>
+            <param name="origin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.BaseStream.SetLength(System.Int64)">
+            <summary>
+            Sets the stream's length to <paramref name="length"/>.
+            </summary>
+            <param name="length">The new length of the stream.</param>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.FileStreams.FileReadStream">
+            <summary>
+            Represents a read-only file stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileReadStream.CanRead">
+            <summary>
+            Indicates whether the stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileReadStream.CanWrite">
+            <summary>
+            Indicates whether the stream supports writing.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.FileStreams.FileReadStream._streamReader">
+            <summary>
+            The binary reader for the file stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.#ctor(Nomad.Core.FileSystem.Configs.FileReadConfig)">
+            <summary>
+            Initializes a new instance of the FileReadStream class with the specified file path, mode, and access.
+            </summary>
+            <param name="config">The path to the file to read from.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a sequence of bytes from the file stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.Read(System.Byte[])">
+            <summary>
+            Reads a sequence of bytes from the file stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.Read(System.Span{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Reads a sequence of bytes from the file stream into a span and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">A span of bytes. When this method returns, the span contains the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the span. This can be less than the length of the span if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.Read(System.Span{System.Byte})">
+            <summary>
+            Reads a sequence of bytes from the file stream into a span and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">A span of bytes. When this method returns, the span contains the bytes read from the current source.</param>
+            <returns>The total number of bytes read into the span. This can be less than the length of the span if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads a sequence of bytes from the file stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous read operation, containing the total number of bytes read into the buffer.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadAsync(System.Memory{System.Byte},System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads a sequence of bytes from the file stream into a memory buffer and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">A memory buffer. When this method returns, the buffer contains the bytes read from the current source.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous read operation, containing the total number of bytes read into the buffer.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadToEnd">
+            <summary>
+            Reads all remaining bytes from the current position to the end of the file stream.
+            </summary>
+            <returns>A byte array containing the remaining data in the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadToEndAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads all remaining bytes from the current position to the end of the file stream.
+            </summary>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous read operation, containing a byte array with the remaining data.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.WriteToStream(Nomad.Core.FileSystem.Streams.IWriteStream)">
+            <summary>
+            Writes the entire content of this stream to the provided stream.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.WriteToStreamAsync(Nomad.Core.FileSystem.Streams.IWriteStream,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes the entire content of this stream to the provided stream.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="ct">The token to monitor for cancellation requests.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ToArray">
+            <summary>
+            Reads the entire file stream into a byte array.
+            </summary>
+            <returns>A byte array containing all data from the file stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.Read7BitEncodedInt">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadByte">
+            <summary>
+            Reads an unsigned byte from the file stream.
+            </summary>
+            <returns>The unsigned byte value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadDouble">
+            <summary>
+            Reads a double-precision floating-point number from the file stream.
+            </summary>
+            <returns>The double value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadFloat">
+            <summary>
+            Reads a single-precision floating-point number from the file stream.
+            </summary>
+            <returns>The float value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadFloat32">
+            <summary>
+            Reads a 32-bit floating-point number from the file stream.
+            </summary>
+            <returns>The 32-bit float value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadFloat64">
+            <summary>
+            Reads a 64-bit floating-point number from the file stream.
+            </summary>
+            <returns>The 64-bit double value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadInt">
+            <summary>
+            Reads a 32-bit signed integer from the file stream.
+            </summary>
+            <returns>The 32-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadInt16">
+            <summary>
+            Reads a 16-bit signed integer from the file stream.
+            </summary>
+            <returns>The 16-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadInt32">
+            <summary>
+            Reads a 32-bit signed integer from the file stream.
+            </summary>
+            <returns>The 32-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadInt64">
+            <summary>
+            Reads a 64-bit signed integer from the file stream.
+            </summary>
+            <returns>The 64-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadInt8">
+            <summary>
+            Reads an 8-bit signed integer from the file stream.
+            </summary>
+            <returns>The 8-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadLong">
+            <summary>
+            Reads a 64-bit signed integer from the file stream.
+            </summary>
+            <returns>The 64-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadSByte">
+            <summary>
+            Reads a signed byte from the file stream.
+            </summary>
+            <returns>The signed byte value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadShort">
+            <summary>
+            Reads a 16-bit signed integer from the file stream.
+            </summary>
+            <returns>The 16-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadSingle">
+            <summary>
+            Reads a single-precision floating-point number from the file stream.
+            </summary>
+            <returns>The single-precision float value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadString">
+            <summary>
+            Reads a string from the file stream.
+            </summary>
+            <returns>The string value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadUInt">
+            <summary>
+            Reads a 32-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 32-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadUInt16">
+            <summary>
+            Reads a 16-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 16-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadUInt32">
+            <summary>
+            Reads a 32-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 32-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadUInt64">
+            <summary>
+            Reads a 64-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 64-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadUInt8">
+            <summary>
+            Reads an 8-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 8-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadULong">
+            <summary>
+            Reads a 64-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 64-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadUShort">
+            <summary>
+            Reads a 16-bit unsigned integer from the file stream.
+            </summary>
+            <returns>The 16-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileReadStream.ReadBoolean">
+            <summary>
+            Reads an 8-bit boolean from the file stream.
+            </summary>
+            <returns>The 8-bit boolean value read from the stream.</returns>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.FileStreams.FileStreamBase">
+            <summary>
+            Base implementation of a file stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileStreamBase.CanSeek">
+            <summary>
+            Indicates whether the stream supports seeking.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Position">
+            <summary>
+            Gets or sets the current position within the file stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Length">
+            <summary>
+            Gets the length of the file stream in bytes.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileStreamBase.FilePath">
+            <summary>
+            Gets the file path associated with the file stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileStreamBase.IsOpen">
+            <summary>
+            Indicates whether the file stream is currently open.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.FileStreams.FileStreamBase.fileStream">
+            <summary>
+            The underlying file stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.#ctor(System.String,System.IO.FileMode,System.IO.FileAccess)">
+            <summary>
+            
+            </summary>
+            <param name="filepath"></param>
+            <param name="fileMode"></param>
+            <param name="fileAccess"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Dispose">
+            <summary>
+            Releases all resources used by the file stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.DisposeAsync">
+            <summary>
+            Asynchronously releases all resources used by the file stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.DisposeAsyncCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Close">
+            <summary>
+            Closes the file stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Flush">
+            <summary>
+            Flushes the file stream's buffer to the underlying file.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously flushes the file stream's buffer to the underlying file.
+            </summary>
+            <param name="ct"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Sets the file stream's position to the specified offset based on the given origin.
+            </summary>
+            <param name="offset"></param>
+            <param name="origin"></param>
+            <returns>The new position in the file stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileStreamBase.SetLength(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.FileStreams.FileWriter">
+            <summary>
+            A unified writer that can write to either a text (StreamWriter) or binary (BinaryWriter) stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriter.#ctor(System.IO.StreamWriter)">
+            <summary>
+            Initializes a new instance for text writing.
+            </summary>
+            <param name="writer">The underlying StreamWriter.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriter.#ctor(System.IO.BinaryWriter)">
+            <summary>
+            Initializes a new instance for binary writing.
+            </summary>
+            <param name="writer">The underlying BinaryWriter.</param>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.FileStreams.FileWriteStream">
+            <summary>
+            Represents a write-only file stream.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileWriteStream.CanRead">
+            <summary>
+            Indicates whether the stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.FileStreams.FileWriteStream.CanWrite">
+            <summary>
+            Indicates whether the stream supports writing.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.FileStreams.FileWriteStream._streamWriter">
+            <summary>
+            The binary writer for the file stream.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.FileStreams.FileWriteStream._format">
+            <summary>
+            The current output format of the stream.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.#ctor(Nomad.Core.FileSystem.Configs.FileWriteConfig)">
+            <summary>
+            Initializes a new instance of the FileWriteStream class with the specified file path, mode, and access.
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Flush">
+            <summary>
+            Flushes the file stream's buffer to the underlying file.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Flushes the file stream's buffer to the underlying file.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Write(System.Byte[])">
+            <summary>
+            Writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Write(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only span of bytes. This method copies the contents of the span to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Write(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only span of bytes. This method copies the contents of the span to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous write operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only memory buffer. This method copies the contents of the buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous write operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes a sequence of bytes to the file stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only memory buffer. This method copies the contents of the buffer to the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous write operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.Write7BitEncodedInt(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteByte(System.Byte)">
+            <summary>
+            Writes a byte to the file stream.
+            </summary>
+            <param name="value">The byte value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteDouble(System.Double)">
+            <summary>
+            Writes a double-precision floating-point number to the file stream.
+            </summary>
+            <param name="value">The double value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteFloat(System.Single)">
+            <summary>
+            Writes a single-precision floating-point number to the file stream.
+            </summary>
+            <param name="value">The float value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteFloat32(System.Single)">
+            <summary>
+            Writes a 32-bit floating-point number to the file stream.
+            </summary>
+            <param name="value">The 32-bit float value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteFloat64(System.Double)">
+            <summary>
+            Writes a 64-bit floating-point number to the file stream.
+            </summary>
+            <param name="value">The 64-bit double value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteFromStream(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            Reads all bytes from the specified read stream and writes them to the file stream.
+            </summary>
+            <param name="stream">The read stream to copy from.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteFromStreamAsync(Nomad.Core.FileSystem.Streams.IReadStream,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads all bytes from the specified read stream and writes them to the file stream.
+            </summary>
+            <param name="stream">The read stream to copy from.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous copy operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteInt(System.Int32)">
+            <summary>
+            Writes a 32-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 32-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteInt16(System.Int16)">
+            <summary>
+            Writes a 16-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 16-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteInt32(System.Int32)">
+            <summary>
+            Writes a 32-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 32-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteInt64(System.Int64)">
+            <summary>
+            Writes a 64-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 64-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteInt8(System.SByte)">
+            <summary>
+            Writes an 8-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 8-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteLong(System.Int64)">
+            <summary>
+            Writes a 64-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 64-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteSByte(System.SByte)">
+            <summary>
+            Writes a signed byte to the file stream.
+            </summary>
+            <param name="value">The signed byte value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteShort(System.Int16)">
+            <summary>
+            Writes a 16-bit signed integer to the file stream.
+            </summary>
+            <param name="value">The 16-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteSingle(System.Single)">
+            <summary>
+            Writes a single-precision floating-point number to the file stream.
+            </summary>
+            <param name="value">The single-precision float value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteString(System.String)">
+            <summary>
+            Writes a string to the file stream.
+            </summary>
+            <param name="value">The string value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteUInt(System.UInt32)">
+            <summary>
+            Writes a 32-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 32-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteUInt16(System.UInt16)">
+            <summary>
+            Writes a 16-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 16-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteUInt32(System.UInt32)">
+            <summary>
+            Writes a 32-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 32-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteUInt64(System.UInt64)">
+            <summary>
+            Writes a 64-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 64-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteUInt8(System.Byte)">
+            <summary>
+            Writes an 8-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 8-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteULong(System.UInt64)">
+            <summary>
+            Writes a 64-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 64-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteUShort(System.UInt16)">
+            <summary>
+            Writes a 16-bit unsigned integer to the file stream.
+            </summary>
+            <param name="value">The 16-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteBoolean(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteLine(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteLine(System.ReadOnlySpan{System.Char})">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteLineAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.FileStreams.FileWriteStream.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.FilePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.IsOpen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.#ctor(Nomad.Core.FileSystem.Configs.MemoryFileReadConfig)">
+            <summary>
+            Initializes a new instance of the MemoryFileReadStream class with the specified file path.
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.DisposeAsyncCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.Close">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.Open(System.String)">
+            <summary>
+            Opens the memory file read stream with the specified file path, open mode, and access mode.
+            </summary>
+            <param name="filepath">The path to the file to open.</param>
+            <returns><c>true</c> if the file was opened successfully; otherwise, <c>false.</c></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileReadStream.AllocateBuffer(System.Int64)">
+            <summary>
+            Creates a new <see cref="T:Nomad.Core.Memory.Buffers.IBufferHandle"/> based on the allocation strategy provided.
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.FilePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.IsOpen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.#ctor(Nomad.Core.FileSystem.Configs.MemoryFileWriteConfig)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.DisposeAsyncCore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.Close">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.Flush">
+            <summary>
+            Flushes the memory file write stream to the underlying file.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously flushes the memory file write stream to the underlying file.
+            </summary>
+            <param name="ct">The cancellation token to use for the operation.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.Open(Nomad.Core.FileSystem.Configs.MemoryFileWriteConfig)">
+            <summary>
+            Opens the memory file write stream with the specified file path, open mode, and access mode.
+            </summary>
+            <param name="config"></param>
+            <returns><c>true</c> if the file was opened successfully; otherwise, <c>false.</c></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.WriteLine(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.WriteLine(System.ReadOnlySpan{System.Char})">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.WriteLineAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryFileWriteStream.WriteLineAsync(System.ReadOnlyMemory{System.Char},System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="line"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.CanRead">
+            <summary>
+            Whether the stream can be read from.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.CanWrite">
+            <summary>
+            Whether the stream can be written to.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.#ctor(Nomad.Core.FileSystem.Configs.MemoryReadConfig,System.Boolean)">
+            <summary>
+            Initializes a new instance of the MemoryReadStream class with the specified buffer and length.
+            </summary>
+            <param name="config"></param>
+            <param name="createBuffer"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Flush">
+            <summary>
+            Flushes the stream. (Not implemented for read-only streams)
+            </summary>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously flushes the stream. (Not implemented for read-only streams)
+            </summary>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous flush operation.</returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.SetLength(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Read(System.Byte[])">
+            <summary>
+            Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Read(System.Span{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Reads a sequence of bytes from the current stream into a span and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">A span of bytes. When this method returns, the span contains the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <returns>The total number of bytes read into the span. This can be less than the length of the span if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Read(System.Span{System.Byte})">
+            <summary>
+            Reads a sequence of bytes from the current stream into a span and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">A span of bytes. When this method returns, the span contains the bytes read from the current source.</param>
+            <returns>The total number of bytes read into the span. This can be less than the length of the span if that many bytes are not currently available, or zero if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream.</param>
+            <param name="count">The maximum number of bytes to be read from the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous read operation, containing the total number of bytes read into the buffer.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadAsync(System.Memory{System.Byte},System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads a sequence of bytes from the current stream into a memory buffer and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">A memory buffer. When this method returns, the buffer contains the bytes read from the current source.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous read operation, containing the total number of bytes read into the buffer.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadToEnd">
+            <summary>
+            Reads all remaining bytes from the current position to the end of the stream.
+            </summary>
+            <returns>A byte array containing the remaining data in the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadToEndAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads all remaining bytes from the current position to the end of the stream.
+            </summary>
+            <param name="cancellationToken">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous read operation, containing a byte array with the remaining data.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.WriteToStream(Nomad.Core.FileSystem.Streams.IWriteStream)">
+            <summary>
+            Writes the entire content of this stream to the provided stream.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.WriteToStreamAsync(Nomad.Core.FileSystem.Streams.IWriteStream,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes the entire content of this stream to the provided stream.
+            </summary>
+            <param name="stream">The stream to write to.</param>
+            <param name="ct">The token to monitor for cancellation requests.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ToArray">
+            <summary>
+            Returns the underlying buffer as a byte array.
+            </summary>
+            <returns>The underlying byte array.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadSByte">
+            <summary>
+            Reads a signed byte from the stream.
+            </summary>
+            <returns>The signed byte value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadShort">
+            <summary>
+            Reads a 16-bit signed integer from the stream.
+            </summary>
+            <returns>The 16-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadInt">
+            <summary>
+            Reads a 32-bit signed integer from the stream.
+            </summary>
+            <returns>The 32-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadLong">
+            <summary>
+            Reads a 64-bit signed integer from the stream.
+            </summary>
+            <returns>The 64-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadByte">
+            <summary>
+            Reads an unsigned byte from the stream.
+            </summary>
+            <returns>The unsigned byte value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadUShort">
+            <summary>
+            Reads a 16-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 16-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadUInt">
+            <summary>
+            Reads a 32-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 32-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadULong">
+            <summary>
+            Reads a 64-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 64-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadInt8">
+            <summary>
+            Reads an 8-bit signed integer from the stream.
+            </summary>
+            <returns>The 8-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadInt16">
+            <summary>
+            Reads a 16-bit signed integer from the stream.
+            </summary>
+            <returns>The 16-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadInt32">
+            <summary>
+            Reads a 32-bit signed integer from the stream.
+            </summary>
+            <returns>The 32-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadInt64">
+            <summary>
+            Reads a 64-bit signed integer from the stream.
+            </summary>
+            <returns>The 64-bit signed integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadUInt8">
+            <summary>
+            Reads an 8-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 8-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadUInt16">
+            <summary>
+            Reads a 16-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 16-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadUInt32">
+            <summary>
+            Reads a 32-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 32-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadUInt64">
+            <summary>
+            Reads a 64-bit unsigned integer from the stream.
+            </summary>
+            <returns>The 64-bit unsigned integer value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadFloat">
+            <summary>
+            Reads a 32-bit floating-point number from the stream.
+            </summary>
+            <returns>The 32-bit floating-point value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadSingle">
+            <summary>
+            Reads a single-precision floating-point number from the stream.
+            </summary>
+            <returns>The single-precision floating-point value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadDouble">
+            <summary>
+            Reads a double-precision floating-point number from the stream.
+            </summary>
+            <returns>The double-precision floating-point value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadFloat32">
+            <summary>
+            Reads a 32-bit floating-point number from the stream.
+            </summary>
+            <returns>The 32-bit floating-point value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadFloat64">
+            <summary>
+            Reads a 64-bit floating-point number from the stream.
+            </summary>
+            <returns>The 64-bit floating-point value read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadBoolean">
+            <summary>
+            Reads an 8-bit value from the stream.
+            </summary>
+            <returns>The 8-bit value read from the stream</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.ReadString">
+            <summary>
+            Reads a UTF-8 encoded string from the stream, prefixed with its length as a 7-bit encoded integer.
+            </summary>
+            <returns>The string read from the stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Read7BitEncodedInt">
+            <summary>
+            Reads an encoded/compressed integer from the save file stream.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.Read``1(System.Int32)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryReadStream.AllocateBuffer(System.Int64)">
+            <summary>
+            Creates a new <see cref="T:Nomad.Core.Memory.Buffers.IBufferHandle"/> based on the allocation strategy provided.
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.Buffer">
+            <summary>
+            The handle to the underlying buffer.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.CanSeek">
+            <summary>
+            Always <b>true</b>.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.strategy">
+            <summary>
+            Controls how we allocate the memory for the buffer internally.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.#ctor(Nomad.Core.FileSystem.Configs.AllocationStrategy)">
+            <summary>
+            
+            </summary>
+            <param name="strategy"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.DisposeAsync">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.DisposeAsyncCore">
+             <summary>
+            
+             </summary>
+             <returns>The <see cref="T:System.Threading.Tasks.ValueTask"/> for the disposal method.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryStreamBase.Seek(System.Int64,System.IO.SeekOrigin)">
+             <summary>
+            
+             </summary>
+             <param name="offset"></param>
+             <param name="origin"></param>
+             <returns></returns>
+             <exception cref="T:System.IO.IOException"></exception>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.MAX_CAPACITY">
+            <summary>
+            The maximum possible length of the buffer. Set to 1 GiB because of integer limitations.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.STACK_ALLOC_THRESHOLD">
+            <summary>
+            The maximum length of a string allowed for stack-based writes before we start writing segments.
+            </summary>
+        </member>
+        <member name="F:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.DEFAULT_CAPACITY">
+            <summary>
+            The default initial capacity of a <see cref="T:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream"/>.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.CanRead">
+            <summary>
+            Marks whether the stream can be read from. Always <b>false</b>.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.CanWrite">
+            <summary>
+            Marks whether the stream can be read from. Always <b>true</b>.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.#ctor(Nomad.Core.FileSystem.Configs.MemoryWriteConfig)">
+            <summary>
+            Initializes a new instance of the MemoryWriteStream class with the specified initial length and fixed size option.
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Flush">
+            <summary>
+            Flushes the stream. This operation is a no-op for memory streams.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.FlushAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously flushes the stream. This operation is a no-op for memory streams.
+            </summary>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous flush operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.SetLength(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Write(System.Byte[])">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Write(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only span of bytes. This method copies the contents of the span to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Write(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only span of bytes. This method copies the contents of the span to the current stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous write operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only memory buffer. This method copies the contents of the buffer to the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous write operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">A read-only memory buffer. This method copies the contents of the buffer to the current stream.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream.</param>
+            <param name="ct">A token to cancel the operation.</param>
+            <returns>A task that represents the asynchronous write operation.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteFromStream(Nomad.Core.FileSystem.Streams.IReadStream)">
+            <summary>
+            Reads all bytes from the specified read stream and writes them to the current stream.
+            </summary>
+            <param name="stream">The read stream to copy from.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteFromStreamAsync(Nomad.Core.FileSystem.Streams.IReadStream,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously reads all bytes from the specified read stream and writes them to the current stream.
+            </summary>
+            <param name="stream">The read stream to copy from.</param>
+            <param name="ct">A token to cancel the operation.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteString(System.String)">
+            <summary>
+            Writes a UTF-8 encoded string to the stream, prefixed with its length as a 7-bit encoded integer.
+            </summary>
+            <param name="value">The string to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Write7BitEncodedInt(System.Int32)">
+            <summary>
+            Writes an integer to the stream using 7-bit encoded format.
+            </summary>
+            <param name="value">The integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteByte(System.Byte)">
+            <summary>
+            Writes a byte to the current stream and advances the current position within this stream by one byte.
+            </summary>
+            <param name="value">The byte to write to the stream.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteSByte(System.SByte)">
+            <summary>
+            Writes a signed byte to the stream.
+            </summary>
+            <param name="value">The signed byte value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteShort(System.Int16)">
+            <summary>
+            Writes a 16-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 16-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteInt(System.Int32)">
+            <summary>
+            Writes a 32-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 32-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteLong(System.Int64)">
+            <summary>
+            Writes a 64-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 64-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteUShort(System.UInt16)">
+            <summary>
+            Writes a 16-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 16-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteUInt(System.UInt32)">
+            <summary>
+            Writes a 32-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 32-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteULong(System.UInt64)">
+            <summary>
+            Writes a 64-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 64-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteInt8(System.SByte)">
+            <summary>
+            Writes an 8-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 8-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteInt16(System.Int16)">
+            <summary>
+            Writes a 16-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 16-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteInt32(System.Int32)">
+            <summary>
+            Writes a 32-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 32-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteInt64(System.Int64)">
+            <summary>
+            Writes a 64-bit signed integer to the stream.
+            </summary>
+            <param name="value">The 64-bit signed integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteUInt8(System.Byte)">
+            <summary>
+            Writes an 8-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 8-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteUInt16(System.UInt16)">
+            <summary>
+            Writes a 16-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 16-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteUInt32(System.UInt32)">
+            <summary>
+            Writes a 32-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 32-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteUInt64(System.UInt64)">
+            <summary>
+            Writes a 64-bit unsigned integer to the stream.
+            </summary>
+            <param name="value">The 64-bit unsigned integer value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteFloat(System.Single)">
+            <summary>
+            Writes a 32-bit floating-point number to the stream.
+            </summary>
+            <param name="value">The 32-bit floating-point value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteSingle(System.Single)">
+            <summary>
+            Writes a single-precision floating-point number to the stream.
+            </summary>
+            <param name="value">The single-precision floating-point value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteDouble(System.Double)">
+            <summary>
+            Writes a double-precision floating-point number to the stream.
+            </summary>
+            <param name="value">The double-precision floating-point value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteFloat32(System.Single)">
+            <summary>
+            Writes a 32-bit floating-point number to the stream.
+            </summary>
+            <param name="value">The 32-bit floating-point value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteFloat64(System.Double)">
+            <summary>
+            Writes a 64-bit floating-point number to the stream.
+            </summary>
+            <param name="value">The 64-bit floating-point value to write.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.WriteBoolean(System.Boolean)">
+            <summary>
+            Writes an 8-bit boolean value to the stream.
+            </summary>
+            <param name="value">The 8-bit boolean value to write</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.EnsureCapacity(System.Int64)">
+            <summary>
+            Ensures we have enough space in the buffer to support the provided required <paramref name="required"/>.
+            </summary>
+            <remarks>
+            We're already checking the buffer is null from all the calling functions, so a null check isn't necessary here.
+            </remarks>
+            <param name="required">The bytes needed to write the data.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.ResizeBuffer(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="newLength"></param>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.AllocateBuffer(System.Int64)">
+            <summary>
+            Creates a new <see cref="T:Nomad.Core.Memory.Buffers.IBufferHandle"/> based on the allocation strategy provided
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.Write``1(``0,System.Int32)">
+            <summary>
+            Writes a value of an unmanaged type to the stream.
+            </summary>
+            <typeparam name="T">The type of the value to write.</typeparam>
+            <param name="value">The value to write.</param>
+            <param name="size">The size in bytes of the primitive we're writing.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.MemoryStream.MemoryWriteStream.BumpPosition(System.Int32)">
+            <summary>
+            Adds <paramref name="byteCount"/> to the position, increasing the stream's length if required.
+            </summary>
+            <param name="byteCount">The number of bytes we're adding to the stream.</param>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.Services.FileSystemService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.#ctor(Nomad.Core.Engine.Services.IEngineService,Nomad.Core.Logger.ILoggerService)">
+             <summary>
+            
+             </summary>
+             <param name="engineService"></param>
+             <param name="logger"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.AddSearchDirectory(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="directory"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.CopyFile(System.String,System.String,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="sourcePath"></param>
+             <param name="destinationPath"></param>
+             <param name="overwrite"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.ReplaceFile(System.String,System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="sourcePath"></param>
+             <param name="destPath"></param>
+             <param name="destBackupPath"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.CreateDirectory(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.DirectoryExists(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.DeleteDirectory(System.String,System.Boolean)">
+            <summary>
+            Deletes a directory at the specified path.
+            </summary>
+            <param name="path"></param>
+            <param name="recursive"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.DeleteFile(System.String)">
+            <summary>
+            Deletes a file at the specified path.
+            </summary>
+            <param name="path">The path of the file to delete.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.FileExists(System.String)">
+            <summary>
+            Checks if a file exists at the specified path.
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetConfigPath">
+            <summary>
+            Gets the configuration path.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetResourcePath">
+            <summary>
+            Gets the resource path.
+            </summary>
+            <returns>The resource path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetSavePath">
+            <summary>
+            Gets the save directory.
+            </summary>
+            <returns>The save directory path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetUserDataPath">
+            <summary>
+            Gets the user data directory.
+            </summary>
+            <returns>The user data directory path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetDirectories(System.String)">
+            <summary>
+            Gets the directories at the specified path.
+            </summary>
+            <param name="path">The path to get directories from.</param>
+            <returns>A list of directory paths.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetFiles(System.String,System.String,System.Boolean)">
+            <summary>
+            Gets the files at the specified path.
+            </summary>
+            <param name="path">The path to get files from.</param>
+            <param name="searchPattern">The search pattern to use.</param>
+            <param name="recursive">Whether to search recursively.</param>
+            <returns>A list of file paths.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetFileSize(System.String)">
+            <summary>
+            Gets the size of the file at the specified path.
+            </summary>
+            <param name="path">The path of the file to get the size of.</param>
+            <returns>The size of the file in bytes.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.GetLastWriteTime(System.String)">
+            <summary>
+            Gets the last write time of the file at the specified path.
+            </summary>
+            <param name="path">The path of the file to get the last write time of.</param>
+            <returns>The last write time of the file.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.MoveFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Moves a file from the source path to the destination path.
+            </summary>
+            <param name="sourcePath">The path of the file to move.</param>
+            <param name="destinationPath">The path to move the file to.</param>
+            <param name="overwrite"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.OpenRead(Nomad.Core.FileSystem.IReadConfig)">
+            <summary>
+            Opens a read stream for the specified file path.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <returns>The read stream for the specified file path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.OpenReadAsync(Nomad.Core.FileSystem.IReadConfig,System.Threading.CancellationToken)">
+            <summary>
+            Opens a read stream for the specified file path asynchronously.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <param name="ct">The cancellation token.</param>
+            <returns>The read stream for the specified file path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.OpenWrite(Nomad.Core.FileSystem.IWriteConfig)">
+            <summary>
+            Opens a write stream for the specified file path.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <returns>The write stream for the specified file path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.OpenWriteAsync(Nomad.Core.FileSystem.IWriteConfig,System.Threading.CancellationToken)">
+            <summary>
+            Opens a write stream with the specified configuration asynchronously.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <param name="ct">The cancellation token.</param>
+            <returns>The write stream with the specified configuration.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.CreateStream(System.IO.FileAccess,Nomad.Core.FileSystem.StreamType,System.String,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="accessMode"></param>
+             <param name="type"></param>
+             <param name="outputFile"></param>
+             <param name="length"></param>
+             <returns></returns>
+             <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.LoadFile(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+             <returns></returns>
+             <exception cref="T:System.IO.IOException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.LoadFileAsync(System.String,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+             <param name="ct"></param>
+             <returns></returns>
+             <exception cref="T:System.IO.IOException"></exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.WriteFile(System.String,System.Byte[],System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+             <param name="buffer"></param>
+             <param name="offset"></param>
+             <param name="length"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.FileSystemService.WriteFileAsync(System.String,System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+             <param name="buffer"></param>
+             <param name="offset"></param>
+             <param name="length"></param>
+             <param name="ct"></param>
+        </member>
+        <member name="T:Nomad.FileSystem.Private.Services.RecursiveFileSearcher">
+            <summary>
+            A Quake 3‑style file search system that searches through multiple base directories
+            in priority order. Files are located by exact relative paths only.
+            </summary>
+        </member>
+        <member name="P:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.SearchDirectories">
+            <summary>
+            Gets all search directories in their current priority order.
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.#ctor(Nomad.Core.Logger.ILoggerCategory,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Nomad.FileSystem.Private.Services.RecursiveFileSearcher"/> class.
+            </summary>
+            <param name="category"></param>
+            <param name="ignoreCase">If true, file lookups are case‑insensitive (recommended for cross‑platform).</param>
+            <param name="useIndex">If true, builds an in‑memory index of all files for faster lookups (may impact startup time).</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.AddSearchDirectory(System.String,System.Boolean)">
+            <summary>
+            Adds a search directory with optional priority.
+            </summary>
+            <param name="directory">Directory to add.</param>
+            <param name="highPriority">If true, adds to beginning of search list; otherwise appends.</param>
+            <exception cref="T:System.ArgumentException">Thrown if directory is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if directory does not exist.</exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.FindFile(System.String)">
+            <summary>
+            Finds a file by its exact relative path. Returns the full path of the first match
+            according to search directory priority, or null if not found.
+            </summary>
+            <param name="relativePath">Relative path to the file (e.g., "Textures/wood.png").</param>
+            <returns>Full path to the found file, or null.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if relativePath is null or empty.</exception>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.FindAllFiles(System.String)">
+            <summary>
+            Finds all occurrences of a file across all search directories, ordered by priority.
+            </summary>
+            <param name="relativePath">Relative path to search for.</param>
+            <returns>List of full paths (may be empty).</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.FindFiles(System.String,System.String)">
+            <summary>
+            Finds files matching a pattern (e.g., "*.png") in a specific relative subdirectory.
+            Returns a dictionary mapping each base directory to the list of matching files.
+            </summary>
+            <param name="searchDir"></param>
+            <param name="searchPattern">Search pattern (supports * and ?).</param>
+            <returns>Dictionary with results per base directory.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.FindFileWithExtensions(System.String,System.String[])">
+            <summary>
+            Finds a file by trying multiple file extensions.
+            </summary>
+            <param name="relativePathWithoutExtension">Relative path without extension.</param>
+            <param name="extensions">Extensions to try (e.g., ".json", ".yaml").</param>
+            <returns>Full path of first matching file, or null.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.NormalizeDirectoryPath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.NormalizePath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.GetSafeFullPath(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="baseDir"></param>
+            <param name="relativePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.FileExists(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.IndexDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.FindFileFromIndex(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="relativePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.RecursiveFileSearcher.GetFilesAsList(System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="rootDir"></param>
+            <param name="searchPattern"></param>
+            <param name="skipReparsePoints"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Private.Services.StreamFactory.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.FileSystem.FileSystemBootstrapper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.FileSystemBootstrapper.Initialize(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+             <summary>
+            
+             </summary>
+             <param name="registry"></param>
+             <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.FileSystemBootstrapper.Shutdown">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.FileSystem.Global.FileSystem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.Initialize(Nomad.Core.FileSystem.IFileSystem)">
+            <summary>
+            
+            </summary>
+            <param name="instance"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.AddSearchDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetSavePath">
+            <summary>
+            Gets the save directory path.
+            </summary>
+            <returns>The save directory path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetResourcePath">
+            <summary>
+            Gets the resource directory path.
+            </summary>
+            <returns>The resource directory path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetConfigPath">
+            <summary>
+            Gets the configuration directory path.
+            </summary>
+            <returns>The configuration directory path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetUserDataPath">
+            <summary>
+            Gets the user data directory path.
+            </summary>
+            <returns>The user data directory path.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.FileExists(System.String)">
+            <summary>
+            Checks if a file exists at the specified path.
+            </summary>
+            <param name="path">The path to check.</param>
+            <returns><c>true</c> if the file exists; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.DeleteFile(System.String)">
+            <summary>
+            Deletes the file at the specified path.
+            </summary>
+            <param name="path">The path of the file to delete.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.MoveFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Moves a file from the source path to the destination path.
+            </summary>
+            <param name="sourcePath">The source path of the file to move.</param>
+            <param name="destinationPath">The destination path of the file to move.</param>
+            <param name="overwrite"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.CopyFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies a file from the source path to the destination path.
+            </summary>
+            <param name="sourcePath">The source path of the file to copy.</param>
+            <param name="destinationPath">The destination path of the file to copy.</param>
+            <param name="overwrite">Whether to overwrite an existing file at the destination path.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.ReplaceFile(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sourcePath"></param>
+            <param name="destPath"></param>
+            <param name="destBackupPath"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetLastWriteTime(System.String)">
+            <summary>
+            Gets the last write time of the file at the specified path.
+            </summary>
+            <param name="path">The path of the file.</param>
+            <returns>The last write time of the file.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetFileSize(System.String)">
+            <summary>
+            Gets the size of the file at the specified path.
+            </summary>
+            <param name="path">The path of the file.</param>
+            <returns>The size of the file in bytes.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.DirectoryExists(System.String)">
+            <summary>
+            Checks if a directory exists at the specified path.
+            </summary>
+            <param name="path">The path to check.</param>
+            <returns><c>true</c> if the directory exists; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.CreateDirectory(System.String)">
+            <summary>
+            Creates a directory at the specified path.
+            </summary>
+            <param name="path">The path of the directory tso create.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.DeleteDirectory(System.String,System.Boolean)">
+            <summary>
+            Deletes the directory at the specified path.
+            </summary>
+            <param name="path">The path of the directory to delete.</param>
+            <param name="recursive">Whether to recursively delete subdirectories and files.</param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetDirectories(System.String)">
+            <summary>
+            Gets a list of directories at the specified path matching the search pattern.
+            </summary>
+            <param name="path">The path of the directory to search.</param>
+            <returns>The list of matching directory paths.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.GetFiles(System.String,System.String,System.Boolean)">
+            <summary>
+            Gets a list of files at the specified path matching the search pattern.
+            </summary>
+            <param name="path">The path of the directory to search.</param>
+            <param name="searchPattern">The search pattern to match against file names.</param>
+            <param name="recursive">Whether to recursively search subdirectories.</param>
+            <returns>The list of matching file paths.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.OpenRead(Nomad.Core.FileSystem.IReadConfig)">
+            <summary>
+            Opens a read stream for the specified file path.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <returns>The opened read stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.OpenWrite(Nomad.Core.FileSystem.IWriteConfig)">
+            <summary>
+            Opens a write stream for the specified file path.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <returns>The opened write stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.OpenReadAsync(Nomad.Core.FileSystem.IReadConfig,System.Threading.CancellationToken)">
+            <summary>
+            Opens a read stream for the specified file path.
+            </summary>
+            <param name="config"></param>
+            <param name="ct">Cancellation token.</param>
+            <returns>The opened read stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.OpenWriteAsync(Nomad.Core.FileSystem.IWriteConfig,System.Threading.CancellationToken)">
+            <summary>
+            Opens a write stream for the specified file path.
+            </summary>
+            <param name="config">How to create the stream and rules around how it should be handled.</param>
+            <param name="ct">Cancellation token.</param>
+            <returns>The opened write stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.CreateStream(System.IO.FileAccess,Nomad.Core.FileSystem.StreamType,System.String,System.Int32)">
+            <summary>
+            Creates a memory stream.
+            </summary>
+            <param name="accessMode">The access mode to create the memory stream with.</param>
+            <param name="type"></param>
+            <param name="outputFile">Optional output file path for the memory stream.</param>
+            <param name="length">The initial length of the memory stream.</param>
+            <returns>The created data stream.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.LoadFile(System.String)">
+            <summary>
+            Loads a file into memory.
+            </summary>
+            <param name="path">The file to open and load.</param>
+            <returns>The data retrieved from the file.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.LoadFileAsync(System.String)">
+            <summary>
+            Loads a file into memory asynchronously.
+            </summary>
+            <param name="path">The file to open and load.</param>
+            <returns>The data retrieved from the file.</returns>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.WriteFile(System.String,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a buffer to disk.
+            </summary>
+            <param name="path">The file to write to.</param>
+            <param name="buffer">The data to write to disk.</param>
+            <param name="offset"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:Nomad.FileSystem.Global.FileSystem.WriteFileAsync(System.String,System.ReadOnlyMemory{System.Byte},System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Writes a buffer asynchronously to disk.
+            </summary>
+            <param name="path">The file to write to.</param>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="length"></param>
+            <param name="ct"></param>
+        </member>
+    </members>
+</doc>
