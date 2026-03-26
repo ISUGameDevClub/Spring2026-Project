@@ -1,0 +1,935 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nomad.EngineUtils.Unity</name>
+    </assembly>
+    <members>
+        <member name="T:Nomad.EngineUtils.Private.SceneManagement.UnityScene">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.SceneManagement.UnityScene.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.SceneManagement.UnityScene.Root">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnityScene.#ctor(UnityEngine.SceneManagement.Scene,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="scene"></param>
+             <param name="path"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnityScene.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.SceneManagement.UnityScene.UnitySceneRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.ActiveScene">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.LoadedScenes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.LoadScene(System.String,Nomad.Core.Engine.SceneManagement.LoadSceneMode)">
+             <summary>
+            
+             </summary>
+             <param name="path"></param>
+             <param name="mode"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.UnloadCurrentScene">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.UnloadAllScenes">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.UnloadScene(Nomad.Core.Engine.SceneManagement.IScene)">
+             <summary>
+            
+             </summary>
+             <param name="scene"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.SetActiveScene(Nomad.Core.Engine.SceneManagement.IScene)">
+             <summary>
+            
+             </summary>
+             <param name="scene"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.ResolveScene(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.SyncLoadedScenes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.GetOrCreateScene(UnityEngine.SceneManagement.Scene,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="scene"></param>
+            <param name="path"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.NormalizeScenePath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.OnSceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)">
+            <summary>
+            
+            </summary>
+            <param name="scene"></param>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.OnSceneUnloaded(UnityEngine.SceneManagement.Scene)">
+            <summary>
+            
+            </summary>
+            <param name="scene"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.SceneManagement.UnitySceneManager.OnActiveSceneChanged(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.Scene)">
+            <summary>
+            
+            </summary>
+            <param name="previousScene"></param>
+            <param name="nextScene"></param>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.Services.UnityDisplayService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityDisplayService.SupportsBloom">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityDisplayService.SupportsTAA">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityDisplayService.CustomSettings">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.#ctor(Nomad.Core.Engine.Services.IWindowService,Nomad.Core.CVars.ICVarSystemService)">
+             <summary>
+            
+             </summary>
+             <param name="windowService"></param>
+             <param name="cvarSystem"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnBrightnessChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{System.Single}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnWindowResolutionChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{Nomad.Core.Engine.Windowing.WindowResolution}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnMonitorIndexChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{System.Int32}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnAspectRatioChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{Nomad.Core.Engine.Windowing.AspectRatio}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnWindowModeChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{Nomad.Core.Engine.Windowing.WindowMode}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnMaxFpsChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{System.Int32}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnVSyncModeChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{Nomad.Core.Engine.Rendering.VSyncMode}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnAntiAliasingChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{Nomad.Core.Engine.Rendering.AntiAliasingMode}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityDisplayService.OnResolutionScaleChanged(Nomad.Core.CVars.CVarValueChangedEventArgs{System.Single}@)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.Services.UnityLocalizationService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityLocalizationService.CurrentLanguage">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityLocalizationService.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityLocalizationService.Translate(Nomad.Core.Util.InternString)">
+             <summary>
+            
+             </summary>
+             <param name="key"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.Services.UnityWindowService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.Title">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.Width">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.Height">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.ScreenIndex">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.IsFocused">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.RefreshRate">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.Monitors">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.Mode">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.SizeChanged">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.FocusChanged">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.Services.UnityWindowService.CloseRequested">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.#ctor(Nomad.Core.Events.IGameEventRegistryService)">
+             <summary>
+            
+             </summary>
+             <param name="eventFactory"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.GetScreenResolution(System.Int32@,System.Int32@)">
+             <summary>
+            
+             </summary>
+             <param name="width"></param>
+             <param name="height"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.GetSupportedResolutions(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="monitorIndex"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.GetNativeResolutionForMonitor(System.Int32,Nomad.Core.Engine.Windowing.WindowSize@)">
+             <summary>
+            
+             </summary>
+             <param name="monitorIndex"></param>
+             <param name="nativeSize"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.GetScreenList">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.SetWindowMode(Nomad.Core.Engine.Windowing.WindowMode)">
+            <summary>
+            
+            </summary>
+            <param name="mode"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.ApplyResolution(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.ToUnityMode(Nomad.Core.Engine.Windowing.WindowMode)">
+            <summary>
+            
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.FromUnityMode(UnityEngine.FullScreenMode)">
+            <summary>
+            
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.OnFocusChanged(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="focused"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.OnScreenSizeChanged(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.Services.UnityWindowService.OnApplicationQuitting">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.UnityCommandBuilder">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.UnityCommandBuilder.ArgumentCount">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.UnityCommandBuilder.TextEntered">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.#ctor(Nomad.Core.Events.IGameEventRegistryService)">
+             <summary>
+            
+             </summary>
+             <param name="eventFactory"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.GetArgumentAt(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="index"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.GetArgs">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.OnHistoryPrev(Nomad.Core.Console.HistoryPrevEventArgs@)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.OnHistoryNext(Nomad.Core.Console.HistoryNextEventArgs@)">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityCommandBuilder.Submit(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="text"></param>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.UnityConsole">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.UnityConsole.CommandBuilder">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.Private.UnityConsole.IsVisible">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityConsole.#ctor(Nomad.Core.Logger.ILoggerService,Nomad.Core.Events.IGameEventRegistryService)">
+             <summary>
+            
+             </summary>
+             <param name="logger"></param>
+             <param name="eventFactory"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityConsole.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityConsole.Clear">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityConsole.Show">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityConsole.Hide">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.UnityDebugSink">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityDebugSink.Print(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="message"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityDebugSink.Clear">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityDebugSink.Flush">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.UnityLoader">
+            <summary>
+            A Unity-focused resource loader.
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityLoader.Load``2(``1)">
+             <summary>
+            
+             </summary>
+             <typeparam name="TResource"></typeparam>
+             <typeparam name="TId"></typeparam>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityLoader.LoadAsync``2(``1,System.Threading.CancellationToken)">
+             <summary>
+            
+             </summary>
+             <typeparam name="TResource"></typeparam>
+             <typeparam name="TId"></typeparam>
+             <param name="id"></param>
+             <param name="ct"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.ResourceRequestExtensions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.ResourceRequestExtensions.GetAwaiter(UnityEngine.ResourceRequest)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.EngineUtils.Private.UnityRuntimeDriver">
+            <summary>
+            Hidden Unity object used to observe runtime window-size changes.
+            </summary>
+        </member>
+        <member name="E:Nomad.EngineUtils.Private.UnityRuntimeDriver.ScreenSizeChanged">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityRuntimeDriver.Create">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityRuntimeDriver.Awake">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.Private.UnityRuntimeDriver.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.ColorExtensions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.ColorExtensions.ToUnity(System.Drawing.Color)">
+             <summary>
+            
+             </summary>
+             <param name="color"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.ColorExtensions.ToSystem(UnityEngine.Color)">
+             <summary>
+            
+             </summary>
+             <param name="color"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Nomad.EngineUtils.Constants">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Constants.CVars">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.Constants.Events">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.DisplayCVars">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.DisplayCVars.Register(Nomad.Core.CVars.ICVarSystemService)">
+             <summary>
+            
+             </summary>
+             <param name="cvarSystem"></param>
+        </member>
+        <member name="T:Nomad.EngineUtils.EngineBootstrapper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.EngineBootstrapper.Initialize(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+            <summary>
+            Initializes the Unity engine services.
+            </summary>
+            <param name="registry"></param>
+            <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.EngineBootstrapper.Shutdown">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Nomad.EngineUtils.NomadBehaviour">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.NomadBehaviour.Object">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.NomadBehaviour.OnInit">
+            <summary>
+            Initializes the component.
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.NomadBehaviour.OnPhysicsUpdate(System.Single)">
+            <summary>
+            Updates the component each physics frame.
+            </summary>
+            <param name="delta"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.NomadBehaviour.OnShutdown">
+            <summary>
+            Terminates and releases the component.
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.NomadBehaviour.OnUpdate(System.Single)">
+            <summary>
+            Updates the component each frame.
+            </summary>
+            <param name="delta"></param>
+        </member>
+        <member name="T:Nomad.EngineUtils.UnityEngineService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.#ctor(Nomad.Core.ServiceRegistry.Interfaces.IServiceRegistry,Nomad.Core.ServiceRegistry.Interfaces.IServiceLocator)">
+             <summary>
+            
+             </summary>
+             <param name="serviceFactory"></param>
+             <param name="locator"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.IsApplicationFocused">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetApplicationVersion">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetEngineVersion">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetOSPath(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="localpath"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetLocalPath(System.String)">
+             <summary>
+            
+             </summary>
+             <param name="ospath"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetStoragePath(Nomad.Core.Engine.Services.StorageScope)">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetStoragePath(System.String,Nomad.Core.Engine.Services.StorageScope)">
+             <summary>
+            
+             </summary>
+             <param name="relativePath"></param>
+             <param name="scope"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetSystemRegion">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.CreateImageRGBA(System.Byte[],System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="image"></param>
+             <param name="width"></param>
+             <param name="height"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.CreateConsoleObject">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.GetResourceLoader">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityEngineService.Quit(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="exitCode"></param>
+        </member>
+        <member name="T:Nomad.EngineUtils.UnityGameObject">
+            <summary>
+            Unity implementation of <see cref="T:Nomad.Core.Scene.GameObjects.IGameObject"/>.
+            </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.UnityGameObject.Name">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.UnityGameObject.Enabled">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.UnityGameObject.Parent">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.UnityGameObject.GameObject">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.UnityGameObject.Transform">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Nomad.EngineUtils.UnityGameObject.Children">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.#ctor(UnityEngine.GameObject)">
+             <summary>
+            
+             </summary>
+             <param name="gameObject"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.AddComponent``1(System.Action{``0})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="initializer"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.GetComponent``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.HasComponent``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.RemoveComponent``1">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.FindChild``1(System.String)">
+             <summary>
+            
+             </summary>
+             <typeparam name="T"></typeparam>
+             <param name="childName"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.AddChild(Nomad.Core.Scene.GameObjects.IGameObject)">
+             <summary>
+            
+             </summary>
+             <param name="child"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.RemoveChild(Nomad.Core.Scene.GameObjects.IGameObject)">
+             <summary>
+            
+             </summary>
+             <param name="child"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.OnInit">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.OnShutdown">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.OnUpdate(System.Single)">
+             <summary>
+            
+             </summary>
+             <param name="delta"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.OnPhysicsUpdate(System.Single)">
+             <summary>
+            
+             </summary>
+             <param name="delta"></param>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.RegisterAttachedUnityComponents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.RefreshChildren">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.WrapGameObject(UnityEngine.GameObject)">
+            <summary>
+            
+            </summary>
+            <param name="gameObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.UnityGameObject.TryGetBackingGameObject(Nomad.Core.Scene.GameObjects.IGameObject,UnityEngine.GameObject@)">
+            <summary>
+            
+            </summary>
+            <param name="gameObject"></param>
+            <param name="unityGameObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Nomad.EngineUtils.VectorExtensions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Nomad.EngineUtils.VectorExtensions.ToUnity(System.Numerics.Vector2)">
+             <summary>
+            
+             </summary>
+             <param name="from"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.VectorExtensions.ToUnity(System.Numerics.Vector3)">
+             <summary>
+            
+             </summary>
+             <param name="from"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.VectorExtensions.ToSystem(UnityEngine.Vector2)">
+             <summary>
+            
+             </summary>
+             <param name="from"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Nomad.EngineUtils.VectorExtensions.ToSystem(UnityEngine.Vector3)">
+             <summary>
+            
+             </summary>
+             <param name="from"></param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>
