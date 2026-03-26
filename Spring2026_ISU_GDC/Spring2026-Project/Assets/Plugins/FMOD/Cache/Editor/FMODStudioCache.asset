@@ -24,7 +24,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 4445193626282675156}
   cacheVersion: 131858
-  cacheTime: 639094469811558883
+  cacheTime: 639094634208302374
   SerializableEventsDict:
   - key: event:/TestEvent(Dog Bark)
     index: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639094469810672565
+  lastModified: 639094634208224672
   FileSizes: []
   Exists: 1
 --- !u!114 &3229135638552788183
@@ -88,7 +88,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/TestingBank01.bank
   Name: TestingBank01
   StudioPath: bank:/TestingBank01
-  lastModified: 639094469811558883
+  lastModified: 639094634208302374
   FileSizes: []
   Exists: 1
 --- !u!114 &4445193626282675156
@@ -106,7 +106,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639094469810682610
+  lastModified: 639094634208269751
   FileSizes:
   - Name: 
     Value: 836

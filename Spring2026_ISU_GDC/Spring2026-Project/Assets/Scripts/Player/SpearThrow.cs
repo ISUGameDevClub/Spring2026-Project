@@ -92,6 +92,7 @@ public class SpearThrow : MonoBehaviour
         spawnedSpear.transform.position = gameObject.transform.position;
         spawnedSpear.transform.up = direction;
         spawnedSpear.transform.Rotate(0f,0f,90f);
+        SoundManager.PlaySound("Sounds/SFX/Attacks/spear bounce", .5f, false);
         removeSpear();
     }
 
