@@ -1122,6 +1122,7 @@ MonoBehaviour:
   aimIndicatorObject: {fileID: 4314850966146697205}
   Spear: {fileID: 5302348069854232140, guid: 8b3dd079695c01442a7eb1c4923cc74f, type: 3}
   playerAimSpearClip: {fileID: 7400000, guid: 05c2dd5d50eeeb34fa26a086378d3423, type: 2}
+  playerInput: {fileID: 844016365402956465}
   SpearInHand: {fileID: 5744527006584943622}
 --- !u!1 &7977142353510913768
 GameObject:

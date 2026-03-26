@@ -529,6 +529,18 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 61723850}
+    - target: {fileID: 844016365402956465, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844016365402956465, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844016365402956465, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: m_Name
       value: Player

@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 using PlayerStateType = ISUGameDev.SpearGame.BasePlayerState.PlayerStateType;
+using UnityEngine.InputSystem;
+
 
 /// <summary>
 /// Class to represent just the spear throwing attack. Must validate that the player has the spear before executing the attack.
 /// </summary>
 public class SpearThrowAttack : MonoBehaviour, IAttack
 {
+      //  public InputAction analog;
 
 
 
@@ -17,6 +20,7 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
     public GameObject Spear;
     [SerializeField] private AnimationClip playerAimSpearClip;
     private Animator playerAnimator;
+    [SerializeField] private PlayerInput playerInput;
 
     public GameObject SpearInHand;
     public static bool isSpearInHand;
@@ -25,6 +29,7 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
     /// Flag that controls whether we start aiming the spear each frame.
     /// </summary>
     private bool currentlyAimingSpear;
+
 
 
     private void Awake()
@@ -63,19 +68,29 @@ public class SpearThrowAttack : MonoBehaviour, IAttack
     {
 
         //TODO: make this use Input System
-        if (Input.GetMouseButton(1)) // if input is held, update the arrow indicator. replace with input systems
+        if (playerInput.actions["SecondaryAttack"].IsPressed())
         {
+            Vector3 mousePosition;
+            //Debug.Log(InputControl.activeControl);
             playerAnimator.Play(playerAimSpearClip.name);
             
             //playerAttacks.enabled = false;
             //playerMovement.enabled = false;//disable movement and attacks when aiming
             aimingSpear = true;
             aimIndicatorObject.SetActive(true);
-            Vector3 mousePosition;
-            mousePosition = Input.mousePosition;
-            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-            direction = new Vector2(mousePosition.x - aimIndicatorHolder.transform.position.x, mousePosition.y - aimIndicatorHolder.transform.position.y);
+            var device = playerInput.devices.Count > 0 ? playerInput.devices[0] : null;
+            if (device is Mouse || device is Keyboard)
+            {
+                mousePosition = Input.mousePosition;
+                mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+                direction = new Vector2(mousePosition.x - aimIndicatorHolder.transform.position.x, mousePosition.y - aimIndicatorHolder.transform.position.y);
+            }
+            else
+            {
+                direction = playerInput.actions["Move"].ReadValue<Vector2>();
+            }
+            
             aimIndicatorHolder.transform.up = direction;
         }
         else
