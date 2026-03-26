@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639095614716625339
+  lastModified: 639100722445000214
   FileSizes: []
   Exists: 1
 --- !u!114 &-8687776049601668647
@@ -38,6 +38,33 @@ MonoBehaviour:
     Data4: 2032620879
   Banks:
   - {fileID: 5898916392214339016}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5386678739761988896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/walk2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/walk2
+  Guid:
+    Data1: 1181028079
+    Data2: 1333697214
+    Data3: 1619482006
+    Data4: 1911858794
+  Banks:
+  - {fileID: 8670496292377983822}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -87,10 +114,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639095614716625339
+  lastModified: 639100722445020332
   FileSizes:
   - Name: 
-    Value: 888
+    Value: 1082
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -108,21 +135,88 @@ MonoBehaviour:
   - {fileID: -4820269682280054812}
   - {fileID: -8832373105473330866}
   - {fileID: 5898916392214339016}
+  - {fileID: 8670496292377983822}
   EditorEvents:
   - {fileID: -5080122498944163462}
   - {fileID: -8687776049601668647}
+  - {fileID: 3074659254185723002}
+  - {fileID: 118562537132694521}
+  - {fileID: 997074776944356189}
+  - {fileID: -5386678739761988896}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8832373105473330866}
   StringsBanks:
   - {fileID: -4820269682280054812}
   cacheVersion: 131858
-  cacheTime: 639095614716625339
+  cacheTime: 639100722445676280
   SerializableEventsDict:
   - key: event:/GlaceonCry
     index: 0
   - key: event:/DrowzeeCry
     index: 1
+  - key: event:/walk4
+    index: 2
+  - key: event:/walk3
+    index: 3
+  - key: event:/walk1
+    index: 4
+  - key: event:/walk2
+    index: 5
+--- !u!114 &118562537132694521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/walk3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/walk3
+  Guid:
+    Data1: -1667319415
+    Data2: 1102674728
+    Data3: -1353747560
+    Data4: -218335876
+  Banks:
+  - {fileID: 8670496292377983822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &997074776944356189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/walk1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/walk1
+  Guid:
+    Data1: 2074411714
+    Data2: 1125346375
+    Data3: 1222909345
+    Data4: 88898791
+  Banks:
+  - {fileID: 8670496292377983822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2067593760226045183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +235,33 @@ MonoBehaviour:
   lastModified: 639094469810672565
   FileSizes: []
   Exists: 1
+--- !u!114 &3074659254185723002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/walk4
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/walk4
+  Guid:
+    Data1: -1580788438
+    Data2: 1158547983
+    Data3: -1357970283
+    Data4: 1988686021
+  Banks:
+  - {fileID: 8670496292377983822}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3229135638552788183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +342,24 @@ MonoBehaviour:
   Path: FMOD/Desktop/PokemonCryTestBank01.bank
   Name: PokemonCryTestBank01
   StudioPath: bank:/PokemonCryTestBank01
-  lastModified: 639095614716625339
+  lastModified: 639100689113939818
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8670496292377983822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerSFX.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/Desktop/PlayerSFX.bank
+  Name: PlayerSFX
+  StudioPath: bank:/PlayerSFX
+  lastModified: 639100722445676280
   FileSizes: []
   Exists: 1

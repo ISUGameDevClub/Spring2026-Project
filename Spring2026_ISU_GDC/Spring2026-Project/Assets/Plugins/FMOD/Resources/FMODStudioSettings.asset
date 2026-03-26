@@ -333,6 +333,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - PlayerSFX
   - PokemonCryTestBank01
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -350,17 +351,17 @@ MonoBehaviour:
   LastEventReferenceScanVersion: 131858
   Platforms:
   - {fileID: -6247820810340434750}
-  - {fileID: 1099884909689041294}
   - {fileID: -5417928129377226935}
-  - {fileID: 9196561512156603061}
   - {fileID: -4938234634742504864}
   - {fileID: -3223242255422463010}
-  - {fileID: 6008383917884111221}
-  - {fileID: 1729362784621127417}
   - {fileID: 549647645779384562}
-  - {fileID: 8777174730275995706}
-  - {fileID: 6484686598562139944}
+  - {fileID: 1099884909689041294}
+  - {fileID: 1729362784621127417}
   - {fileID: 3648308990346370014}
+  - {fileID: 6008383917884111221}
+  - {fileID: 6484686598562139944}
+  - {fileID: 8777174730275995706}
+  - {fileID: 9196561512156603061}
   MigratedPlatforms: 0a00000000000000150000000b00000009000000050000001200000008000000060000000c0000000200000001000000
 --- !u!114 &549647645779384562
 MonoBehaviour:
@@ -506,15 +507,15 @@ MonoBehaviour:
   displaySortOrder: 0
   childIdentifiers:
   - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - c88d16e5272a4e241b0ef0ac2e53b73d
   - 2c5177b11d81d824dbb064f9ac8527da
   - e7a046c753c3c3d4aacc91f6597f310d
-  - fd7c55dab0fce234b8c25f6ffca523c1
-  - 52eb9df5db46521439908db3a29a1bbb
   - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 46fbfdf3fc43db0458918377fd40293e
-  - de700ef3f37a49b58a57ae3addf01ad9
+  - 52eb9df5db46521439908db3a29a1bbb
   - b7716510a1f36934c87976f3a81dbf3d
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - de700ef3f37a49b58a57ae3addf01ad9
+  - 46fbfdf3fc43db0458918377fd40293e
+  - c88d16e5272a4e241b0ef0ac2e53b73d
   codecChannels:
     Value: []
     HasValue: 0

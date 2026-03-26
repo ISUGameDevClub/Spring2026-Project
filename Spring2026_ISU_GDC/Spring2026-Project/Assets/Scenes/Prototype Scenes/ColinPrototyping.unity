@@ -544,7 +544,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1371853776}
   m_SourcePrefab: {fileID: 100100000, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
 --- !u!1 &1366565033
 GameObject:
@@ -684,6 +687,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1371853762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6681619109718579405, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
+  m_PrefabInstance: {fileID: 855229412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1371853776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371853762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b865c9f86022804a8dec78f8da29efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  timeBetweenSounds: 0.2
+  walk1:
+    Guid:
+      Data1: 2074411714
+      Data2: 1125346375
+      Data3: 1222909345
+      Data4: 88898791
+    Path: event:/walk1
+  walk2:
+    Guid:
+      Data1: 1181028079
+      Data2: 1333697214
+      Data3: 1619482006
+      Data4: 1911858794
+    Path: event:/walk2
+  walk3:
+    Guid:
+      Data1: -1667319415
+      Data2: 1102674728
+      Data3: -1353747560
+      Data4: -218335876
+    Path: event:/walk3
+  walk4:
+    Guid:
+      Data1: -1580788438
+      Data2: 1158547983
+      Data3: -1357970283
+      Data4: 1988686021
+    Path: event:/walk4
 --- !u!1 &1747270312
 GameObject:
   m_ObjectHideFlags: 0
