@@ -790,7 +790,7 @@ MonoBehaviour:
   fallGravityMultiplier: 2
   topFallingSpeedRelease: 20
   topFallingSpeedHold: 17
-  numDoubleJumps: 0
+  numDoubleJumps: 1
   distanceFromFloor: 1.02
   distanceFromWall: 0.6
 --- !u!114 &5111070950753326809
