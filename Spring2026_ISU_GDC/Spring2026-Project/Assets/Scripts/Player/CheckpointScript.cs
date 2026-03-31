@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class CheckpointScript : MonoBehaviour
@@ -24,6 +25,8 @@ public class CheckpointScript : MonoBehaviour
         if(collider.gameObject.CompareTag("Checkpoint"))
         {
             playerRespawn = collider.gameObject.transform.position;
+            Animator totemAnimator = collider.gameObject.GetComponent<Animator>();
+            totemAnimator.Play("Glow");
         }
         
     }
