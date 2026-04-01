@@ -23,7 +23,7 @@ public class HitboxProperties : MonoBehaviour
     private void Update()
     {
         //If our attack is out and at a point where it's supposed to damage someone, damage them.
-        if (attackActive == true)
+        if (attackActive)
         {
             if (hurtEnemies.Count < enemiesInRange.Count) // if we have yet to damage all enemies in range, damage them
             {
@@ -59,7 +59,7 @@ public class HitboxProperties : MonoBehaviour
     //attack_landed = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(attackTarget))
+        if (collision.gameObject.tag == attackTarget)
         {
             enemiesInRange.Add(collision.gameObject);
         }
@@ -68,7 +68,7 @@ public class HitboxProperties : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(attackTarget))
+        if (collision.gameObject.tag == attackTarget)
         {
             enemiesInRange.Remove(collision.gameObject);
         }
