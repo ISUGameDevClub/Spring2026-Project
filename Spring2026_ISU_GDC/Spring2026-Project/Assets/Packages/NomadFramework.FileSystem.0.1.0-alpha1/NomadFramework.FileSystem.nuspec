@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>NomadFramework.FileSystem</id>
+    <version>0.1.0-alpha1</version>
+    <authors>Noah Van Til</authors>
+    <license type="expression">MPL-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/MPL-2.0</licenseUrl>
+    <icon>NomadFramework.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/SIGAAMDAD/NomadFramework.git</projectUrl>
+    <description>Package Description</description>
+    <tags>dotnet library framework game-development godot unity</tags>
+    <repository type="git" url="https://github.com/SIGAAMDAD/NomadFramework.git" branch="main" commit="ec65505a297cad84cb79a7f1cf46ff9d2d8e5b0d" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="NomadFramework.Core" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.CVars" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Events" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Logger" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="NomadFramework.Core" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.CVars" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Events" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+        <dependency id="NomadFramework.Logger" version="0.1.0-alpha1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
