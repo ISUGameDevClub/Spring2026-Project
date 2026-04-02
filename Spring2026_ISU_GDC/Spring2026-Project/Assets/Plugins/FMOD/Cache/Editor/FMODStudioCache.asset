@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639101439114919185
+  lastModified: 639106713283916436
   FileSizes: []
   Exists: 1
 --- !u!114 &-8687776049601668647
@@ -87,7 +87,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639101439114919185
+  lastModified: 639106713283931111
   FileSizes:
   - Name: 
     Value: 888
@@ -117,7 +117,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -4820269682280054812}
   cacheVersion: 131858
-  cacheTime: 639101439114940234
+  cacheTime: 639106713283951457
   SerializableEventsDict:
   - key: event:/GlaceonCry
     index: 0
@@ -221,6 +221,6 @@ MonoBehaviour:
   Path: FMOD/Desktop/PokemonCryTestBank01.bank
   Name: PokemonCryTestBank01
   StudioPath: bank:/PokemonCryTestBank01
-  lastModified: 639101439114940234
+  lastModified: 639106713283951457
   FileSizes: []
   Exists: 1

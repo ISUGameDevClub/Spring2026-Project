@@ -836,6 +836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StabbyStab
       objectReference: {fileID: 0}
+    - target: {fileID: 9024138925777582689, guid: 856ce1ced26dfa8469ead25312ac1a99, type: 3}
+      propertyPath: enemyRange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

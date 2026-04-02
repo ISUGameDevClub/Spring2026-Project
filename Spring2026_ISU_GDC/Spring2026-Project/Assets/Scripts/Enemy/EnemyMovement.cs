@@ -30,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         playerDist = Mathf.Abs(playerTransform.position.x - transform.position.x);
         if (playerDist > enemyRange)
         {
@@ -67,11 +68,13 @@ public class EnemyMovement : MonoBehaviour
         // if positive, then enemy is to the left. (needs to move right/positive)
         if (direction > 0)
         {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0 ,0));
             enemyRigid.linearVelocity = new Vector2(1 * enemySpeed, enemyRigid.linearVelocity.y);
         }
         else
         {
             //if direction < 0, then enemy is to the right. (needs to move left/negative)
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180 ,0));
             enemyRigid.linearVelocity = new Vector2(-1 * enemySpeed, enemyRigid.linearVelocity.y);
         }
 
