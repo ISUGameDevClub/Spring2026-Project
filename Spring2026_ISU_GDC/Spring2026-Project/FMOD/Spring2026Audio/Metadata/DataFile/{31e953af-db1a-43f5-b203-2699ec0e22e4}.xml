@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{31e953af-db1a-43f5-b203-2699ec0e22e4}">
+		<property name="assetPath">
+			<value>SFX/Enemies/Enemy 2/Enemy 2 Getting Hit 3.pkf</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7b880ef8-6a00-456f-ae12-5e1345136bad}</destination>
+		</relationship>
+	</object>
+</objects>
