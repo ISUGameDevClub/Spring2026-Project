@@ -35,6 +35,9 @@ namespace ISUGameDev.SpearGame.Player.Movement
 
         private float moveInput;
 
+        private GameObject movingPlatform;
+        private Vector3 platformLastPosition;
+
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -59,6 +62,8 @@ namespace ISUGameDev.SpearGame.Player.Movement
             isWallSliding = false;
 
             lastJumpTime = 1;
+
+            movingPlatform = null;
         }
 
         void Update()
@@ -202,6 +207,23 @@ namespace ISUGameDev.SpearGame.Player.Movement
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -movementConstants.WallSlidingSpeed, float.MaxValue));
             }
             #endregion
+
+            #region Moving Platform
+            if (movingPlatform != null)
+            {
+                Vector2 platformDelta = (Vector2)movingPlatform.transform.position - (Vector2)platformLastPosition;
+
+                // Only move with the platform when grounded on it
+                if (lastGroundedTime == 0)
+                {
+                    rb.position += platformDelta;
+                }
+
+                platformLastPosition = movingPlatform.transform.position;
+            }
+            #endregion
+
+
         }
 
         private void Jump()
@@ -266,6 +288,16 @@ namespace ISUGameDev.SpearGame.Player.Movement
         public void StopAllCurrentMovement()
         {
             rb.linearVelocity = Vector2.zero;
+        }
+
+        // Sets the player's moving platform object for tracking moving platform movement.
+        public void SetMovingPlatform(GameObject obj, Vector3 pos)
+        {
+            movingPlatform = obj;
+            if (obj != null)
+            {
+                platformLastPosition = pos;
+            }
         }
     }
 }
