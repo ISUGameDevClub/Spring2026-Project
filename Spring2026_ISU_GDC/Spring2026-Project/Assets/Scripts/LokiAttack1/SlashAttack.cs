@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(FlashMarkerSpawner))]
-[RequireComponent(typeof(SlashHitbox))]
-[RequireComponent(typeof(LokiAnimator))]
+
 
 public class SlashAttack : MonoBehaviour
 {
@@ -21,21 +19,19 @@ public class SlashAttack : MonoBehaviour
     [SerializeField] private Vector2 arenaMax = new(8f, 4f);
     [SerializeField] private float minFlashSpacing = 2.5f;
 
-    private FlashMarkerSpawner _spawner;
-    private SlashHitbox _hitbox;
-    private LokiAnimator _lokiAnimator;
+    private FlashSpawner _spawner;
+    public SlashHitBox _hitbox;
     private bool _running;
 
     public bool IsRunning => _running;
 
     private void Awake()
     {
-        _spawner = GetComponent<FlashMarkerSpawner>();
-        _hitbox = GetComponent<SlashHitbox>();
-        _lokiAnimator = GetComponent<LokiAnimator>();
+        _spawner = GetComponent<FlashSpawner>();
+        _hitbox = GetComponent<SlashHitBox>();
     }
 
-    /// <summary>Kick off the full slash sequence. Safe to call from any state machine.</summary>
+    ///Kick off the full slash sequence. Safe to call from any state machine.
     public void TriggerSlashAttack()
     {
         if (_running) return;
@@ -46,11 +42,10 @@ public class SlashAttack : MonoBehaviour
     {
         _running = true;
 
-        // 1. Charge
-        _lokiAnimator.PlayCharge();
+        // Charge
         yield return new WaitForSeconds(chargeDuration);
 
-        // 2. Spawn flash markers, record positions and directions
+        //Spawn flash markers, record positions and directions
         var positions = new List<Vector3>();
         var directions = new List<bool>(); // true = slash right
 
@@ -63,35 +58,29 @@ public class SlashAttack : MonoBehaviour
             directions.Add(goRight);
 
             _spawner.SpawnFlash(pos, goRight, i + 1);
-            _lokiAnimator.PlayFlashSpawnSFX();
-
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
 
         yield return new WaitForSeconds(0.15f); // brief read window after last flash
 
-        // 3. Teleport-slash at each position in order
+        // Teleport-slash at each position in order
         for (int i = 0; i < positions.Count; i++)
         {
             transform.position = positions[i];
-            _lokiAnimator.PlayTeleport(directions[i]);
             _spawner.DismissFlash(i);
 
             yield return new WaitForSeconds(preSlashDelay);
 
-            _lokiAnimator.PlaySlash(directions[i]);
             _hitbox.Activate();
             yield return new WaitForSeconds(slashDuration);
             _hitbox.Deactivate();
 
             // Punish window — Loki holds still
-            _lokiAnimator.PlayPunishIdle();
             yield return new WaitForSeconds(punishWindowDuration);
         }
 
-        // 4. Clean up and return to idle
+        // Clean up and return to idle
         _spawner.CleanUpAll();
-        _lokiAnimator.PlayIdle();
         _running = false;
     }
 
