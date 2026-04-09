@@ -741,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe8b97c363736541a4a363ea5355ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Player.PlayerController
-  maxHealth: 100
+  maxHealth: 5
   moveSpeed: 0
   _userInterface: {fileID: 7325397213317776131}
 --- !u!114 &5915114662108560871
@@ -790,7 +790,7 @@ MonoBehaviour:
   fallGravityMultiplier: 2
   topFallingSpeedRelease: 20
   topFallingSpeedHold: 17
-  numDoubleJumps: 0
+  numDoubleJumps: 1
   distanceFromFloor: 1.02
   distanceFromWall: 0.6
 --- !u!114 &5111070950753326809
