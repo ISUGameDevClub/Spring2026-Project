@@ -23,7 +23,7 @@ namespace ISUGameDev.SpearGame.Player.Movement
         private float gravityScale;
         private bool isJumping;
         private bool jumpInputReleased;
-        private bool touchingWall;
+        public bool touchingWall;
         private int numWallJumps;
         private int numWallJumpsDefault;
         private int wallDirection;

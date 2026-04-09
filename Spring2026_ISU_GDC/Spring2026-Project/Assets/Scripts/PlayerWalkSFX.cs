@@ -1,5 +1,6 @@
 using UnityEngine;
 using FMODUnity;
+using ISUGameDev.SpearGame.Player.Movement;
 
 public class PlayerWalkSFX : MonoBehaviour
 {
@@ -7,8 +8,12 @@ public class PlayerWalkSFX : MonoBehaviour
 
     [SerializeField] private float timeBetweenSounds;
     private float timeCounter;
+    private Rigidbody2D player;
+   private PlayerMovement pm;
     private void Start()
     {
+        player = GetComponent<Rigidbody2D>();
+        pm = GetComponent<PlayerMovement>();
         timeCounter = timeBetweenSounds;
     }
 
@@ -22,14 +27,14 @@ public class PlayerWalkSFX : MonoBehaviour
     {
         if ((timeCounter>=0))
         {
-            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0f)//&&player grounded)
+            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0f && player.linearVelocity.y == 0 && pm.touchingWall == false)
             timeCounter -= Time.deltaTime;
             //Debug.Log(timeCounter);
         }
         else
         {
             timeCounter = timeBetweenSounds;
-            //Debug.Log("Sound Played");
+            Debug.Log("Sound Played");
             PlayMySound();
         }
     }
