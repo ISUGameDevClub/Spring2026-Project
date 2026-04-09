@@ -53,36 +53,42 @@ namespace ISUGameDev.SpearGame.Player
 
         //Health UI
         
-        public int numOfHearts;
+        
 
         [SerializeField] private UnityEngine.UI.Image[] hearts;
         [SerializeField] private Sprite fullHeart;
         [SerializeField] private Sprite emptyHeart;
-        [SerializeField] private float HP;
 
-        void Start()
+
+        
+        void Update()
         {
-            //HP = health;
-        }
-        private void Update()
-        {
-            Debug.Log("Test");
-            health = HP;
-            if (health < numOfHearts)
+            //Debug.Log(health);
+
+            //health alter test
+
+            //if (Input.GetKeyDown(KeyCode.I))
+            //{
+            //    health--;
+            //    Debug.Log("down");
+            //}
+            //if (Input.GetKeyDown(KeyCode.Y))
+            //{
+            //    health++;
+            //    Debug.Log("up");
+            //}
+
+            if (health > maxHealth)
             {
-                health = numOfHearts;
+                health = maxHealth;
+            }
+            else if (health<0)
+            {
+                health = 0;
             }
             for (int i = 0; i < hearts.Length; i++)
             {
-                if (i < health)
-                {
-                    hearts[i].sprite = fullHeart;
-                }
-                else
-                {
-                    hearts[i].sprite = emptyHeart;
-                }
-                    if (i < hearts.Length)
+                if (i < maxHealth)
                 {
                     hearts[i].enabled = true;
                 }
@@ -91,9 +97,20 @@ namespace ISUGameDev.SpearGame.Player
                     hearts[i].enabled = false;
                 }
 
+                if (i < health)
+                {
+                    hearts[i].sprite = fullHeart;
+                }
+                else
+                {
+                    hearts[i].sprite = emptyHeart;
+                }
+                
+
             }
         }
 
+        
     }
     
 
