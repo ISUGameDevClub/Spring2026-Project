@@ -13,7 +13,7 @@ public class CheckpointScript : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown("r"))
+        if(Input.GetKeyDown(KeyCode.R))
         {
             CheckpointDebug();
         }
@@ -21,7 +21,7 @@ public class CheckpointScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag.Equals("Checkpoint"))
+        if(collider.gameObject.CompareTag("Checkpoint"))
         {
             playerRespawn = collider.gameObject.transform.position;
         }
