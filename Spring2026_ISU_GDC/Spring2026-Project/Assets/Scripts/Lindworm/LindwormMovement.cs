@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Splines;
 
 public class LindwormMovement : MonoBehaviour
@@ -9,10 +10,11 @@ public class LindwormMovement : MonoBehaviour
     private float stunCounter = 0;
     private float positionPercent;
     private bool forward = true;
-    
+    private SpriteRenderer sr;
     
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
     }
 
     
@@ -25,10 +27,12 @@ public class LindwormMovement : MonoBehaviour
             if (forward)
             {
                 positionPercent += speed * Time.deltaTime;
+                sr.flipX = false;
             }
             else
             {
                 positionPercent -= speed * Time.deltaTime;
+                sr.flipX = true;
             }
 
             Vector3 currentPosition = spline.EvaluatePosition(positionPercent);

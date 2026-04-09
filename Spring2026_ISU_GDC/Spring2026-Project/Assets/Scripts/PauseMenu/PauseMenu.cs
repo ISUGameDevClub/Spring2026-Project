@@ -16,7 +16,7 @@ public class PauseMenu : MonoBehaviour
     private GameObject ControlContainer;
 
     [SerializeField]
-    private InputActionReference _pauseAction;
+    private InputActionReference pauseAction;
 
     /// <summary>
     /// 
@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         GameStateManager.GameStateChanged.Subscribe(OnGameStateChanged);
-        _pauseAction.action.started += OnPauseActionTriggered;
+        pauseAction.action.started += OnPauseActionTriggered;
     }
 
     /// <summary>
