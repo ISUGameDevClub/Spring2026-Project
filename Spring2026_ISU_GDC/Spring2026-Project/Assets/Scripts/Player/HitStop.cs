@@ -1,31 +1,34 @@
 using System.Collections;
 using UnityEngine;
 
-public class HitStop : MonoBehaviour
+namespace ISUGameDev.SpearGame.Player
 {
-    
-    void HitStopFunc(float duration)
+    public class HitStop : MonoBehaviour
     {
-        StartCoroutine(WaitForTime(duration));
-    }
-
-    IEnumerator WaitForTime(float duration)
-    {
-        Time.timeScale =0;
-        yield return new WaitForSecondsRealtime(duration);
-        Time.timeScale = 1;
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown("s"))
+        private void HitStopFunc(float duration)
         {
-            HitStopFunc(.3f);
+            StartCoroutine(WaitForTime(duration));
+        }
+
+        private IEnumerator WaitForTime(float duration)
+        {
+            Time.timeScale = 0;
+            yield return new WaitForSecondsRealtime(duration);
+            Time.timeScale = 1;
+        }
+
+        private void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+            if (Input.GetKeyDown("s"))
+            {
+                HitStopFunc(.3f);
+            }
         }
     }
 }

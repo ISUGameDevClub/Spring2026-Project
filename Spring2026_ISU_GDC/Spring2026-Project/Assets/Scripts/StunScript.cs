@@ -1,5 +1,8 @@
+using ISUGameDev.SpearGame.Player;
+using ISUGameDev.SpearGame.Player.PlayerState;
 using UnityEngine;
 
+// TODO: refactor...
 public class StunScript : MonoBehaviour
 {
 
@@ -16,13 +19,13 @@ public class StunScript : MonoBehaviour
     {
         if (stunTimer <= Time.time)
         {
-            playerStateMachine.ChangeState(ISUGameDev.SpearGame.BasePlayerState.PlayerStateType.RoamingWithSpear);
+            playerStateMachine.ChangeState(PlayerStateType.RoamingWithSpear);
         }
     }
 
     public void InflictStun(float stunTime)
     {
-        playerStateMachine.ChangeState(ISUGameDev.SpearGame.BasePlayerState.PlayerStateType.Stunned);
+        playerStateMachine.ChangeState(PlayerStateType.Stunned);
         stunTimer = Time.time + stunTime;
     }
 }

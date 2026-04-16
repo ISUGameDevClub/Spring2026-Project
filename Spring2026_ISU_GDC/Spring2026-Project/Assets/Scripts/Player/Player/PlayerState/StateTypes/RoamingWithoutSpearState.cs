@@ -1,18 +1,21 @@
-using ISUGameDev.SpearGame;
+using ISUGameDev.SpearGame.Player.PlayerAttacks;
 using UnityEngine;
-using static ISUGameDev.SpearGame.BasePlayerState;
 
-public class RoamingWithoutSpearState : BasePlayerState
+namespace ISUGameDev.SpearGame.Player.PlayerState.StateTypes
 {
-    [SerializeField] private SpearDashAttack spearDashAttack;
-
-    private void Awake()
+    public class RoamingWithoutSpearState : BasePlayerState
     {
-        this.playerStateType = PlayerStateType.RoamingWithoutSpear;
-    }
+        [SerializeField]
+        private SpearDashAttack spearDashAttack;
 
-    public override AttackMechanic GetSecondaryAttackMechanicForState()
-    {
-        return spearDashAttack.GetAttackImplementation();
+        private void Awake()
+        {
+            playerStateType = PlayerStateType.RoamingWithoutSpear;
+        }
+
+        public override AttackMechanic GetSecondaryAttackMechanicForState()
+        {
+            return spearDashAttack.GetAttackImplementation();
+        }
     }
 }

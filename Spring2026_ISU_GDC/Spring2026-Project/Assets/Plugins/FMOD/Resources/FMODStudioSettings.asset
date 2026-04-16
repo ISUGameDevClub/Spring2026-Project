@@ -333,7 +333,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - TestingBank01
+  - PokemonCryTestBank01
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
