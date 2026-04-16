@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class FlashHit : MonoBehaviour
 {
-
     bool isHit;
     void Update()
     {
@@ -13,7 +12,7 @@ public class FlashHit : MonoBehaviour
     {
         GameObject hit = collision.gameObject;
 
-        if (hit.tag.Equals("Player"))
+        if (hit.CompareTag("Player"))
         {
             if (!isHit)
             {

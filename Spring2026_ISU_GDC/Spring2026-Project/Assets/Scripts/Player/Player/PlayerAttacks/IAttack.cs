@@ -1,14 +1,17 @@
-using UnityEngine;
+using ISUGameDev.SpearGame.Player.PlayerState;
 
-/// <summary>
-/// Contract for an attack in game. Must have an implementation for carrying out an attack
-/// </summary>
-public interface IAttack
+namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 {
-
     /// <summary>
-    /// Gets attack implementation for this specific attack.
+    /// Contract for an attack in game. Must have an implementation for carrying out an attack
     /// </summary>
-    /// <returns>function pointer delegate of type AttackMechanic</returns>
-    AttackMechanic GetAttackImplementation();
+    public interface IAttack
+    {
+
+        /// <summary>
+        /// Gets attack implementation for this specific attack.
+        /// </summary>
+        /// <returns>function pointer delegate of type AttackMechanic</returns>
+        AttackMechanic GetAttackImplementation();
+    }
 }

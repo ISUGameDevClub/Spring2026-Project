@@ -1,18 +1,19 @@
-using ISUGameDev.SpearGame;
-using UnityEngine;
-using static ISUGameDev.SpearGame.BasePlayerState;
+using ISUGameDev.SpearGame.Player.Movement;
 
-public class InDialogueState : BasePlayerState
+namespace ISUGameDev.SpearGame.Player.PlayerState.StateTypes
 {
-
-    private void Awake()
+    public class InDialogueState : BasePlayerState
     {
-        this.playerStateType = PlayerStateType.InDialogue;
-    }
 
-    public override void ApplyMovementModiferForState(PlayerMovement playerMovement)
-    { 
-       playerMovement.StopAllCurrentMovement();
-       playerMovement.enabled = false;
+        private void Awake()
+        {
+            playerStateType = PlayerStateType.InDialogue;
+        }
+
+        public override void ApplyMovementModiferForState(PlayerMovement playerMovement)
+        {
+            playerMovement.StopAllCurrentMovement();
+            playerMovement.enabled = false;
+        }
     }
 }
