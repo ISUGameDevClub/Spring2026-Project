@@ -1,6 +1,7 @@
 using System;
 using Nomad.Core.Events;
 using Nomad.Core.Logger;
+using Nomad.Core.ServiceRegistry.Globals;
 
 namespace FrameworkHandler.State
 {
@@ -36,7 +37,7 @@ namespace FrameworkHandler.State
 		/// <remarks>
 		/// The <see cref="GameStateChanged"/> event is fire whenever this variable is changed
 		/// </remarks>
-		public GameState GameState { get; private set; } = GameState.TitleScreen;
+		public GameState GameState { get; private set; } = GameState.Menu;
 
 		private ILoggerCategory _category;
 		private ILoggerService _logger;
@@ -76,11 +77,11 @@ namespace FrameworkHandler.State
 			// make sure we actually have valid state to do the transition
 			switch (GameState)
 			{
-				case GameState.TitleScreen:
-					_logger.PrintWarning(in _category, "GameStateManager.PauseGame: attempted to pause game from title screen.");
+				case GameState.Menu:
+					_category.PrintWarning("GameStateManager.PauseGame: attempted to pause game from title screen.");
 					break;
 				case GameState.Paused:
-					_logger.PrintWarning(in _category, "GameStateManager.PauseGame: game is already paused.");
+					_category.PrintWarning("GameStateManager.PauseGame: game is already paused.");
 					break;
 				case GameState.Level:
 					SetGameState(GameState.Paused);
@@ -103,11 +104,11 @@ namespace FrameworkHandler.State
 			// make sure we actually have valid state to do the transition
 			switch (GameState)
 			{
-				case GameState.TitleScreen:
-					_logger.PrintWarning(in _category, "GameStateManager.UnPauseGame: attempted to unpause game from title screen.");
+				case GameState.Menu:
+					_category.PrintWarning("GameStateManager.UnPauseGame: attempted to unpause game from title screen.");
 					break;
 				case GameState.Level:
-					_logger.PrintWarning(in _category, "GameStateManager.UnPauseGame: game isn't paused, but function is called.");
+					_category.PrintWarning("GameStateManager.UnPauseGame: game isn't paused, but function is called.");
 					break;
 				case GameState.Paused:
 					SetGameState(GameState.Level);
@@ -121,23 +122,23 @@ namespace FrameworkHandler.State
 		/// <summary>
 		/// </summary>
 		/// <remarks>
-		/// A lose wrapper around calling <see cref="SetGameState"/> with <see cref="GameState.Titlescreen"/>, effectively the same as writing
-		/// "SetGameSet( GameState.Titlescreen )" when the pause menu is active
+		/// A lose wrapper around calling <see cref="SetGameState"/> with <see cref="GameState.Menu"/>, effectively the same as writing
+		/// "SetGameSet( GameState.Menu )" when the pause menu is active
 		/// </remarks>
-		/// <returns>True if state was changed to <see cref="GameState.TitleScreen"/></return>
-		public bool ActivateTitleScreen()
+		/// <returns>True if state was changed to <see cref="GameState.Menu"/></return>
+		public bool ActivateMenu()
 		{
 			// make sure we actually have valid state to do the transition
 			switch (GameState)
 			{
 				case GameState.Level:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateTitleScreen: attempted to activate title screen from a level without using the pause menu.");
+					_category.PrintWarning("GameStateManager.ActivateMenu: attempted to activate title screen from a level without using the pause menu.");
 					break;
-				case GameState.TitleScreen:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateTitleScreen: title screen state reactivated.");
+				case GameState.Menu:
+					_category.PrintWarning("GameStateManager.ActivateMenu: title screen state reactivated.");
 					break;
 				case GameState.Paused:
-					SetGameState(GameState.TitleScreen);
+					SetGameState(GameState.Menu);
 					return true;
 				default: // uh-oh
 					throw new ArgumentOutOfRangeException("GameStateManager has an invalid game state!");
@@ -158,12 +159,12 @@ namespace FrameworkHandler.State
 			switch (GameState)
 			{
 				case GameState.Paused:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateLevel: attempted to activate level state from pause menu, use GameStateManager.UnPauseGame instead.");
+					_category.PrintWarning("GameStateManager.ActivateLevel: attempted to activate level state from pause menu, use GameStateManager.UnPauseGame instead.");
 					break;
 				case GameState.Level:
-					_logger.PrintWarning(in _category, "GameStateManager.ActivateLevel: level state reactivated.");
+					_category.PrintWarning("GameStateManager.ActivateLevel: level state reactivated.");
 					break;
-				case GameState.TitleScreen:
+				case GameState.Menu:
 					SetGameState(GameState.Level);
 					return true;
 				default: // uh-oh
@@ -182,16 +183,16 @@ namespace FrameworkHandler.State
 		/// <exception cref="ArgumentOutOfRangeException">Thrown if <paramref name="state"/> isn't a valid <see cref="GameState"/>.</exception>
 		public void SetGameState(GameState state)
 		{
-			if (state < GameState.TitleScreen || state >= GameState.Count)
+			if (state < GameState.Menu || state >= GameState.Count)
 			{
 				throw new ArgumentOutOfRangeException($"Provided state '{state}' is not a valid GameState");
 			}
 			else if (GameState == state)
 			{
-				_logger.PrintWarning(in _category, $"GameStateManager.SetGameState: same game state.");
+				_category.PrintWarning($"GameStateManager.SetGameState: same game state.");
 			}
 
-			_logger.PrintLine(in _category, $"GameStateManager.SetState: changing state to '{state}' from '{GameState}...");
+			_category.PrintLine($"GameStateManager.SetState: changing state to '{state}' from '{GameState}...");
 
 			// notify the system
 			TriggerGameStateChange(state);
@@ -207,7 +208,7 @@ namespace FrameworkHandler.State
 		/// <exception cref="ArgumentOutOfRangeException">Thrown if <paramref name="newState"/> isn't a valid <see cref="global::GameState"/>.</exception>
 		private void TriggerGameStateChange(GameState newState)
 		{
-			if (newState < GameState.TitleScreen || newState >= GameState.Count)
+			if (newState < GameState.Menu || newState >= GameState.Count)
 			{
 				throw new ArgumentOutOfRangeException(nameof(newState));
 			}
