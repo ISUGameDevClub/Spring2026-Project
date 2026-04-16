@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{963e7602-a1e6-404a-9248-5d3a4d486473}">
+		<property name="assetPath">
+			<value>Music Scoring/Earth level one .wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>110.51678004535147</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7b880ef8-6a00-456f-ae12-5e1345136bad}</destination>
+		</relationship>
+	</object>
+</objects>
