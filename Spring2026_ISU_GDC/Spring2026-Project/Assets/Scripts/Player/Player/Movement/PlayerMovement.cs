@@ -75,6 +75,8 @@ namespace ISUGameDev.SpearGame.Player.Movement
 
             float yVel = rb.linearVelocityY;
             GetComponent<Animator>().SetFloat("PlayerYVelocity", yVel);
+            
+            GetComponent<Animator>().SetBool("IsGrounded", lastGroundedTime < movementConstants.JumpCoyoteTime);
 
             if (moveInput < -0.01f || moveInput > 0.01f)
             {
@@ -231,7 +233,7 @@ namespace ISUGameDev.SpearGame.Player.Movement
 
         private void Jump(bool firstJump = true)
         {
-            GetComponent<Animator>().SetTrigger("JustJumped");
+           
 
             if (!firstJump)
             {
@@ -240,6 +242,7 @@ namespace ISUGameDev.SpearGame.Player.Movement
             else
             {
                 FMODUnity.RuntimeManager.PlayOneShot(jumpSFX);
+                GetComponent<Animator>().SetTrigger("JustJumped");
             }
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
