@@ -21,6 +21,9 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 
         [SerializeField] private float travelSpeed = 10f;
         [SerializeField] private float pickUpDistance = 0.3f;
+        
+        [SerializeField] private FMODUnity.EventReference dashSFX;
+        [SerializeField] private FMODUnity.EventReference spearPickupSFX;
 
         private void Awake()
         {
@@ -70,6 +73,9 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             if (!spearStuckInWall) { return; }
             if (isDashing) { return; }
 
+            //sfx
+            FMODUnity.RuntimeManager.PlayOneShot(dashSFX);
+            
             //cache players rotation
             var playerObj = playerAnimator.gameObject;
             playerRotCache = playerObj.transform.rotation.eulerAngles;
@@ -101,6 +107,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 
         public void PickUpSpear()
         {
+            FMODUnity.RuntimeManager.PlayOneShot(spearPickupSFX);
+            
             Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
             transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
 
