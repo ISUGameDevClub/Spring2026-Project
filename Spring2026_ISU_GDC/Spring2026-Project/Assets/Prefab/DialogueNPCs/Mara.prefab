@@ -67,7 +67,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03665924, y: 0.21078861}
+  m_Offset: {x: 0.03665924, y: 0.14520001}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.7962885, y: 2.0814393}
+  m_Size: {x: 2.7962885, y: 2.2126164}
   m_EdgeRadius: 0
 --- !u!114 &320665395504814035
 MonoBehaviour:
@@ -91,9 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d7939d394af48fc8f5e881a0055210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  dialogue: {fileID: 11400000, guid: 49360ac79058741629003afb8cc6859d, type: 2}
-  dialogueUIPrefab: {fileID: 1030786580407506917, guid: b94debb601c10aa4a929d6ac05eeb9e5, type: 3}
-  dialogueState: 5
+  dialogue: {fileID: 11400000, guid: efe6a9bb04bacef4eb7ffa28b6570b3e, type: 2}
 --- !u!1 &6843183565237711834
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3485131595477770534}
   - component: {fileID: 8619663898522180015}
+  - component: {fileID: 6021696081243278856}
   m_Layer: 0
   m_Name: NPC_GFX
   m_TagString: Untagged
@@ -120,8 +119,8 @@ Transform:
   m_GameObject: {fileID: 6843183565237711834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.308, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3541065601844607173}
@@ -175,7 +174,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3277670875376260617, guid: 9db30050640a9c649abfa076c1d32c70, type: 3}
+  m_Sprite: {fileID: 2581700760353946512, guid: af2693bce36e7a04086df5ed1ddfc08d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,6 +184,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &6021696081243278856
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843183565237711834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb89b765b9e08344ab4fff123d6aad24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7502793538743428290
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3541065601844607173}
   m_Layer: 0
-  m_Name: Base_DialogueNPC
+  m_Name: Mara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
