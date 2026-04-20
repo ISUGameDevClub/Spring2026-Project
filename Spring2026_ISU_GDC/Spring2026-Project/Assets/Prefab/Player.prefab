@@ -1202,6 +1202,14 @@ MonoBehaviour:
   - {fileID: 7400000, guid: e6322474cde5bc743b6f56ec9b021b08, type: 2}
   - {fileID: 7400000, guid: 873131df19cb3884ab8a67d6cf9c8eb1, type: 2}
   hitboxForJab: {fileID: 1100537893380807450}
+  attackSFX:
+    Guid:
+      Data1: -300563083
+      Data2: 1202652805
+      Data3: 405551780
+      Data4: 1944548073
+    Path: event:/Spear/SpearJab
+  attackCooldown: 0.4
 --- !u!114 &1517656977522327550
 MonoBehaviour:
   m_ObjectHideFlags: 0

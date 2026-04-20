@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639122173102966749
+  lastModified: 639122210254104420
   FileSizes: []
   Exists: 1
 --- !u!114 &-8690127170289924221
@@ -214,10 +214,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639122173102977925
+  lastModified: 639122210254114468
   FileSizes:
   - Name: 
-    Value: 2268
+    Value: 2302
   Exists: 1
 --- !u!114 &-4516263947548409783
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639122188969177961
+  lastModified: 639122210254823868
   FileSizes: []
   Exists: 1
 --- !u!114 &-4158823097253760280
@@ -438,13 +438,14 @@ MonoBehaviour:
   - {fileID: 3918485850780848059}
   - {fileID: -8690127170289924221}
   - {fileID: -9220837683260970925}
+  - {fileID: 1100726447527208490}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8832373105473330866}
   StringsBanks:
   - {fileID: -4820269682280054812}
   cacheVersion: 131858
-  cacheTime: 639122188969177961
+  cacheTime: 639122210254823868
   SerializableEventsDict:
   - key: event:/Ambience/Wind
     index: 0
@@ -492,6 +493,35 @@ MonoBehaviour:
     index: 21
   - key: event:/Spear/SpearCock
     index: 22
+  - key: event:/Spear/SpearJab
+    index: 23
+--- !u!114 &1100726447527208490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spear/SpearJab
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Spear/SpearJab
+  Guid:
+    Data1: -300563083
+    Data2: 1202652805
+    Data3: 405551780
+    Data4: 1944548073
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1518855233857011202
 MonoBehaviour:
   m_ObjectHideFlags: 0
