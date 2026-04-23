@@ -1220,6 +1220,32 @@ MonoBehaviour:
   layoutGroup: {fileID: 6262481657663045956}
   featherPrefab: {fileID: 3015976351460923068, guid: 32070ecb1d3d07642a9266331d7f5e00, type: 3}
   maxHealthFeathers: 4
+  cannotTakeDamage: 0
+  playerHitSfx:
+    Guid:
+      Data1: -1166255978
+      Data2: 1265805898
+      Data3: 1632750269
+      Data4: -1912444949
+    Path: event:/EnemySFX/EnemyGettingHit 2
+  playerMoanSfx:
+    Guid:
+      Data1: 1987617193
+      Data2: 1141108701
+      Data3: -1411332688
+      Data4: 1106980061
+    Path: event:/Player/PlayerGettingHit
+  playerRenderer: {fileID: 4886527534139308763}
+  hitFlashMaterial: {fileID: 2100000, guid: ecf232fcdfc598e489ace3fba3f375e3, type: 2}
+  hitFlashDuration: 0.2
+  playerGhostPrefab: {fileID: 2995548434247892153, guid: f181e971af6014347b622736e85c3e24, type: 3}
+  playerDeathSFX:
+    Guid:
+      Data1: -360112638
+      Data2: 1147344702
+      Data3: 821071491
+      Data4: 641601502
+    Path: event:/Player/PlayerDeath
 --- !u!1 &6702410588215574469
 GameObject:
   m_ObjectHideFlags: 0

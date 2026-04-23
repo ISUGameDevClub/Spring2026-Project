@@ -75,6 +75,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             if (!spearStuckInWall) { return; }
             if (isDashing) { return; }
 
+            transform.root.gameObject.GetComponent<PlayerHealthController>().cannotTakeDamage = true;
+            
             dashHitbox.gameObject.SetActive(true);
             
             //sfx
@@ -115,6 +117,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             
             Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
             transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
+            
+            transform.root.gameObject.GetComponent<PlayerHealthController>().cannotTakeDamage = false;
             
             dashHitbox.gameObject.SetActive(false);
 

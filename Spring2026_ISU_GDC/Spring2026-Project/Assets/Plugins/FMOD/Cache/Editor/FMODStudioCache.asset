@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639122210254104420
+  lastModified: 639125564598526149
   FileSizes: []
   Exists: 1
 --- !u!114 &-8690127170289924221
@@ -142,7 +142,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639122161876219482
+  lastModified: 639125564599746688
   FileSizes: []
   Exists: 1
 --- !u!114 &-6723434506069728811
@@ -163,6 +163,33 @@ MonoBehaviour:
     Data2: 1147344702
     Data3: 821071491
     Data4: 641601502
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5840770640407175281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiKnifeRichochet
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiKnifeRichochet
+  Guid:
+    Data1: 1993732999
+    Data2: 1328989521
+    Data3: 1455517610
+    Data4: 29979920
   Banks:
   - {fileID: -4473253729219495171}
   IsStream: 0
@@ -214,10 +241,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639122210254114468
+  lastModified: 639125564598546165
   FileSizes:
   - Name: 
-    Value: 2302
+    Value: 2812
   Exists: 1
 --- !u!114 &-4516263947548409783
 MonoBehaviour:
@@ -261,7 +288,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639122210254823868
+  lastModified: 639125574961417028
   FileSizes: []
   Exists: 1
 --- !u!114 &-4158823097253760280
@@ -318,6 +345,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3569860250803868042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiSwordCharge
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiSwordCharge
+  Guid:
+    Data1: -203626417
+    Data2: 1186950988
+    Data3: -1005801082
+    Data4: 208501256
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2988266345097221645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,9 +387,63 @@ MonoBehaviour:
   Path: FMOD/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 639122161878843720
+  lastModified: 639125564602502686
   FileSizes: []
   Exists: 1
+--- !u!114 &-2654254436584297306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiKnifeThrow
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiKnifeThrow
+  Guid:
+    Data1: 155388575
+    Data2: 1187085136
+    Data3: 1754973364
+    Data4: -1988706777
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2457596321544473951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiFlashes
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiFlashes
+  Guid:
+    Data1: 964100736
+    Data2: 1294880380
+    Data3: -759814494
+    Data4: 1485173287
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2333377350588002348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +476,33 @@ MonoBehaviour:
   - Credits
   - GameOver
   Exists: 1
+--- !u!114 &-1803271611609314231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiCloneGettingHit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiCloneGettingHit
+  Guid:
+    Data1: 279836770
+    Data2: 1092363181
+    Data3: 1374544542
+    Data4: -1419198990
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1406674899732551466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,13 +574,24 @@ MonoBehaviour:
   - {fileID: -8690127170289924221}
   - {fileID: -9220837683260970925}
   - {fileID: 1100726447527208490}
+  - {fileID: 2326007995024068565}
+  - {fileID: 7250722512800328752}
+  - {fileID: -3569860250803868042}
+  - {fileID: 6163979515710281879}
+  - {fileID: -1803271611609314231}
+  - {fileID: -2457596321544473951}
+  - {fileID: -5840770640407175281}
+  - {fileID: -2654254436584297306}
+  - {fileID: 5372964075706316816}
+  - {fileID: 6519754023905987245}
+  - {fileID: 59185951506876470}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8832373105473330866}
   StringsBanks:
   - {fileID: -4820269682280054812}
   cacheVersion: 131858
-  cacheTime: 639122210254823868
+  cacheTime: 639125574961417028
   SerializableEventsDict:
   - key: event:/Ambience/Wind
     index: 0
@@ -495,6 +641,55 @@ MonoBehaviour:
     index: 22
   - key: event:/Spear/SpearJab
     index: 23
+  - key: event:/EnemySFX/Loki SFX/LokiDeath
+    index: 24
+  - key: event:/EnemySFX/Loki SFX/LokiTeleport
+    index: 25
+  - key: event:/EnemySFX/Loki SFX/LokiSwordCharge
+    index: 26
+  - key: event:/EnemySFX/Loki SFX/LokiCloneSpawn
+    index: 27
+  - key: event:/EnemySFX/Loki SFX/LokiCloneGettingHit
+    index: 28
+  - key: event:/EnemySFX/Loki SFX/LokiFlashes
+    index: 29
+  - key: event:/EnemySFX/Loki SFX/LokiKnifeRichochet
+    index: 30
+  - key: event:/EnemySFX/Loki SFX/LokiKnifeThrow
+    index: 31
+  - key: event:/EnemySFX/Enemy3Attack
+    index: 32
+  - key: event:/Drawbridge
+    index: 33
+  - key: event:/EnemySFX/Loki SFX/LokiCheapShot
+    index: 34
+--- !u!114 &59185951506876470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiCheapShot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiCheapShot
+  Guid:
+    Data1: 1438169851
+    Data2: 1314445884
+    Data3: -597385033
+    Data4: -66174560
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1100726447527208490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +789,33 @@ MonoBehaviour:
   lastModified: 639094469810672565
   FileSizes: []
   Exists: 1
+--- !u!114 &2326007995024068565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiDeath
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiDeath
+  Guid:
+    Data1: 595693343
+    Data2: 1080235844
+    Data3: 673287304
+    Data4: 1423967198
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2452232577563141196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +855,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -4473253729219495171}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -812,6 +1034,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5372964075706316816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Enemy3Attack
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Enemy3Attack
+  Guid:
+    Data1: 887795936
+    Data2: 1140882862
+    Data3: -1142624870
+    Data4: -1457177150
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5584533933897356069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +1089,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 18000
+--- !u!114 &6163979515710281879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiCloneSpawn
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiCloneSpawn
+  Guid:
+    Data1: 396022619
+    Data2: 1202452148
+    Data3: 28532390
+    Data4: -323371577
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6519754023905987245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drawbridge
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Drawbridge
+  Guid:
+    Data1: -628370707
+    Data2: 1221265341
+    Data3: -1040893793
+    Data4: -187653417
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7069614700154921617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +1168,33 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -2333377350588002348}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7250722512800328752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EnemySFX/Loki SFX/LokiTeleport
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/EnemySFX/Loki SFX/LokiTeleport
+  Guid:
+    Data1: 1153109551
+    Data2: 1187691858
+    Data3: 1119358100
+    Data4: 984573459
+  Banks:
+  - {fileID: -4473253729219495171}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
