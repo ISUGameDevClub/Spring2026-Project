@@ -13,6 +13,9 @@ namespace ISUGameDev.SpearGame.Player.Movement
         private Rigidbody2D rb;
         private PlayerMovementConstants movementConstants;
 
+        [SerializeField] private FMODUnity.EventReference jumpSFX;
+        [SerializeField] private FMODUnity.EventReference doubleJumpSFX;
+        
         private float acceleration;
         private float decceleration;
         private float accelerationDefault;
@@ -72,6 +75,8 @@ namespace ISUGameDev.SpearGame.Player.Movement
 
             float yVel = rb.linearVelocityY;
             GetComponent<Animator>().SetFloat("PlayerYVelocity", yVel);
+            
+            GetComponent<Animator>().SetBool("IsGrounded", lastGroundedTime < movementConstants.JumpCoyoteTime);
 
             if (moveInput < -0.01f || moveInput > 0.01f)
             {
@@ -156,7 +161,7 @@ namespace ISUGameDev.SpearGame.Player.Movement
                 Jump();
             else if (jumpInputReleased && numDoubleJumps > 0 && lastGroundedTime != 0 && lastJumpTime == Time.fixedDeltaTime && !touchingWall)
             {
-                Jump();
+                Jump(false);
                 numDoubleJumps--;
                 jumpInputReleased = false;
             }
@@ -226,9 +231,19 @@ namespace ISUGameDev.SpearGame.Player.Movement
 
         }
 
-        private void Jump()
+        private void Jump(bool firstJump = true)
         {
-            GetComponent<Animator>().SetTrigger("JustJumped");
+           
+
+            if (!firstJump)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(doubleJumpSFX);
+            }
+            else
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(jumpSFX);
+                GetComponent<Animator>().SetTrigger("JustJumped");
+            }
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(Vector2.up * movementConstants.JumpForce, ForceMode2D.Impulse);

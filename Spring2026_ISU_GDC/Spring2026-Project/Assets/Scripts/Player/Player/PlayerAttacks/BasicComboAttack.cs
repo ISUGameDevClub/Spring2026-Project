@@ -17,6 +17,11 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
         private int currentComboAttack = 0;
         private Animator playerAnimator;
         private float comboTimer = 0;
+        
+        [SerializeField] private FMODUnity.EventReference attackSFX;
+        
+        [SerializeField] float attackCooldown = 0.5f;
+        private float cooldownTimer = 0;
 
         public AttackMechanic GetAttackImplementation()
         {
@@ -41,9 +46,15 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
         //  Used for when the player attacks while equipped with the spear.
         private void UseComboAttacks()
         {
+            if (IsOnCooldown()) return;
+            
             //Debug.Log((int)GlobalGameData.Data.basicJabDamage);
             hitboxForJab.SetDamageForHitbox((int)GlobalGameData.Data.basicJabDamage);
 
+            FMODUnity.RuntimeManager.PlayOneShot(attackSFX);
+
+            cooldownTimer = Time.time + attackCooldown;
+            
             playerAnimator.Play(basicAttacks[currentComboAttack].name);
             if (currentComboAttack < basicAttacks.Count() - 1)
             {
@@ -55,6 +66,11 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
                 // Reset the attacks back to the start of the combo.
                 currentComboAttack = 0;
             }
+        }
+        
+        public bool IsOnCooldown()
+        {
+            return Time.time < cooldownTimer;
         }
     }
 }
