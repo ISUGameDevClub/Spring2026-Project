@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6198cdbfb3ab42799698812d172dc50, type: 3}
+  m_Name: Heimdall_Conc
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Dialogue.Dialogue
+  dialogueStrings:
+  - I did not lose faith in you for a second, my lady.
+  - The 9 realms have been saved, no thanks to you.
+  - As I said, it is my duty. Seeing the realms thrive is the only reward I hope
+    for.
+  - I am sure Loki will not be the last, but now is not the time to think of such
+    things.
+  - I believe peace is upon us.
+  - Peace well earned.
+  - I have hopes that without their strongest, this war will fizzle out.
+  - "Well then. If that\u2019s the case, I suppose there\u2019s not much left to
+    do here."
+  - "I gather you are correct. So\u2026"
+  - Where to next?
+  characterIcon: {fileID: 0}
+  characterName: Heimdall & Ratatoskr

@@ -11,6 +11,7 @@ public class SpearTravel : MonoBehaviour
     public bool hitWall;
     private float xAngle;
     private float yAngle;
+    [SerializeField] private FMODUnity.EventReference spearStuckInWallSFX;
 
     // Update is called once per frame
     void Start()
@@ -36,6 +37,8 @@ public class SpearTravel : MonoBehaviour
         {
             hitWall = true;
             FindFirstObjectByType<PlayerEventManager>().OnPlayerSpearStuckInWall.Invoke(this.gameObject);
+            Vector3 flatPosition = new Vector3(transform.position.x, transform.position.y, 0f);
+            FMODUnity.RuntimeManager.PlayOneShot(spearStuckInWallSFX, flatPosition);
         }
         if(hitWall&&col.gameObject.tag=="Player")
         {

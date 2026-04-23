@@ -21,6 +21,11 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 
         [SerializeField] private float travelSpeed = 10f;
         [SerializeField] private float pickUpDistance = 0.3f;
+        
+        [SerializeField] private FMODUnity.EventReference dashSFX;
+        [SerializeField] private FMODUnity.EventReference spearPickupSFX;
+
+        [SerializeField] private HitboxProperties dashHitbox;
 
         private void Awake()
         {
@@ -70,6 +75,11 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             if (!spearStuckInWall) { return; }
             if (isDashing) { return; }
 
+            dashHitbox.gameObject.SetActive(true);
+            
+            //sfx
+            FMODUnity.RuntimeManager.PlayOneShot(dashSFX);
+            
             //cache players rotation
             var playerObj = playerAnimator.gameObject;
             playerRotCache = playerObj.transform.rotation.eulerAngles;
@@ -101,8 +111,12 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 
         public void PickUpSpear()
         {
+            FMODUnity.RuntimeManager.PlayOneShot(spearPickupSFX);
+            
             Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
             transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
+            
+            dashHitbox.gameObject.SetActive(false);
 
             playerAnimator.SetBool("HoldingSpear", true);
             playerAnimator.Play(playerIdleWithSpearClip.name);

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6198cdbfb3ab42799698812d172dc50, type: 3}
+  m_Name: Fossegrim
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Dialogue.Dialogue
+  dialogueStrings:
+  - Well, well, well. Who do we have here?
+  - A Valkyrie? All on her lonesome?
+  - It must be a lonely path fighting for the 9 realms. No company, no conversation,
+    no fun.
+  - "Why don\u2019t you take a rest in the sea with me? Take a little weight off
+    of those heroic shoulders of yours."
+  - Not today, spirit. You cannot fool me.
+  - I know you well. Your waters are a danger and I am not so easily charmed into
+    my own demise.
+  - "Oh come on! You\u2019re no fun."
+  - Fine. Run along if you must.
+  - Actually, you may be of use to me.
+  - What do you know of Ragnarok?
+  - Ragnarok? Is that why you are so eager to pass me by?
+  - "Hm\u2026Well I suppose I cannot have my fun if the world ends can I?"
+  - "Yes\u2026I suppose I can tell you what I have seen."
+  - Loki has heard of you and your quest, though I do not know many who have not
+    at this point.
+  - He has begun building forces in Muspelheim just for little old you!
+  - "And\u2026everyone else I imagine. Hahaha! End of the world and all!"
+  - You know, the fun thing about Muspelheim is that its fires caused Ymir to be
+    formed in the beginning.
+  - Where streams of ice and fire met, Ymir rose out of melting frost.
+  - How very dramatic.
+  - All of that to say, I believe that may be why Loki has found himself there.
+  - "The secrets of how to free Surtr may very well be intertwined with him and his
+    brother\u2019s origins."
+  - Hence why Loki is there.
+  - However, beyond that I know nothing more.
+  - Thank you.
+  - Do not cause too much trouble, spirit.
+  - No promises, hero.
+  characterIcon: {fileID: 0}
+  characterName: Fossegrim

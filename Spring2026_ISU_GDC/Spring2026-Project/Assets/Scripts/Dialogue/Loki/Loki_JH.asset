@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6198cdbfb3ab42799698812d172dc50, type: 3}
+  m_Name: Loki_JH
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Dialogue.Dialogue
+  dialogueStrings:
+  - "Valkyrie\u2026"
+  - I knew you would travel far to reach me, but those travels have now come to an
+    end.
+  - "In all honesty, I\u2019m surprised you have not grown tired of me. But that
+    is not the point of this."
+  - Ragnarok is inevitable.
+  - "It is written\u2026destined to happen."
+  - And now it is time for Surtr to return to the 9 realms.
+  - Not today, Loki.
+  - Stand down now or perish.
+  - Hahaha!
+  - You are so full of hope.
+  - "\u2018Stand down or perish.\u2019 Hahaha!"
+  - "\u2026"
+  - No.
+  characterIcon: {fileID: 0}
+  characterName: Loki

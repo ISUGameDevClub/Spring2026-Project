@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6198cdbfb3ab42799698812d172dc50, type: 3}
+  m_Name: Heimdall_Intro
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Dialogue.Dialogue
+  dialogueStrings:
+  - Welcome Valkyrie.
+  - I wish I could give you a warmer welcome, but these are troubling times.
+  - I am Heimdall and this here is Ratatoskr.
+  - Well met.
+  - Well met to you as well, my lady.
+  - I will be direct. Ragnarok is upon us.
+  - The Gods have slain the frost giant Ymir and Loki seeks to free and recruit his
+    brother, Surtr and harness his rage.
+  - I fear the 9 realms are at stake if Loki is successful.
+  - You may be our last hope.
+  - It is my one duty to protect this world, my friend. It would be an honor to fight.
+    Tell me what I need to do.
+  - I expected no less from you.
+  - The plan is a simple one. Seek out and vanquish Loki and his allies.
+  - I will first send you to Midgard. It has fallen to chaos ever since this war
+    has sparked up.
+  - Once you have arrived, maybe you can find more information about where Loki may
+    be lurking.
+  - I have high hopes that you will succeed. If you have any doubts, have no fear,
+    Valkyrie, for you will not be alone.
+  - Ratatoskr and I will be at your side ready to transport you with the Bifrost
+    to wherever you must go.
+  - Call and we will answer, my lady.
+  - I wish you luck.
+  characterIcon: {fileID: 0}
+  characterName: Heimdall & Ratatoskr
