@@ -5,7 +5,7 @@
 			<value>SpearBounce</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{030ccd8d-6b75-4b28-9545-45a1726a7e81}</destination>
@@ -84,7 +84,7 @@
 	</object>
 	<object class="MultiSound" id="{7886618b-5d3f-42b7-a577-42c272cf791a}">
 		<relationship name="sounds">
-			<destination>{7d100b09-57a9-42bd-a8e2-b57d0627bee7}</destination>
+			<destination>{6cfaf4d5-d614-4d03-93b2-7684bfc82683}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f8f2e797-b41a-466f-bb58-5703a0b7514b}">
@@ -96,26 +96,17 @@
 	<object class="MixerBusEffectChain" id="{56350907-d9e6-495d-b6f2-81c1ea45959a}">
 		<relationship name="effects">
 			<destination>{a4f7161b-3344-4bb1-8f8e-a1805efb05d3}</destination>
-			<destination>{ef843b44-5238-4ff2-a247-5a33a1a08809}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2669180a-63ce-4e2f-916a-d7407e833feb}" />
-	<object class="SingleSound" id="{7d100b09-57a9-42bd-a8e2-b57d0627bee7}">
+	<object class="SingleSound" id="{6cfaf4d5-d614-4d03-93b2-7684bfc82683}">
+		<property name="volume">
+			<value>1.5</value>
+		</property>
 		<relationship name="audioFile">
-			<destination>{57e68649-6bb6-4653-8717-bde98b0cdd1f}</destination>
+			<destination>{761ef2e1-daa6-4b66-a6f9-5a3d64395805}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{512a0511-178f-4dd5-bcd7-6f4a7ed397f8}" />
 	<object class="MixerBusFader" id="{a4f7161b-3344-4bb1-8f8e-a1805efb05d3}" />
-	<object class="SpatialiserEffect" id="{ef843b44-5238-4ff2-a247-5a33a1a08809}">
-		<property name="distanceRolloffType">
-			<value>1</value>
-		</property>
-		<property name="maximumDistance">
-			<value>70</value>
-		</property>
-		<property name="overrideRange">
-			<value>true</value>
-		</property>
-	</object>
 </objects>
