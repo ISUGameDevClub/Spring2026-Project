@@ -25,6 +25,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
         [SerializeField] private FMODUnity.EventReference dashSFX;
         [SerializeField] private FMODUnity.EventReference spearPickupSFX;
 
+        [SerializeField] private HitboxProperties dashHitbox;
+
         private void Awake()
         {
             playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
@@ -73,6 +75,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             if (!spearStuckInWall) { return; }
             if (isDashing) { return; }
 
+            dashHitbox.gameObject.SetActive(true);
+            
             //sfx
             FMODUnity.RuntimeManager.PlayOneShot(dashSFX);
             
@@ -111,6 +115,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             
             Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
             transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
+            
+            dashHitbox.gameObject.SetActive(false);
 
             playerAnimator.SetBool("HoldingSpear", true);
             playerAnimator.Play(playerIdleWithSpearClip.name);

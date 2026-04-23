@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using ISUGameDev.SpearGame.Enemy;
@@ -19,6 +21,18 @@ public class HitboxProperties : MonoBehaviour
     // If we damage an enemy, we add them to this list to not damage them every frame the attack is active.
     private List<GameObject> hurtEnemies = new List<GameObject>();
     private List<GameObject> enemiesInRange = new List<GameObject>();
+
+    [SerializeField] private int defaultDamage;
+    [SerializeField] private bool overrideGlobalGameData = false;
+    [SerializeField] private bool debugMessagesOn = false;
+
+    private void Start()
+    {
+        if (overrideGlobalGameData)
+        {
+            SetDamageForHitbox(defaultDamage);
+        }
+    }
 
     private void Update()
     {
@@ -51,6 +65,11 @@ public class HitboxProperties : MonoBehaviour
                 {
                     component.TakeDamage(damage, hitStun, knockbackX, gameObject);
                     hurtEnemies.Add(enemy);
+                    
+                    if (debugMessagesOn)
+                    {
+                        Debug.Log(component.gameObject.name  +" takes damage");
+                    }
                 }
             }
         }
@@ -59,9 +78,19 @@ public class HitboxProperties : MonoBehaviour
     //attack_landed = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (debugMessagesOn)
+        {
+            Debug.Log("Hitbox hit " + collision.gameObject.name);
+        }
+        
         if (collision.gameObject.CompareTag(attackTarget))
         {
             enemiesInRange.Add(collision.gameObject);
+            
+            if (debugMessagesOn)
+            {
+                Debug.Log("Added " + collision.gameObject.name +" to enemiesInRange");
+            }
         }
 
     }
@@ -70,8 +99,23 @@ public class HitboxProperties : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(attackTarget))
         {
-            enemiesInRange.Remove(collision.gameObject);
+            //bandaid fix to make sure OnTriggerExit doesnt get called to early on fast moving projectiles
+            StartCoroutine(RemoveEnemyFromRangeAfterDelay(collision.gameObject, enemiesInRange,0.2f));
+            //enemiesInRange.Remove(collision.gameObject);
         }
+    }
+    
+    //bandaid fix to make sure OnTriggerExit doesnt get called to early on fast moving projectiles
+    IEnumerator RemoveEnemyFromRangeAfterDelay(GameObject enemyObj, List<GameObject> enemyList, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        enemyList.Remove(enemyObj);
+    }
+
+    private void OnDisable()
+    {
+        hurtEnemies.Clear();
+        enemiesInRange.Clear();
     }
 }
 
