@@ -46,5 +46,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: LavaLake
+    uniqueID: 682949465
+    locked: 0
+  - name: TerrainGlow
+    uniqueID: 2705837237
+    locked: 0
   m_RenderingLayers:
   - Default
