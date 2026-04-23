@@ -20,6 +20,9 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
         public static bool isSpearInHand;
 
         private GameObject spawnedSpear;
+        
+        [SerializeField] private FMODUnity.EventReference spearCockSFX;
+        [SerializeField] private FMODUnity.EventReference spearThrowSFX;
 
         /// <summary>
         /// Flag that controls whether we start aiming the spear each frame.
@@ -67,6 +70,12 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             {
                 playerAnimator.Play(playerAimSpearClip.name);
 
+                //sfx
+                if (!aimingSpear)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(spearCockSFX);
+                }
+                
                 //playerAttacks.enabled = false;
                 //playerMovement.enabled = false;//disable movement and attacks when aiming
                 aimingSpear = true;
@@ -93,6 +102,7 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
 
         private void ThrowSpear()
         {
+            FMODUnity.RuntimeManager.PlayOneShot(spearThrowSFX);
             playerAnimator.SetBool("HoldingSpear", false);
 
             spawnedSpear = Instantiate(Spear);

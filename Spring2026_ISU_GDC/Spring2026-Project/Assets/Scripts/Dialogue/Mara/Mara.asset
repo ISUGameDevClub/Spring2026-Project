@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6198cdbfb3ab42799698812d172dc50, type: 3}
+  m_Name: Mara
+  m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Dialogue.Dialogue
+  dialogueStrings:
+  - The trickster has run away.
+  - Worry not, Valkyrie, I will bring Loki many nightmares in his defeat.
+  - That is, if you manage to vanquish him.
+  - You need not do so in my name.
+  - Then I will do so in mine. I will have much satisfaction in doing so.
+  - "Very well\u2026I suppose\u2026 "
+  - "Seeing as you\u2019re here, what do you know of Ragnarok? Where is Loki?"
+  - "Ah\u2026he is likely in the realm of Jotunheim."
+  - It is where Ymir was slain and dissolved into a lake of his own blood.
+  - If Loki has discovered how to bring Surtr to the 9 realms, Jotunheim would be
+    the place to summon him.
+  - I suppose I know my next destination then.
+  - "Hm\u2026Valkyrie\u2026?"
+  - "\u2026?"
+  - I give you my luck.
+  - "I would very much enjoy Loki\u2019s prodding mind."
+  - "Thanks\u2026"
+  - Farewell.
+  characterIcon: {fileID: 0}
+  characterName: Mara

@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 35.44}
+        value: {x: 0, y: 0, z: 19.206}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -53,7 +53,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 8506908448244863953, guid: 9cb028c62b4160a40aab831b089f3a32, type: 3}
+      value: {fileID: -4968617050328970887, guid: 6fc3ce867cc5789469b42e2d82ec1f24, type: 3}
     attribute: m_Sprite
     path: PlayerGFX
     classID: 212
@@ -94,7 +94,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 8506908448244863953, guid: 9cb028c62b4160a40aab831b089f3a32, type: 3}
+    - {fileID: -4968617050328970887, guid: 6fc3ce867cc5789469b42e2d82ec1f24, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -164,7 +164,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 35.44
+        value: 19.206
         inSlope: 0
         outSlope: 0
         tangentMode: 136
