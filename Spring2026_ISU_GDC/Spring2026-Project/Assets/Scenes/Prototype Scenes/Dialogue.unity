@@ -907,7 +907,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3541065601844607173, guid: 6e558e6c6bbaebd40bcc0316e416d9b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.19
+      value: -13.02
       objectReference: {fileID: 0}
     - target: {fileID: 3541065601844607173, guid: 6e558e6c6bbaebd40bcc0316e416d9b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -949,6 +949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fossegrim
       objectReference: {fileID: 0}
+    - target: {fileID: 8619663898522180015, guid: 6e558e6c6bbaebd40bcc0316e416d9b7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1076662973937260758, guid: f42ff160bcf399b43803c4c72ee01ec2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
