@@ -14,6 +14,11 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float enemyPauseTime;
 
+    private SpriteRenderer spriteRenderer;
+    private Animator enemyAnimator;
+    [SerializeField] AnimationClip enemyAttack;
+    [SerializeField] AnimationClip enemyMoveAnim;
+
     private float pauseTimer = 0.0f;
 
     private Transform playerTransform;
@@ -25,36 +30,40 @@ public class EnemyMovement : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRigid = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        enemyAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        playerDist = Mathf.Abs(playerTransform.position.x - transform.position.x);
-        if (playerDist > enemyRange)
-        {
-            Move();
-        }
-        else if (playerDist <= enemyRange)
-        {
-            enemyRigid.linearVelocity = new Vector2(0, enemyRigid.linearVelocity.y);
-            if (timer <= 0f)
+        if (spriteRenderer.isVisible){
+            playerDist = Mathf.Abs(playerTransform.position.x - transform.position.x);
+            if (playerDist > enemyRange)
             {
-                if (enemyPauseTime > 0)
+                Move();
+            }
+            else if (playerDist <= enemyRange)
+            {
+                enemyRigid.linearVelocity = new Vector2(0, enemyRigid.linearVelocity.y);
+                if (timer <= 0f)
                 {
-                    //Debug.Log("I can attack you, but i want you to dodge! I am " + tag + ", and I will attack in : " + pauseTimer.ToString());
-                    pauseTimer -= Time.deltaTime;
-                    if (pauseTimer <= 0f)
+                    if (enemyPauseTime > 0)
+                    {
+                        //Debug.Log("I can attack you, but i want you to dodge! I am " + tag + ", and I will attack in : " + pauseTimer.ToString());
+                        pauseTimer -= Time.deltaTime;
+                        if (pauseTimer <= 0f)
+                        {
+                            Attack();
+                            timer = enemyCooldownSeconds;
+                            pauseTimer = enemyPauseTime;
+                        }
+                    }
+                    else
                     {
                         Attack();
                         timer = enemyCooldownSeconds;
-                        pauseTimer = enemyPauseTime;
                     }
-                }
-                else
-                {
-                    Attack();
-                    timer = enemyCooldownSeconds;
                 }
             }
         }
@@ -63,22 +72,26 @@ public class EnemyMovement : MonoBehaviour
 
     private void Move()
     {
+        enemyAnimator.Play(enemyMoveAnim.name);
         float direction = playerTransform.position.x - transform.position.x;
         // if positive, then enemy is to the left. (needs to move right/positive)
         if (direction > 0)
         {
             enemyRigid.linearVelocity = new Vector2(1 * enemySpeed, enemyRigid.linearVelocity.y);
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180 ,0));
         }
         else
         {
             //if direction < 0, then enemy is to the right. (needs to move left/negative)
             enemyRigid.linearVelocity = new Vector2(-1 * enemySpeed, enemyRigid.linearVelocity.y);
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0 ,0));
         }
 
     }
 
     private void Attack()
     {
+        enemyAnimator?.Play(enemyAttack.name);
         if (tag.ToString().Equals("StabEnemy"))
         {
             Debug.Log("replace with stab attack function");
