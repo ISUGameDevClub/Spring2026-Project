@@ -19,13 +19,13 @@ MonoBehaviour:
     no fun.
   - "Why don\u2019t you take a rest in the sea with me? Take a little weight off
     of those heroic shoulders of yours."
-  - Not today, spirit. You cannot fool me.
-  - I know you well. Your waters are a danger and I am not so easily charmed into
-    my own demise.
+  - '[v]Not today, spirit. You cannot fool me.'
+  - '[v]I know you well. Your waters are a danger and I am not so easily charmed
+    into my own demise.'
   - "Oh come on! You\u2019re no fun."
   - Fine. Run along if you must.
-  - Actually, you may be of use to me.
-  - What do you know of Ragnarok?
+  - '[v]Actually, you may be of use to me.'
+  - '[v]What do you know of Ragnarok?'
   - Ragnarok? Is that why you are so eager to pass me by?
   - "Hm\u2026Well I suppose I cannot have my fun if the world ends can I?"
   - "Yes\u2026I suppose I can tell you what I have seen."
@@ -42,8 +42,8 @@ MonoBehaviour:
     brother\u2019s origins."
   - Hence why Loki is there.
   - However, beyond that I know nothing more.
-  - Thank you.
-  - Do not cause too much trouble, spirit.
+  - '[v]Thank you.'
+  - '[v]Do not cause too much trouble, spirit.'
   - No promises, hero.
-  characterIcon: {fileID: 0}
+  characterIcon: {fileID: 4731415751306989113, guid: e183b84714a2b7b46ab3953a33abb7c6, type: 3}
   characterName: Fossegrim
