@@ -333,10 +333,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
-  - Ambience
-  - Music
-  - SFX
-  - UI
+  - PokemonCryTestBank01
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
