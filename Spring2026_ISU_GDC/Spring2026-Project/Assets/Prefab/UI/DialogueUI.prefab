@@ -128,6 +128,8 @@ MonoBehaviour:
   characterNameText: {fileID: 8635698749595822817}
   characterIconImage: {fileID: 2410225983148218071}
   textSpeed: 0.05
+  valkyrieOverrideIcon: {fileID: -8993000888767777156, guid: 200672c0d6fb9d84f8d855c39d8146ad, type: 3}
+  ratatoskrOverrideIcon: {fileID: -184134334778653468, guid: f6cf048d065e6ce42a3c6bdcff7309e3, type: 3}
 --- !u!1 &2160612127960093414
 GameObject:
   m_ObjectHideFlags: 0

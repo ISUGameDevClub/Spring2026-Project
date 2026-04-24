@@ -13923,6 +13923,7 @@ MonoBehaviour:
   MusicVolSlider: {fileID: 277556298496736668}
   SFXVolSlider: {fileID: 1874850463091107293}
   windowModeList: {fileID: 0}
+  vsyncToggle: {fileID: 0}
 --- !u!1 &8884809033453370781
 GameObject:
   m_ObjectHideFlags: 0
