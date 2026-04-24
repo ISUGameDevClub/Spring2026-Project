@@ -1260,7 +1260,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3541065601844607173, guid: df5b3ef32abcc694185862a80fad0e55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9471818
+      value: -1.41
       objectReference: {fileID: 0}
     - target: {fileID: 3541065601844607173, guid: df5b3ef32abcc694185862a80fad0e55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1301,6 +1301,10 @@ PrefabInstance:
     - target: {fileID: 7502793538743428290, guid: df5b3ef32abcc694185862a80fad0e55, type: 3}
       propertyPath: m_Name
       value: Heimdall_Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502793538743428290, guid: df5b3ef32abcc694185862a80fad0e55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4169,7 +4173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1699459550712615083, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1868444556779791310, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4213,19 +4217,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5334271121637467163, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5334271121637467163, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7422444002406583174, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7422444002406583174, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,5 +1,6 @@
 using ISUGameDev.SpearGame.Player;
 using ISUGameDev.SpearGame.Player.PlayerAttacks;
+using ISUGameDev.SpearGame.Player.PlayerState;
 using UnityEngine;
 
 public class SpearTravel : MonoBehaviour
@@ -56,8 +57,11 @@ public class SpearTravel : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        //TODO: make this less hacky?
-        FindFirstObjectByType<SpearDashAttack>().PickUpSpear();
+        if (FindFirstObjectByType<PlayerStateMachine>().currentState.playerStateType != PlayerStateType.InDialogue)
+        {
+            //TODO: make this less hacky?
+            FindFirstObjectByType<SpearDashAttack>().PickUpSpear();
+        }
         
         Destroy(gameObject);
         

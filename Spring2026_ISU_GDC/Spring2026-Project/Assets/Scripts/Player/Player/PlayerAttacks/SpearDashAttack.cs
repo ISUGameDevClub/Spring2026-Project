@@ -111,7 +111,7 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             isDashing = true;
         }
 
-        public void PickUpSpear()
+        public void PickUpSpear(bool changeStateToRoamWithSpearAfterSpearPickup = true)
         {
             FMODUnity.RuntimeManager.PlayOneShot(spearPickupSFX);
             
@@ -128,7 +128,12 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             isDashing = false;
             spearStuckInWall = false;
             rb.linearVelocity = Vector2.zero;
-            FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+
+            if (changeStateToRoamWithSpearAfterSpearPickup)
+            {
+                FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+            }
+            
             Destroy(spearObjCache?.gameObject);
             Physics2D.IgnoreLayerCollision(transform.root.gameObject.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), false);
 

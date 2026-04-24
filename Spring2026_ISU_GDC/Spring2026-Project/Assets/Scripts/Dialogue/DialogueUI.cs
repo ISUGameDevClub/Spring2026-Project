@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using ISUGameDev.SpearGame.Player;
+using ISUGameDev.SpearGame.Player.PlayerState;
 using Nomad.Core.Events;
 using Nomad.Events.Globals;
 using TMPro;
@@ -170,7 +172,11 @@ namespace ISUGameDev.SpearGame.Dialogue
             }
 
             dialogueCanvas.enabled = false;
-            dialogueFinished.Publish(default);
+            
+            //bandaid fix
+            FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+            
+            //dialogueFinished.Publish(default);
         }
     }
 }
