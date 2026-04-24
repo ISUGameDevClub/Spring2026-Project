@@ -16,12 +16,11 @@ MonoBehaviour:
   - There you are.
   - "I\u2019ve been waiting for you to come, Valkyrie."
   - "It\u2019s time to put an end to this."
-  - Put an end to this?
-  - "The only thing I\u2019ll be putting an end to is Ragnarok."
-  - And if I have to go through you in the process, so be it.
+  - '[v]Put an end to this?'
+  - "[v]The only thing I\u2019ll be putting an end to is Ragnarok."
+  - '[v]And if I have to go through you in the process, so be it.'
   - We will see about that.
   - But first, you must keep up.
   - Hahahahaha!
-  - "I\u2019ll have to find where he went."
-  characterIcon: {fileID: 0}
+  characterIcon: {fileID: -5437625340153700201, guid: c3e7a0e720db3a94fad747f42458fcd1, type: 3}
   characterName: Loki

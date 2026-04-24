@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ISUGameDev.SpearGame.Dialogue.Dialogue
   dialogueStrings:
   - I did not lose faith in you for a second, my lady.
-  - The 9 realms have been saved, no thanks to you.
-  - As I said, it is my duty. Seeing the realms thrive is the only reward I hope
-    for.
+  - '[r]The 9 realms have been saved, thanks to you.'
+  - '[v]As I said, it is my duty. Seeing the realms thrive is the only reward I hope
+    for.'
   - I am sure Loki will not be the last, but now is not the time to think of such
     things.
   - I believe peace is upon us.
-  - Peace well earned.
-  - I have hopes that without their strongest, this war will fizzle out.
+  - '[v]Peace well earned.'
+  - '[v]I have hopes that without their strongest, this war will fizzle out.'
   - "Well then. If that\u2019s the case, I suppose there\u2019s not much left to
     do here."
-  - "I gather you are correct. So\u2026"
-  - Where to next?
-  characterIcon: {fileID: 0}
+  - "[v]I gather you are correct. So\u2026"
+  - '[v]Where to next?'
+  characterIcon: {fileID: 5409877374513879306, guid: 6c7e76d0462c03742a67d9f5ebc3cffa, type: 3}
   characterName: Heimdall & Ratatoskr

@@ -16,20 +16,20 @@ MonoBehaviour:
   - The trickster has run away.
   - Worry not, Valkyrie, I will bring Loki many nightmares in his defeat.
   - That is, if you manage to vanquish him.
-  - You need not do so in my name.
+  - '[v]You need not do so in my name.'
   - Then I will do so in mine. I will have much satisfaction in doing so.
-  - "Very well\u2026I suppose\u2026 "
-  - "Seeing as you\u2019re here, what do you know of Ragnarok? Where is Loki?"
+  - "[v]Very well\u2026I suppose\u2026 "
+  - "[v]Seeing as you\u2019re here, what do you know of Ragnarok? Where is Loki?"
   - "Ah\u2026he is likely in the realm of Jotunheim."
   - It is where Ymir was slain and dissolved into a lake of his own blood.
   - If Loki has discovered how to bring Surtr to the 9 realms, Jotunheim would be
     the place to summon him.
-  - I suppose I know my next destination then.
+  - '[v]I suppose I know my next destination then.'
   - "Hm\u2026Valkyrie\u2026?"
-  - "\u2026?"
+  - "[v]\u2026?"
   - I give you my luck.
   - "I would very much enjoy Loki\u2019s prodding mind."
-  - "Thanks\u2026"
-  - Farewell.
-  characterIcon: {fileID: 0}
+  - "[v]Thanks\u2026"
+  - '[v]Farewell.'
+  characterIcon: {fileID: 6575074199990049643, guid: 61a7cc558be37584fb1962a30380bd9e, type: 3}
   characterName: Mara
