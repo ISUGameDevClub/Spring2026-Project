@@ -36,6 +36,8 @@ namespace ISUGameDev.SpearGame.Dialogue
         [SerializeField] private Sprite valkyrieOverrideIcon;
         [SerializeField] private Sprite ratatoskrOverrideIcon;
 
+        [SerializeField] private bool capitalizeNames = false;
+        
         private IGameEvent<EmptyEventArgs> dialogueFinished;
         private bool skipTyping = false;
 
@@ -76,7 +78,7 @@ namespace ISUGameDev.SpearGame.Dialogue
 
             if (characterNameText != null && !string.IsNullOrEmpty(dialogue.characterName))
             {
-                characterNameText.text = dialogue.characterName;
+                characterNameText.text = capitalizeNames ? dialogue.characterName.ToUpper() : dialogue.characterName;
             }
 
             if (characterIconImage != null && dialogue.characterIcon != null)
