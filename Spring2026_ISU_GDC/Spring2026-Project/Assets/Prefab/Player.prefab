@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870eea0ca1ceab84fb14a2e93411da22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InDialogueState
+  idleAnimClip: {fileID: 7400000, guid: 19a5ea99255aa1042876b07d1318665a, type: 2}
 --- !u!1 &2849549113344391383
 GameObject:
   m_ObjectHideFlags: 0
