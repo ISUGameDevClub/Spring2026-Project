@@ -1302,6 +1302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heimdall_Intro
       objectReference: {fileID: 0}
+    - target: {fileID: 7502793538743428290, guid: df5b3ef32abcc694185862a80fad0e55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
