@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using ISUGameDev.SpearGame.Enemy;
+using ISUGameDev.SpearGame;
 
 
 public class HitboxProperties : MonoBehaviour
@@ -42,6 +43,7 @@ public class HitboxProperties : MonoBehaviour
             if (hurtEnemies.Count < enemiesInRange.Count) // if we have yet to damage all enemies in range, damage them
             {
                 DealDamage();
+                Debug.Log("Damage was dealt");
             }
         }
         else
@@ -57,11 +59,12 @@ public class HitboxProperties : MonoBehaviour
 
     public void DealDamage()
     {
+        Debug.Log("Dealing damage");
         foreach (var enemy in enemiesInRange)
         {
             if (hurtEnemies.IndexOf(enemy) == -1) // Negative 1 means they are not found in the list
             {
-                if (enemy.TryGetComponent<EnemyBase>(out var component))
+                if (enemy.TryGetComponent<EntityBase>(out var component))
                 {
                     component.TakeDamage(damage, hitStun, knockbackX, gameObject);
                     hurtEnemies.Add(enemy);

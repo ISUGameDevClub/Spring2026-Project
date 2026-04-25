@@ -15,10 +15,12 @@ namespace ISUGameDev.SpearGame.Player
         
         [SerializeField]
         private HeadsUpDisplay _userInterface;
+        private PlayerHealthController healthControlRef;
 
         public override void TakeDamage(int damageValue, float knockback, float stunDuration, GameObject attacker)
         {
             base.TakeDamage(damageValue, knockback, stunDuration, attacker);
+            healthControlRef.TakeOneDamage();
             if (health <= 0)
             {
                 // TODO: incorporate an actual checkpoint respawn system
@@ -32,7 +34,7 @@ namespace ISUGameDev.SpearGame.Player
         protected override void Awake()
         {
             base.Awake();
-
+            healthControlRef = GetComponent<PlayerHealthController>();
             _playerDie = GameEventRegistry.GetEvent<EmptyEventArgs>(nameof(PlayerDie), nameof(PlayerController));
         }
 
