@@ -202,6 +202,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1402974412397702033}
   m_SourcePrefab: {fileID: 100100000, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+--- !u!1 &4571525599782575246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8115192650539132524, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+  m_PrefabInstance: {fileID: 5760006031767501538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6197422145384274220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1868444556779791310, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
@@ -230,6 +235,7 @@ MonoBehaviour:
   enemyPauseTime: 1
   enemyAttack: {fileID: 7400000, guid: 428edf8918fd6dd4b9fe8b7eee580bad, type: 2}
   enemyMoveAnim: {fileID: 7400000, guid: 43fb93988aa15934e90420b47e0ce3fb, type: 2}
+  enemyCanvas: {fileID: 4571525599782575246}
 --- !u!50 &1402974412397702033
 Rigidbody2D:
   serializedVersion: 5

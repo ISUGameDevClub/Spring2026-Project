@@ -19,6 +19,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] AnimationClip enemyAttack;
     [SerializeField] AnimationClip enemyMoveAnim;
 
+    [SerializeField] private GameObject enemyCanvas;
+    
     private float pauseTimer = 0.0f;
 
     private Transform playerTransform;
@@ -79,12 +81,18 @@ public class EnemyMovement : MonoBehaviour
         {
             enemyRigid.linearVelocity = new Vector2(1 * enemySpeed, enemyRigid.linearVelocity.y);
             transform.rotation = Quaternion.Euler(new Vector3(0, 180 ,0));
+            
+            //bandaid fix so health bar does not face wrong way
+            enemyCanvas.transform.rotation = Quaternion.Euler(new Vector3(0, 0 ,0));
         }
         else
         {
             //if direction < 0, then enemy is to the right. (needs to move left/negative)
             enemyRigid.linearVelocity = new Vector2(-1 * enemySpeed, enemyRigid.linearVelocity.y);
             transform.rotation = Quaternion.Euler(new Vector3(0, 0 ,0));
+            
+            //bandaid fix so health bar does not face wrong way
+            enemyCanvas.transform.rotation = Quaternion.Euler(new Vector3(0, 0 ,0));
         }
 
     }
