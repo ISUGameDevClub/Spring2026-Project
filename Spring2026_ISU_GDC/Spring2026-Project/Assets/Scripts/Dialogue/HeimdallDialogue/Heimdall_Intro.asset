@@ -16,26 +16,26 @@ MonoBehaviour:
   - Welcome Valkyrie.
   - I wish I could give you a warmer welcome, but these are troubling times.
   - I am Heimdall and this here is Ratatoskr.
-  - Well met.
+  - '[v]Well met.'
   - Well met to you as well, my lady.
   - I will be direct. Ragnarok is upon us.
-  - The Gods have slain the frost giant Ymir and Loki seeks to free and recruit his
-    brother, Surtr and harness his rage.
+  - '[r]The Gods have slain the frost giant Ymir and Loki seeks to free and recruit
+    his brother, Surtr and harness his rage.'
   - I fear the 9 realms are at stake if Loki is successful.
-  - You may be our last hope.
-  - It is my one duty to protect this world, my friend. It would be an honor to fight.
-    Tell me what I need to do.
+  - '[r]You may be our last hope.'
+  - '[v]It is my one duty to protect this world, my friend. It would be an honor
+    to fight. Tell me what I need to do.'
   - I expected no less from you.
   - The plan is a simple one. Seek out and vanquish Loki and his allies.
   - I will first send you to Midgard. It has fallen to chaos ever since this war
     has sparked up.
-  - Once you have arrived, maybe you can find more information about where Loki may
-    be lurking.
+  - '[r]Once you have arrived, maybe you can find more information about where Loki
+    may be lurking.'
   - I have high hopes that you will succeed. If you have any doubts, have no fear,
     Valkyrie, for you will not be alone.
   - Ratatoskr and I will be at your side ready to transport you with the Bifrost
     to wherever you must go.
-  - Call and we will answer, my lady.
+  - '[r]Call and we will answer, my lady.'
   - I wish you luck.
-  characterIcon: {fileID: 0}
+  characterIcon: {fileID: 5409877374513879306, guid: 6c7e76d0462c03742a67d9f5ebc3cffa, type: 3}
   characterName: Heimdall & Ratatoskr

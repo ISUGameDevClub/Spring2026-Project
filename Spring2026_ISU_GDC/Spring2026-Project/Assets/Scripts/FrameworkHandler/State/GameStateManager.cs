@@ -49,7 +49,7 @@ namespace FrameworkHandler.State
 		private static readonly object _instanceLock = new object();
 
 		public static IGameEvent<GameStateChangedEventArgs> GameStateChanged => Instance._stateChanged;
-		private IGameEvent<GameStateChangedEventArgs> _stateChanged;
+		private readonly IGameEvent<GameStateChangedEventArgs> _stateChanged = default;
 
 		/// <summary>
 		/// 

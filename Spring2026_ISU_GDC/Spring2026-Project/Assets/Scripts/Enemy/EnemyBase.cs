@@ -21,6 +21,7 @@ namespace ISUGameDev.SpearGame.Enemy
        [SerializeField] private float hitFlashDuration = 0.1f;
        
        [SerializeField] private FMODUnity.EventReference spearHitSFX;
+       [SerializeField] private FMODUnity.EventReference enemyGruntSFX;
 
        private Material originalMaterial;
        private float ghostMoveTimer = 0f;
@@ -32,6 +33,7 @@ namespace ISUGameDev.SpearGame.Enemy
           base.TakeDamage(damageValue, knockback, stunDuration, attacker);
           Debug.Log(damageValue + " damage taken");
           FMODUnity.RuntimeManager.PlayOneShot(spearHitSFX);
+          FMODUnity.RuntimeManager.PlayOneShot(enemyGruntSFX);
 
           StartCoroutine(HitFlash());
 

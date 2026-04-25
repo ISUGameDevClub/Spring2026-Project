@@ -1,3 +1,4 @@
+using ISUGameDev.SpearGame.Player.PlayerAttacks;
 using Nomad.Core.Events;
 using Nomad.Events.Globals;
 using UnityEngine;
@@ -48,6 +49,9 @@ namespace ISUGameDev.SpearGame.Dialogue
             Debug.Log("Dialogue triggered");
 
             dialogueTriggered.Publish(new DialogueTriggeredEventArgs(dialogue));
+            
+            //bandaid fix to make sure player picks up spear whenever dialogue is triggered during a spear dash
+            FindFirstObjectByType<SpearDashAttack>().PickUpSpear(false);
             
             // disable collider
             GetComponent<Collider2D>().enabled = false;

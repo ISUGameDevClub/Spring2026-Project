@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using ISUGameDev.SpearGame.Player;
+using ISUGameDev.SpearGame.Player.PlayerState;
 using Nomad.Core.Events;
 using Nomad.Events.Globals;
 using TMPro;
@@ -15,7 +17,6 @@ namespace ISUGameDev.SpearGame.Dialogue
     /// </summary>
     public class DialogueUI : MonoBehaviour
     {
-        //Dialogue menu component references
         [SerializeField] private Canvas dialogueCanvas;
 
         /// <summary>
@@ -33,8 +34,14 @@ namespace ISUGameDev.SpearGame.Dialogue
         /// </summary>
         [SerializeField] private Image characterIconImage;
         [SerializeField] private float textSpeed = 0.05f;
+
+        [SerializeField] private Sprite valkyrieOverrideIcon;
+        [SerializeField] private Sprite ratatoskrOverrideIcon;
+
+        [SerializeField] private bool capitalizeNames = false;
         
         private IGameEvent<EmptyEventArgs> dialogueFinished;
+        private bool skipTyping = false;
 
         /// <summary>
         /// Unity's Awake method is called when the script instance is being loaded.
@@ -45,6 +52,14 @@ namespace ISUGameDev.SpearGame.Dialogue
         {
             dialogueFinished = GameEventRegistry.GetEvent<EmptyEventArgs>(nameof(DialogueTrigger.DialogueFinished), nameof(DialogueTrigger));
             dialogueCanvas.enabled = false;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                skipTyping = true;
+            }
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -65,7 +80,7 @@ namespace ISUGameDev.SpearGame.Dialogue
 
             if (characterNameText != null && !string.IsNullOrEmpty(dialogue.characterName))
             {
-                characterNameText.text = dialogue.characterName;
+                characterNameText.text = capitalizeNames ? dialogue.characterName.ToUpper() : dialogue.characterName;
             }
 
             if (characterIconImage != null && dialogue.characterIcon != null)
@@ -77,9 +92,35 @@ namespace ISUGameDev.SpearGame.Dialogue
             foreach (string sentence in dialogue.dialogueStrings)
             {
                 dialogueText.text = string.Empty;
-                yield return StartCoroutine(TypeSentence(sentence));
 
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                string processedSentence = sentence;
+                if (sentence.StartsWith("[v]"))
+                {
+                    processedSentence = sentence.Substring(3);
+                    characterIconImage.sprite = valkyrieOverrideIcon;
+                }
+                else if (sentence.StartsWith("[r]"))
+                {
+                    processedSentence = sentence.Substring(3);
+                    characterIconImage.sprite = ratatoskrOverrideIcon;
+                }
+                else
+                {
+                    characterIconImage.sprite = dialogue.characterIcon;
+                }
+
+                yield return StartCoroutine(TypeSentence(processedSentence));
+
+                if (skipTyping)
+                {
+                    dialogueText.text = processedSentence;
+                    skipTyping = false;
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                }
+                else
+                {
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                }
             }
             HandleDialogueOver();
         }
@@ -95,8 +136,15 @@ namespace ISUGameDev.SpearGame.Dialogue
         /// </returns>
         private IEnumerator TypeSentence(string sentence)
         {
+            skipTyping = false;
             foreach (char letter in sentence)
             {
+                if (skipTyping)
+                {
+                    dialogueText.text = sentence;
+                    yield break;
+                }
+
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(textSpeed);
             }
@@ -124,7 +172,11 @@ namespace ISUGameDev.SpearGame.Dialogue
             }
 
             dialogueCanvas.enabled = false;
-            dialogueFinished.Publish(default);
+            
+            //bandaid fix
+            FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+            
+            //dialogueFinished.Publish(default);
         }
     }
 }

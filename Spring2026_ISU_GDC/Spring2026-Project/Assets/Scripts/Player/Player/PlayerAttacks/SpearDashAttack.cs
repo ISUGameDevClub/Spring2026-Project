@@ -75,6 +75,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             if (!spearStuckInWall) { return; }
             if (isDashing) { return; }
 
+            transform.root.gameObject.GetComponent<PlayerHealthController>().cannotTakeDamage = true;
+            
             dashHitbox.gameObject.SetActive(true);
             
             //sfx
@@ -109,12 +111,14 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             isDashing = true;
         }
 
-        public void PickUpSpear()
+        public void PickUpSpear(bool changeStateToRoamWithSpearAfterSpearPickup = true)
         {
             FMODUnity.RuntimeManager.PlayOneShot(spearPickupSFX);
             
             Rigidbody2D rb = transform.root.gameObject.GetComponent<Rigidbody2D>();
             transform.root.gameObject.transform.rotation = Quaternion.Euler(playerRotCache);
+            
+            transform.root.gameObject.GetComponent<PlayerHealthController>().cannotTakeDamage = false;
             
             dashHitbox.gameObject.SetActive(false);
 
@@ -124,7 +128,12 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             isDashing = false;
             spearStuckInWall = false;
             rb.linearVelocity = Vector2.zero;
-            FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+
+            if (changeStateToRoamWithSpearAfterSpearPickup)
+            {
+                FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
+            }
+            
             Destroy(spearObjCache?.gameObject);
             Physics2D.IgnoreLayerCollision(transform.root.gameObject.layer, Mathf.RoundToInt(Mathf.Log(wallLayer.value, 2)), false);
 

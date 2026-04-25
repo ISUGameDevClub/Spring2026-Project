@@ -19,7 +19,7 @@ public class StunScript : MonoBehaviour
     {
         if (stunTimer <= Time.time)
         {
-            playerStateMachine.ChangeState(PlayerStateType.RoamingWithSpear);
+            //playerStateMachine.ChangeState(PlayerStateType.RoamingWithSpear);
         }
     }
 
