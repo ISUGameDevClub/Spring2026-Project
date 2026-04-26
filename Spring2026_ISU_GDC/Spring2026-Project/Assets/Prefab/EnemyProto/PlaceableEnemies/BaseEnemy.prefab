@@ -119,6 +119,13 @@ MonoBehaviour:
       Data3: -717154156
       Data4: 439065696
     Path: event:/EnemySFX/EnemyGettingHit 3
+  enemyDeathSFX:
+    Guid:
+      Data1: 1766824841
+      Data2: 1132774771
+      Data3: 658433452
+      Data4: 140742798
+    Path: event:/EnemySFX/EnemyGettingHit1
 --- !u!95 &1107064496585824159
 Animator:
   serializedVersion: 7

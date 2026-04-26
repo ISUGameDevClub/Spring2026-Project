@@ -50,6 +50,13 @@ MonoBehaviour:
   blackoutTime: 2
   timeTillShowLevelName: 0
   loadingText: {fileID: 4049580261416332415}
+  drumHitSFX:
+    Guid:
+      Data1: 1445633513
+      Data2: 1220376054
+      Data3: -1266048894
+      Data4: 622155513
+    Path: event:/Ambience/DrumHit
 --- !u!1 &3309993460335784973
 GameObject:
   m_ObjectHideFlags: 0

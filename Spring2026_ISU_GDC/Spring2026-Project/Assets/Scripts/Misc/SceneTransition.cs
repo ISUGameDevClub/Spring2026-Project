@@ -12,6 +12,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private float blackoutTime = 2f;
     [SerializeField] private float timeTillShowLevelName = 2f;
     [SerializeField] private GameObject loadingText;
+    [SerializeField] private FMODUnity.EventReference drumHitSFX;
 
     public static SceneTransition Instance { get; private set; }
 
@@ -59,6 +60,8 @@ public class SceneTransition : MonoBehaviour
         {
             loadingText.GetComponent<TextMeshProUGUI>().text = levelTitle;
             loadingText.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            FMODUnity.RuntimeManager.PlayOneShot(drumHitSFX);
         }
         
         //bandaid fix 10 second buffer
