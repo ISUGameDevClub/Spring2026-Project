@@ -66,7 +66,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 639127225198256532
+  lastModified: 639127588909964541
   FileSizes: []
   Exists: 1
 --- !u!114 &-8486953564899794897
@@ -165,7 +165,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639127225196982644
+  lastModified: 639127588883369518
   FileSizes: []
   Exists: 1
 --- !u!114 &-6920495405385255385
@@ -318,7 +318,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639127225196992672
+  lastModified: 639127588883439595
   FileSizes: []
   Exists: 1
 --- !u!114 &-4863734623633358860
@@ -456,6 +456,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2447910739511184274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/DrumHit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambience/DrumHit
+  Guid:
+    Data1: 1445633513
+    Data2: 1220376054
+    Data3: -1266048894
+    Data4: 622155513
+  Banks:
+  - {fileID: 4233233921733280544}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-967383187538439272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,13 +592,14 @@ MonoBehaviour:
   - {fileID: -4994645679955415669}
   - {fileID: -5421745179646770027}
   - {fileID: 164987310701449418}
+  - {fileID: -2447910739511184274}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4958092683690839082}
   StringsBanks:
   - {fileID: 3046665527059696379}
   cacheVersion: 131858
-  cacheTime: 639127225198256532
+  cacheTime: 639127591426325771
   SerializableEventsDict:
   - key: event:/Ambience/Wind
     index: 0
@@ -643,6 +671,8 @@ MonoBehaviour:
     index: 33
   - key: event:/UI/Button Hover SFX
     index: 34
+  - key: event:/Ambience/DrumHit
+    index: 35
 --- !u!114 &55939520807178043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,10 +938,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639127225197002681
+  lastModified: 639127588883454625
   FileSizes:
   - Name: 
-    Value: 2812
+    Value: 2862
   Exists: 1
 --- !u!114 &3057787135752080468
 MonoBehaviour:
@@ -1036,7 +1066,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639127225198246523
+  lastModified: 639127591426325771
   FileSizes: []
   Exists: 1
 --- !u!114 &6611111506156764975
@@ -1108,7 +1138,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639127225198137621
+  lastModified: 639127588906499944
   FileSizes: []
   Exists: 1
 --- !u!114 &8325429423203644995
