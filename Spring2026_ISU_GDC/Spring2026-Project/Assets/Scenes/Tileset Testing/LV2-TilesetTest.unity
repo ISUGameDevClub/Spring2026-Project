@@ -4262,6 +4262,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8158498222187696969, guid: 5e2c3d8f224cd4f4cb942caa6c7cd401, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 10da417003d58184e887896d46853e59, type: 2}
+    - target: {fileID: 8333112749244933929, guid: 5e2c3d8f224cd4f4cb942caa6c7cd401, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 52.986664
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333112749244933929, guid: 5e2c3d8f224cd4f4cb942caa6c7cd401, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.4837
+      objectReference: {fileID: 0}
     - target: {fileID: 8656388007350603248, guid: 5e2c3d8f224cd4f4cb942caa6c7cd401, type: 3}
       propertyPath: m_Name
       value: Lava

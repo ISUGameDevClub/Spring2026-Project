@@ -24504,7 +24504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8333112749244933929}
   - component: {fileID: 6998897194523177069}
-  - component: {fileID: 8158498222187696969}
+  - component: {fileID: 2568610408377223537}
   m_Layer: 0
   m_Name: GradientGlow
   m_TagString: Untagged
@@ -24586,7 +24586,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &8158498222187696969
+--- !u!95 &2568610408377223537
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -24596,7 +24596,7 @@ Animator:
   m_GameObject: {fileID: 4317479244394702079}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b0246dbd0d0b4de48a41ab786a3ceb24, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8bafb288eb2dd3841a777e56b6aa6956, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
