@@ -13,6 +13,11 @@ public class LokiClone : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        if (transform.position.x - player.transform.position.x > 0) // Flip to face player
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
+        GetComponent<Animator>().Play("Poof");
         StartCoroutine(Attack());
     }
 

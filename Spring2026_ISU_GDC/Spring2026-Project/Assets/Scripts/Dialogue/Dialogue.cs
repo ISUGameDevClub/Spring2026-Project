@@ -14,5 +14,7 @@ namespace ISUGameDev.SpearGame.Dialogue
 
         [Header("Name")]
         public string characterName;
+
+        public bool disappearAfterDialogue = false;
     }
 }

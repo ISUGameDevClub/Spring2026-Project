@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ISUGameDev.SpearGame.Enemy;
 
 
 
@@ -19,9 +20,19 @@ public class SlashAttack : MonoBehaviour
     [SerializeField] private Vector2 arenaMax = new(8f, 4f);
     [SerializeField] private float minFlashSpacing = 2.5f;
 
+    [Header("FMOD Events")]
+    [SerializeField] private FMODUnity.EventReference LokiSwordCharge;
+    [SerializeField] private FMODUnity.EventReference LokiTeleport;
+    [SerializeField] private FMODUnity.EventReference LokiFlash;
+
+
+
     private FlashSpawner _spawner;
     public SlashHitBox _hitbox;
     private bool _running;
+
+    private LokiBase loki;
+    private Animator animator;
 
     public bool IsRunning => _running;
 
@@ -29,6 +40,8 @@ public class SlashAttack : MonoBehaviour
     {
         _spawner = GetComponent<FlashSpawner>();
         _hitbox = GetComponent<SlashHitBox>();
+        loki = GetComponent<LokiBase>();
+        animator = loki.animator;
     }
 
     ///Kick off the full slash sequence. Safe to call from any state machine.
@@ -43,6 +56,8 @@ public class SlashAttack : MonoBehaviour
         _running = true;
 
         // Charge
+        animator.Play("LokiCharge");
+        FMODUnity.RuntimeManager.PlayOneShot(LokiSwordCharge);
         yield return new WaitForSeconds(chargeDuration);
 
         //Spawn flash markers, record positions and directions
@@ -58,15 +73,18 @@ public class SlashAttack : MonoBehaviour
             directions.Add(goRight);
 
             _spawner.SpawnFlash(pos, goRight, i + 1);
+            FMODUnity.RuntimeManager.PlayOneShot(LokiFlash);
             yield return new WaitForSeconds(timeBetweenFlashes);
         }
 
         yield return new WaitForSeconds(0.15f); // brief read window after last flash
 
         // Teleport-slash at each position in order
+        animator.Play("LokiSlice");
         for (int i = 0; i < positions.Count; i++)
         {
             transform.position = positions[i];
+            FMODUnity.RuntimeManager.PlayOneShot(LokiTeleport);
             _spawner.DismissFlash(i);
 
             yield return new WaitForSeconds(preSlashDelay);
@@ -82,6 +100,9 @@ public class SlashAttack : MonoBehaviour
         // Clean up and return to idle
         _spawner.CleanUpAll();
         _running = false;
+
+        //Change State to Idle
+        loki.SwapToIdleState();
     }
 
     private Vector3 GetValidPosition(List<Vector3> existing, int maxTries = 30)
@@ -94,10 +115,14 @@ public class SlashAttack : MonoBehaviour
                 0f);
 
             bool tooClose = false;
+            bool inGround = false;
             foreach (var e in existing)
                 if (Vector3.Distance(candidate, e) < minFlashSpacing) { tooClose = true; break; }
 
-            if (!tooClose) return candidate;
+            Collider2D hit = Physics2D.OverlapPoint(candidate);
+            if (hit != null && hit.CompareTag("Ground"))
+                inGround = true;
+            if (!tooClose && !inGround) return candidate;
         }
 
         return new Vector3(Random.Range(arenaMin.x, arenaMax.x), Random.Range(arenaMin.y, arenaMax.y), 0f);
