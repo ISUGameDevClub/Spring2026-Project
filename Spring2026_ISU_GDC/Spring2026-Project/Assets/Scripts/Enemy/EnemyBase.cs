@@ -22,6 +22,7 @@ namespace ISUGameDev.SpearGame.Enemy
        
        [SerializeField] private FMODUnity.EventReference spearHitSFX;
        [SerializeField] private FMODUnity.EventReference enemyGruntSFX;
+       [SerializeField] private FMODUnity.EventReference enemyDeathSFX;
 
        private Material originalMaterial;
        private float ghostMoveTimer = 0f;
@@ -39,6 +40,7 @@ namespace ISUGameDev.SpearGame.Enemy
 
           if (health <= 0.0f)
           {
+             FMODUnity.RuntimeManager.PlayOneShot(enemyDeathSFX);
              Destroy(gameObject, 0.2f);
           }
        }

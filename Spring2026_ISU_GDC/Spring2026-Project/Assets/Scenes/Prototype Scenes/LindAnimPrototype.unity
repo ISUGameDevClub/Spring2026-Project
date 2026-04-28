@@ -256,33 +256,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &72837602 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5835354749503253055, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-  m_PrefabInstance: {fileID: 8366553486928875862}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &72837606
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72837602}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b2e7660abb5b6fb4c9ecc65026c74ec8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &399462588
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,14 +546,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LindwormSpline
       objectReference: {fileID: 0}
-    - target: {fileID: 4614852796582480226, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4614852796582480226, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6546493555718406680, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.43
@@ -621,29 +586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445626098428509947, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -3680837050398524499, guid: ba6719a06ef9cbe4c8d09e344f2dece8, type: 3}
-    - target: {fileID: 8445626098428509947, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      propertyPath: m_Color.b
-      value: 0.7686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445626098428509947, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      propertyPath: m_Color.g
-      value: 0.7686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445626098428509947, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      propertyPath: m_Color.r
-      value: 0.7686275
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5835354749503253055, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 72837606}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f146bfda0a03444b9e57c1e68352e3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
