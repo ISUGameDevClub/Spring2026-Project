@@ -131,6 +131,8 @@ MonoBehaviour:
   valkyrieOverrideIcon: {fileID: -8993000888767777156, guid: 200672c0d6fb9d84f8d855c39d8146ad, type: 3}
   ratatoskrOverrideIcon: {fileID: -184134334778653468, guid: f6cf048d065e6ce42a3c6bdcff7309e3, type: 3}
   capitalizeNames: 1
+  spriteToTurnOff: {fileID: 0}
+  fogVFX: {fileID: 450171685254595754, guid: 3dde25b2c7e6dd641b7eefce3206e7c8, type: 3}
 --- !u!1 &2160612127960093414
 GameObject:
   m_ObjectHideFlags: 0
