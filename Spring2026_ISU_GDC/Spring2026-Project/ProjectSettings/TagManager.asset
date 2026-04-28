@@ -53,5 +53,20 @@ TagManager:
   - name: TerrainGlow
     uniqueID: 2705837237
     locked: 0
+  - name: enemies
+    uniqueID: 290768455
+    locked: 0
+  - name: NPC
+    uniqueID: 1900478141
+    locked: 0
+  - name: Player
+    uniqueID: 2553937415
+    locked: 0
+  - name: Respawn Totem
+    uniqueID: 3277938123
+    locked: 0
+  - name: Platform
+    uniqueID: 2095916711
+    locked: 0
   m_RenderingLayers:
   - Default
