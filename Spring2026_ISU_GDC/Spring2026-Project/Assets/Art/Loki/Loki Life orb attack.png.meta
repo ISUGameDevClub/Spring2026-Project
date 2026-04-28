@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: e4d41fa652d50da48a1b831f74b7122c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8161540100953754353
+    second: Loki Life orb attack_0
+  - first:
+      213: -7701729047533162246
+    second: Loki Life orb attack_1
+  - first:
+      213: -2190559540189549894
+    second: Loki Life orb attack_2
+  - first:
+      213: 924172860432721054
+    second: Loki Life orb attack_3
+  - first:
+      213: -1748137167969765312
+    second: Loki Life orb attack_4
+  - first:
+      213: 7985667031745993274
+    second: Loki Life orb attack_5
+  - first:
+      213: 7478704284184940243
+    second: Loki Life orb attack_6
+  - first:
+      213: -2570947617354325092
+    second: Loki Life orb attack_7
+  - first:
+      213: -3251533623061635677
+    second: Loki Life orb attack_8
+  - first:
+      213: -2413059870880623131
+    second: Loki Life orb attack_9
+  - first:
+      213: 6791494962678434095
+    second: Loki Life orb attack_10
+  - first:
+      213: 8740406027236923924
+    second: Loki Life orb attack_11
+  - first:
+      213: -12183409457936460
+    second: Loki Life orb attack_12
+  - first:
+      213: -8935955869169545033
+    second: Loki Life orb attack_13
+  - first:
+      213: 48162865815261296
+    second: Loki Life orb attack_14
+  - first:
+      213: -6941931710850092550
+    second: Loki Life orb attack_15
+  - first:
+      213: -2473358875782925522
+    second: Loki Life orb attack_16
+  - first:
+      213: -1652957731558955893
+    second: Loki Life orb attack_17
+  - first:
+      213: -8257080539845938877
+    second: Loki Life orb attack_18
+  - first:
+      213: 1984525893393555710
+    second: Loki Life orb attack_19
+  - first:
+      213: -6294212073386186140
+    second: Loki Life orb attack_20
+  - first:
+      213: -2300553391589751256
+    second: Loki Life orb attack_21
+  - first:
+      213: 9079255157675172529
+    second: Loki Life orb attack_22
+  - first:
+      213: -4435779052567902290
+    second: Loki Life orb attack_23
+  - first:
+      213: -2858785258159127232
+    second: Loki Life orb attack_24
+  - first:
+      213: -4000750384578444765
+    second: Loki Life orb attack_25
+  - first:
+      213: -3673149577631146292
+    second: Loki Life orb attack_26
+  - first:
+      213: -7557419715006724976
+    second: Loki Life orb attack_27
+  - first:
+      213: 8338030896459064305
+    second: Loki Life orb attack_28
+  - first:
+      213: -806718700885762951
+    second: Loki Life orb attack_29
+  - first:
+      213: 2566382025041197632
+    second: Loki Life orb attack_30
+  - first:
+      213: -5746697282285854414
+    second: Loki Life orb attack_31
+  - first:
+      213: -785055545466519902
+    second: Loki Life orb attack_32
+  - first:
+      213: 6605322055286841375
+    second: Loki Life orb attack_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Loki Life orb attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa4479ea7d934170800000000000000
+      internalID: 8161540100953754353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af07a7d9c36fd1590800000000000000
+      internalID: -7701729047533162246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaa8ab44b19991e0800000000000000
+      internalID: -2190559540189549894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e942621f15253dc00800000000000000
+      internalID: 924172860432721054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048318cf18e5db7e0800000000000000
+      internalID: -1748137167969765312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a94c10bd9c2de60800000000000000
+      internalID: 7985667031745993274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de090f2ce1b9c760800000000000000
+      internalID: 7478704284184940243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93657373c8225cd0800000000000000
+      internalID: -2570947617354325092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Loki Life orb attack_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad1c2ea56b30e2d0800000000000000
+      internalID: -3251533623061635677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 537008d0ea0a6c04dab3d992c7cd0f48
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Loki Life orb attack_0: 8161540100953754353
+      Loki Life orb attack_1: -7701729047533162246
+      Loki Life orb attack_2: -2190559540189549894
+      Loki Life orb attack_3: 924172860432721054
+      Loki Life orb attack_4: -1748137167969765312
+      Loki Life orb attack_5: 7985667031745993274
+      Loki Life orb attack_6: 7478704284184940243
+      Loki Life orb attack_7: -2570947617354325092
+      Loki Life orb attack_8: -3251533623061635677
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
