@@ -33,3 +33,4 @@ MonoBehaviour:
   - '[v]Farewell.'
   characterIcon: {fileID: 6575074199990049643, guid: 61a7cc558be37584fb1962a30380bd9e, type: 3}
   characterName: Mara
+  disappearAfterDialogue: 0

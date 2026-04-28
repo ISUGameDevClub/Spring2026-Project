@@ -43,7 +43,6 @@ namespace ISUGameDev.SpearGame.Dialogue
         private IGameEvent<EmptyEventArgs> dialogueFinished;
         private bool skipTyping = false;
 
-        private bool disappearAfterDialogue = false;
         [SerializeField] private GameObject spriteToTurnOff;
         [SerializeField] private Transform spriteToTurnOffPos;
         [SerializeField] private GameObject fogVFX;
@@ -115,11 +114,6 @@ namespace ISUGameDev.SpearGame.Dialogue
                     processedSentence = sentence.Substring(3);
                     characterIconImage.sprite = ratatoskrOverrideIcon;
                 }
-                else if (sentence.StartsWith("[d]"))
-                {
-                    processedSentence = sentence.Substring(3);
-                    disappearAfterDialogue = true;
-                }
                 else
                 {
                     characterIconImage.sprite = dialogue.characterIcon;
@@ -138,7 +132,7 @@ namespace ISUGameDev.SpearGame.Dialogue
                     yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
                 }
             }
-            HandleDialogueOver();
+            HandleDialogueOver(dialogue);
         }
 
         /// <summary>
@@ -172,9 +166,9 @@ namespace ISUGameDev.SpearGame.Dialogue
         /// invokes the OnDialogueUIClosed event to signal that the dialogue UI is closed,
         /// and destroys the current dialogue UI game object.
         /// </summary>
-        private void HandleDialogueOver()
+        private void HandleDialogueOver(Dialogue dialogue)
         {
-            if (disappearAfterDialogue)
+            if (dialogue.disappearAfterDialogue)
             {
                 GameObject spritePos = GameObject.FindWithTag("NPC");
                 Vector3 spawnPosition = spritePos.transform.position;
