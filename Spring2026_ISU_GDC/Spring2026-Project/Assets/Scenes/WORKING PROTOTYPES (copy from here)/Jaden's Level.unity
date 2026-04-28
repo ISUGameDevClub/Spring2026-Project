@@ -223,7 +223,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8039059425857322619, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8894114917774022392, guid: 46d83bf587c2ccd4f849a77e754d8fff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37005,20 +37005,32 @@ PrefabInstance:
       value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 8926814555252396990, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
+      propertyPath: m_Color.b
+      value: 0.015723169
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926814555252396990, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49936482
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926814555252396990, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926814555252396990, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8961737884236276396, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
       propertyPath: m_LocalScale.x
-      value: 37.625
+      value: 42.01584
       objectReference: {fileID: 0}
     - target: {fileID: 8961737884236276396, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 202
+      value: 204.3
       objectReference: {fileID: 0}
     - target: {fileID: 8961737884236276396, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 61.06
+      value: 61.18
       objectReference: {fileID: 0}
     - target: {fileID: 8961737884236276396, guid: c08e366c7d9b2a34bb41ef1c0e3bf232, type: 3}
       propertyPath: m_LocalPosition.z
@@ -71444,8 +71456,8 @@ SceneRoots:
   - {fileID: 347387177}
   - {fileID: 1111785055}
   - {fileID: 978309383}
-  - {fileID: 2054788357}
   - {fileID: 1651050275}
   - {fileID: 916985136}
   - {fileID: 1662091865}
   - {fileID: 944802705}
+  - {fileID: 2054788357}
