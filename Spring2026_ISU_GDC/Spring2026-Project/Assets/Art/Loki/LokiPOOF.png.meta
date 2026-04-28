@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: 1c05d33469158fe428f2087d6d0e3ee2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 354704909350091404
+    second: LokiPOOF_0
+  - first:
+      213: 2377657116130341623
+    second: LokiPOOF_1
+  - first:
+      213: -1977530207863661703
+    second: LokiPOOF_2
+  - first:
+      213: -263143605121691174
+    second: LokiPOOF_3
+  - first:
+      213: 5577050108445133048
+    second: LokiPOOF_4
+  - first:
+      213: 3503484744933640616
+    second: LokiPOOF_5
+  - first:
+      213: -1401083101200563293
+    second: LokiPOOF_6
+  - first:
+      213: 9059624346928049526
+    second: LokiPOOF_7
+  - first:
+      213: 1426788458099093613
+    second: LokiPOOF_8
+  - first:
+      213: -850068667147669048
+    second: LokiPOOF_9
+  - first:
+      213: 6029199323823830044
+    second: LokiPOOF_10
+  - first:
+      213: 575031295531034244
+    second: LokiPOOF_11
+  - first:
+      213: 2374913115656824266
+    second: LokiPOOF_12
+  - first:
+      213: 5709472182994230939
+    second: LokiPOOF_13
+  - first:
+      213: -2773519524397593233
+    second: LokiPOOF_14
+  - first:
+      213: -6031952548633880478
+    second: LokiPOOF_15
+  - first:
+      213: -686247233127070652
+    second: LokiPOOF_16
+  - first:
+      213: 430840067469310320
+    second: LokiPOOF_17
+  - first:
+      213: 2485400072084522905
+    second: LokiPOOF_18
+  - first:
+      213: -1190622715752292384
+    second: LokiPOOF_19
+  - first:
+      213: -6851649221744267810
+    second: LokiPOOF_20
+  - first:
+      213: -3438080667778385469
+    second: LokiPOOF_21
+  - first:
+      213: -3981836393712713774
+    second: LokiPOOF_22
+  - first:
+      213: -454707523214626394
+    second: LokiPOOF_23
+  - first:
+      213: -6003392225437094877
+    second: LokiPOOF_24
+  - first:
+      213: -4366466551057114048
+    second: LokiPOOF_25
+  - first:
+      213: -1911405195169130960
+    second: LokiPOOF_26
+  - first:
+      213: 907866816604511905
+    second: LokiPOOF_27
+  - first:
+      213: -1962801834650120582
+    second: LokiPOOF_28
+  - first:
+      213: 3378027367737351495
+    second: LokiPOOF_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LokiPOOF_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a36e95c3a2ce400800000000000000
+      internalID: 354704909350091404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LokiPOOF_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2f0acbc822ff020800000000000000
+      internalID: 2377657116130341623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LokiPOOF_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b9eabd0c66e84e0800000000000000
+      internalID: -1977530207863661703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LokiPOOF_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad15ecb0940295cf0800000000000000
+      internalID: -263143605121691174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LokiPOOF_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f80d607689a56d40800000000000000
+      internalID: 5577050108445133048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LokiPOOF_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a905c130d0ee9030800000000000000
+      internalID: 3503484744933640616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3e859692bbe4f0d4e951e65a4a450f85
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      LokiPOOF_0: 354704909350091404
+      LokiPOOF_1: 2377657116130341623
+      LokiPOOF_2: -1977530207863661703
+      LokiPOOF_3: -263143605121691174
+      LokiPOOF_4: 5577050108445133048
+      LokiPOOF_5: 3503484744933640616
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
