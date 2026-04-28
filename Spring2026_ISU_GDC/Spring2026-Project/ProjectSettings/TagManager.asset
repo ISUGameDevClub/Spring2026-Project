@@ -9,6 +9,7 @@ TagManager:
   - Checkpoint
   - StabEnemy
   - RangedEnemy
+  - NPC
   layers:
   - Default
   - TransparentFX

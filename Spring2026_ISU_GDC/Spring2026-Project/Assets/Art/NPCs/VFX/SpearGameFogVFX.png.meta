@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: f3f01d86cfd17d246996becde92fc96d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1590768162648712807
+    second: SpearGameFogVFX_0
+  - first:
+      213: 8823045561850768032
+    second: SpearGameFogVFX_1
+  - first:
+      213: 1337213641540854951
+    second: SpearGameFogVFX_2
+  - first:
+      213: 3067724370172515089
+    second: SpearGameFogVFX_3
+  - first:
+      213: 3969856791702385770
+    second: SpearGameFogVFX_4
+  - first:
+      213: -7676310023812553746
+    second: SpearGameFogVFX_5
+  - first:
+      213: -1348643374616895907
+    second: SpearGameFogVFX_6
+  - first:
+      213: -1680817477195512271
+    second: SpearGameFogVFX_7
+  - first:
+      213: -1003253666343639955
+    second: SpearGameFogVFX_8
+  - first:
+      213: 1478692135417602108
+    second: SpearGameFogVFX_9
+  - first:
+      213: 3512307508890095302
+    second: SpearGameFogVFX_10
+  - first:
+      213: -2040843641894777936
+    second: SpearGameFogVFX_11
+  - first:
+      213: 7454554966483662489
+    second: SpearGameFogVFX_12
+  - first:
+      213: 8100215670764667132
+    second: SpearGameFogVFX_13
+  - first:
+      213: 6795352528887769849
+    second: SpearGameFogVFX_14
+  - first:
+      213: 5709424111077902332
+    second: SpearGameFogVFX_15
+  - first:
+      213: -5725459235247218982
+    second: SpearGameFogVFX_16
+  - first:
+      213: -4254001617513489801
+    second: SpearGameFogVFX_17
+  - first:
+      213: 9178734488654529665
+    second: SpearGameFogVFX_18
+  - first:
+      213: 1206498234743723555
+    second: SpearGameFogVFX_19
+  - first:
+      213: 4377423482536574082
+    second: SpearGameFogVFX_20
+  - first:
+      213: -579732982392721377
+    second: SpearGameFogVFX_21
+  - first:
+      213: -2106351718728126757
+    second: SpearGameFogVFX_22
+  - first:
+      213: 5658600735160704355
+    second: SpearGameFogVFX_23
+  - first:
+      213: 4935453438897296877
+    second: SpearGameFogVFX_24
+  - first:
+      213: -8217379379732649026
+    second: SpearGameFogVFX_25
+  - first:
+      213: 9105081885771098194
+    second: SpearGameFogVFX_26
+  - first:
+      213: 5010540444693450566
+    second: SpearGameFogVFX_27
+  - first:
+      213: -8003583879117910170
+    second: SpearGameFogVFX_28
+  - first:
+      213: -3322171881168153031
+    second: SpearGameFogVFX_29
+  - first:
+      213: 1352130674953245241
+    second: SpearGameFogVFX_30
+  - first:
+      213: -6864413886497497766
+    second: SpearGameFogVFX_31
+  - first:
+      213: 5923473889154990014
+    second: SpearGameFogVFX_32
+  - first:
+      213: 2349551391736568058
+    second: SpearGameFogVFX_33
+  - first:
+      213: -4690659148565026465
+    second: SpearGameFogVFX_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpearGameFogVFX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9999259c8c47ce9e0800000000000000
+      internalID: -1590768162648712807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpearGameFogVFX_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aaa3372131c17a70800000000000000
+      internalID: 8823045561850768032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpearGameFogVFX_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a469dcd8bcbe8210800000000000000
+      internalID: 1337213641540854951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpearGameFogVFX_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11311f8af0fb29a20800000000000000
+      internalID: 3067724370172515089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpearGameFogVFX_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64b79608b3c71730800000000000000
+      internalID: 3969856791702385770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpearGameFogVFX_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3e1e444b4487590800000000000000
+      internalID: -7676310023812553746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7065a9c0080624a46991a0f2a6373ca2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":3.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SpearGameFogVFX_0: -1590768162648712807
+      SpearGameFogVFX_1: 8823045561850768032
+      SpearGameFogVFX_2: 1337213641540854951
+      SpearGameFogVFX_3: 3067724370172515089
+      SpearGameFogVFX_4: 3969856791702385770
+      SpearGameFogVFX_5: -7676310023812553746
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

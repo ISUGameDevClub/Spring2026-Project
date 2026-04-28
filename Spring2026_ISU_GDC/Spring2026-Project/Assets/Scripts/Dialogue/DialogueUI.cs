@@ -43,6 +43,11 @@ namespace ISUGameDev.SpearGame.Dialogue
         private IGameEvent<EmptyEventArgs> dialogueFinished;
         private bool skipTyping = false;
 
+        private bool disappearAfterDialogue = false;
+        [SerializeField] private GameObject spriteToTurnOff;
+        [SerializeField] private Transform spriteToTurnOffPos;
+        [SerializeField] private GameObject fogVFX;
+
         /// <summary>
         /// Unity's Awake method is called when the script instance is being loaded.
         /// Initializes the DialogueUI component by disabling the dialogue canvas at the start,
@@ -52,6 +57,12 @@ namespace ISUGameDev.SpearGame.Dialogue
         {
             dialogueFinished = GameEventRegistry.GetEvent<EmptyEventArgs>(nameof(DialogueTrigger.DialogueFinished), nameof(DialogueTrigger));
             dialogueCanvas.enabled = false;
+        }
+
+        private void Start()
+        {
+            spriteToTurnOff = GameObject.FindWithTag("NPC");
+
         }
 
         private void Update()
@@ -104,12 +115,17 @@ namespace ISUGameDev.SpearGame.Dialogue
                     processedSentence = sentence.Substring(3);
                     characterIconImage.sprite = ratatoskrOverrideIcon;
                 }
+                else if (sentence.StartsWith("[d]"))
+                {
+                    processedSentence = sentence.Substring(3);
+                    disappearAfterDialogue = true;
+                }
                 else
                 {
                     characterIconImage.sprite = dialogue.characterIcon;
                 }
 
-                yield return StartCoroutine(TypeSentence(processedSentence));
+                    yield return StartCoroutine(TypeSentence(processedSentence));
 
                 if (skipTyping)
                 {
@@ -158,6 +174,15 @@ namespace ISUGameDev.SpearGame.Dialogue
         /// </summary>
         private void HandleDialogueOver()
         {
+            if (disappearAfterDialogue)
+            {
+                GameObject spritePos = GameObject.FindWithTag("NPC");
+                Vector3 spawnPosition = spritePos.transform.position;
+
+                spriteToTurnOff.SetActive(false);
+                Instantiate(fogVFX, spawnPosition, Quaternion.identity);
+            }
+
             if (dialogueText != null)
             {
                 dialogueText.text = string.Empty;
