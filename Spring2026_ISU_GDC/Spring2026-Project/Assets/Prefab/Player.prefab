@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthController
   layoutGroup: {fileID: 6262481657663045956}
   featherPrefab: {fileID: 3015976351460923068, guid: 32070ecb1d3d07642a9266331d7f5e00, type: 3}
-  maxHealthFeathers: 4
+  maxHealthFeathers: 5
   cannotTakeDamage: 0
   playerHitSfx:
     Guid:
