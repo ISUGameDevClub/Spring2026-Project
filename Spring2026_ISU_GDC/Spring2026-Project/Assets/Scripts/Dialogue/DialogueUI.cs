@@ -60,7 +60,7 @@ namespace ISUGameDev.SpearGame.Dialogue
 
         private void Start()
         {
-            spriteToTurnOff = GameObject.FindWithTag("NPC");
+            //spriteToTurnOff = GameObject.FindWithTag("NPC");
 
         }
 
@@ -170,9 +170,16 @@ namespace ISUGameDev.SpearGame.Dialogue
         {
             if (dialogue.disappearAfterDialogue)
             {
-                GameObject spritePos = GameObject.FindWithTag("NPC");
-                Vector3 spawnPosition = spritePos.transform.position;
+                GameObject[] allNPCs = GameObject.FindGameObjectsWithTag("NPC");
+                GameObject spritePos = System.Array.Find(allNPCs, npc => 
+                    npc.GetComponentInChildren<DialogueTrigger>()?.GetDialogue() == dialogue
+                );
 
+                //if (spritePos == null) return;
+                
+                Vector3 spawnPosition = spritePos.transform.GetChild(0).position;
+                spriteToTurnOff = spritePos;
+                
                 spriteToTurnOff.SetActive(false);
                 Instantiate(fogVFX, spawnPosition, Quaternion.identity);
             }

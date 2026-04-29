@@ -20,6 +20,8 @@ namespace ISUGameDev.SpearGame.Dialogue
 
         public IGameEvent<EmptyEventArgs> DialogueFinished => dialogueFinished;
         private IGameEvent<EmptyEventArgs> dialogueFinished;
+        
+        public Dialogue GetDialogue() => dialogue;
 
         /// <summary>
         /// Initializes the DialogueTrigger component by caching a reference to the PlayerStateMachine
