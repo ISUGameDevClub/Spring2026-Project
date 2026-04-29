@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using ISUGameDev.SpearGame.Player;
 using ISUGameDev.SpearGame.Player.Movement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class PlayerHealthController : MonoBehaviour
 
     [SerializeField] private GameObject playerGhostPrefab;
     [SerializeField] private FMODUnity.EventReference playerDeathSFX;
+    
+    [SerializeField] private float timeTillReloadSceneAfterDeath = 4f;
+    [SerializeField] SceneTransition sceneTransitionPrefab;
     
     private Material originalMaterial;
 
@@ -85,5 +89,15 @@ public class PlayerHealthController : MonoBehaviour
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         Instantiate(playerGhostPrefab, transform.position, Quaternion.identity);
         FMODUnity.RuntimeManager.PlayOneShot(playerDeathSFX);
+        
+        Invoke("ReloadSceneAfterDeath", timeTillReloadSceneAfterDeath);
+    }
+
+    private void ReloadSceneAfterDeath()
+    {
+        Vector3 playerPos = GetComponent<CheckpointScript>().playerRespawn;
+        
+        SceneTransition sceneTransition = Instantiate(sceneTransitionPrefab).GetComponent<SceneTransition>();
+        sceneTransition?.TriggerTransition(SceneManager.GetActiveScene().name, "", playerPos);
     }
 }
