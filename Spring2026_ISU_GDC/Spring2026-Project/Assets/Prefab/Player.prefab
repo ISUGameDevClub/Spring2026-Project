@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 8039059425857322619}
   - component: {fileID: 441347286873950702}
   - component: {fileID: 866894367945178312}
+  - component: {fileID: 225318973744112535}
   - component: {fileID: 3729384869306514446}
   - component: {fileID: 5915114662108560871}
   - component: {fileID: 2497859468115165051}
@@ -893,6 +894,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.04183784, y: -0.049139857}
   m_Size: {x: 0.3445403, y: 0.82090926}
   m_Direction: 0
+--- !u!114 &225318973744112535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681619109718579405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86b144b364400949bd37fb065f83950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckpointScript
+  playerRespawn: {x: 0, y: 0, z: 0}
+  totemGlow: {fileID: 7400000, guid: bd00b922b70203a4cbabade4e0ab546d, type: 2}
 --- !u!114 &3729384869306514446
 MonoBehaviour:
   m_ObjectHideFlags: 0
