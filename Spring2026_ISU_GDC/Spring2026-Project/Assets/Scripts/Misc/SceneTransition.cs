@@ -33,12 +33,12 @@ public class SceneTransition : MonoBehaviour
     /// </summary>
     /// <param name="sceneToLoad"></param>
     /// <param name="levelTitle"></param>
-    public void TriggerTransition(string sceneToLoad, string levelTitle)
+    public void TriggerTransition(string sceneToLoad, string levelTitle, Vector3 playerSpawnPoint = default)
     {
-        StartCoroutine(TransitionRoutine(sceneToLoad, levelTitle));
+        StartCoroutine(TransitionRoutine(sceneToLoad, levelTitle, playerSpawnPoint));
     }
 
-    private IEnumerator TransitionRoutine(string sceneToLoad, string levelTitle)
+    private IEnumerator TransitionRoutine(string sceneToLoad, string levelTitle, Vector3 playerSpawnPoint = default)
     {
         // Fade to black
         yield return StartCoroutine(Fade(0f, 1f));
@@ -48,6 +48,13 @@ public class SceneTransition : MonoBehaviour
         while (!loadOp.isDone)
             yield return null;
 
+        //if player spawn point is not default (0,0,0), then spawn player at that point
+        if (playerSpawnPoint != default)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = playerSpawnPoint;
+        }
+        
         yield return new WaitForSeconds(blackoutTime);
         
         // Fade back to clear
@@ -56,7 +63,7 @@ public class SceneTransition : MonoBehaviour
         yield return new WaitForSeconds(timeTillShowLevelName);
         
         // Optionally show loading text
-        if (levelTitle != null || levelTitle != "")
+        if (levelTitle != null && levelTitle != "")
         {
             loadingText.GetComponent<TextMeshProUGUI>().text = levelTitle;
             loadingText.SetActive(true);

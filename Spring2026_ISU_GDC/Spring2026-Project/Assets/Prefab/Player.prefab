@@ -907,7 +907,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointScript
   playerRespawn: {x: 0, y: 0, z: 0}
-  totemGlow: {fileID: 7400000, guid: bd00b922b70203a4cbabade4e0ab546d, type: 2}
+  checkpointSFX:
+    Guid:
+      Data1: 196721063
+      Data2: 1177631136
+      Data3: 67662770
+      Data4: 187965304
+    Path: event:/Player/Healing
 --- !u!114 &3729384869306514446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,6 +1268,8 @@ MonoBehaviour:
       Data3: 821071491
       Data4: 641601502
     Path: event:/Player/PlayerDeath
+  timeTillReloadSceneAfterDeath: 3
+  sceneTransitionPrefab: {fileID: 3536240335683494075, guid: 7fcbfd7afd2f6504c919fb159eb27630, type: 3}
 --- !u!1 &6702410588215574469
 GameObject:
   m_ObjectHideFlags: 0

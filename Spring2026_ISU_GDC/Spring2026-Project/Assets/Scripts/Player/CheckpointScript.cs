@@ -5,6 +5,8 @@ public class CheckpointScript : MonoBehaviour
 {
     
       public Vector3 playerRespawn;
+      [SerializeField] private FMODUnity.EventReference checkpointSFX;
+      private GameObject curCheckpointObj;
    
     void Start()
     {
@@ -14,19 +16,21 @@ public class CheckpointScript : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        /*if(Input.GetKeyDown(KeyCode.R))
         {
             CheckpointDebug();
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.CompareTag("Checkpoint"))
+        if(collider.gameObject.CompareTag("Checkpoint") && collider.gameObject != curCheckpointObj)
         {
             playerRespawn = collider.gameObject.transform.position;
             Animator totemAnimator = collider.gameObject.GetComponent<Animator>();
             totemAnimator.Play("Glow");
+            FMODUnity.RuntimeManager.PlayOneShot(checkpointSFX);
+            curCheckpointObj = collider.gameObject;
         }
         
     }
