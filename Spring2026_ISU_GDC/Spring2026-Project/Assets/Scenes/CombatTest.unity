@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &42895321
+--- !u!1001 &36596762
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2473513975007595068, guid: c895d5163d844244eadf2af3038a85d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6814246
+      value: 8.43056
       objectReference: {fileID: 0}
     - target: {fileID: 2473513975007595068, guid: c895d5163d844244eadf2af3038a85d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.2681496
+      value: -2.1971726
       objectReference: {fileID: 0}
     - target: {fileID: 2473513975007595068, guid: c895d5163d844244eadf2af3038a85d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -651,4 +651,4 @@ SceneRoots:
   - {fileID: 855229412}
   - {fileID: 399462591}
   - {fileID: 612088638}
-  - {fileID: 42895321}
+  - {fileID: 36596762}

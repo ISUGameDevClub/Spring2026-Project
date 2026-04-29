@@ -39,6 +39,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1107064496585824159, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a95d13dac8e4d5b449fb43600300a2ac, type: 2}
     - target: {fileID: 1699459550712615083, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_Name
       value: ArcherEnemy
@@ -182,8 +186,8 @@ MonoBehaviour:
   enemyRange: 9
   enemyCooldownSeconds: 0
   enemyPauseTime: 0
-  enemyAttack: {fileID: 7400000, guid: 20ea4f77542f79c4dba49af49002b485, type: 2}
-  enemyMoveAnim: {fileID: 7400000, guid: 513590b1bd7351244b95bb5b0660b9c4, type: 2}
+  enemyAttack: {fileID: 7400000, guid: 59d2717e5329dd54199ce97a27af21d2, type: 2}
+  enemyMoveAnim: {fileID: 7400000, guid: 3105e2fc74856d6449f7c6196184f872, type: 2}
   enemyCanvas: {fileID: 5414266895092879262}
 --- !u!114 &1567108526520526085
 MonoBehaviour:
