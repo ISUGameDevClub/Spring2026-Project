@@ -12,7 +12,9 @@ public class ButtonOnClickSceneTransition : MonoBehaviour
 
     public void LoadSceneOnButtonClick()
     {
+        Debug.Log("Load Scene On Button Clicked");
+        
         SceneTransition sceneTransition = Instantiate(sceneTransitionPrefab).GetComponent<SceneTransition>();
-        sceneTransition?.TriggerTransition(sceneToLoad, levelNameToDisplay);
+        sceneTransition?.TriggerTransition(sceneToLoad, levelNameToDisplay, Vector3.zero, false);
     }
 }

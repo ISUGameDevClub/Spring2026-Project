@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6000527994110877472}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0076, z: 0}
+  m_LocalPosition: {x: 0, y: -0.017, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -173,6 +173,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8321312395307282629, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7832425
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321312395307282629, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.06561634
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321312395307282629, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -188,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4139736088420025778, guid: f152feecc7a6d5746813f116a45f9de1, type: 3}
+    - target: {fileID: 8350974663144207076, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 467
+      objectReference: {fileID: 0}
     - target: {fileID: 8350974663144207076, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
