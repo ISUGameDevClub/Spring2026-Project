@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FINAL GAME SCENES/MainMenu.unity
     guid: dde64f04117fc1d499166799f5878a26
   - enabled: 1
+    path: Assets/Scenes/FINAL GAME SCENES/IntroScene.unity
+    guid: 70e30e5a572482147bff742a9cf5ca9c
+  - enabled: 1
     path: Assets/Scenes/FINAL GAME SCENES/Credits.unity
     guid: d6ba0b46b79a51e41b2ac6b566cfa77d
   - enabled: 1
@@ -23,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FINAL GAME SCENES/Loki Boss Scene.unity
     guid: 535a051809c5dee4a82e1a2a0b38cec9
+  - enabled: 1
+    path: Assets/Scenes/FINAL GAME SCENES/EndingScene.unity
+    guid: 9f4f5ad29a4d0bd4bb1f02fe4bd9a64f
   - enabled: 1
     path: Assets/Scenes/JakeOPrototype/FMOD Pokemon Cry test.unity
     guid: d6d04b6dd5f82e34bad8afa55a19da86
