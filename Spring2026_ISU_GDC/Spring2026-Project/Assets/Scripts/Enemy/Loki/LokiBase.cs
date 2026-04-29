@@ -44,6 +44,16 @@ namespace ISUGameDev.SpearGame.Enemy
         private int att2Weight = 1;
 
         public bool halfHealth = false;
+        
+        [SerializeField] private string sceneToLoad;
+    
+        [Header("Leave this blank if you don't want to display a level name")]
+        [SerializeField] private string levelNameToDisplay;
+
+        [SerializeField] private GameObject sceneTransitionPrefab;
+        
+        
+        
 
         public override void TakeDamage(int damageValue, float knockback, float stunDuration, GameObject attacker)
         {
@@ -66,6 +76,9 @@ namespace ISUGameDev.SpearGame.Enemy
             {
                 FMODUnity.RuntimeManager.PlayOneShot(enemyDeathSFX);
                 StateMachine.ChangeState(DeathState);
+                
+                SceneTransition sceneTransition = Instantiate(sceneTransitionPrefab).GetComponent<SceneTransition>();
+                sceneTransition?.TriggerTransition(sceneToLoad, levelNameToDisplay);
             }
        }
 

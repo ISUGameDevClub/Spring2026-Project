@@ -39,3 +39,4 @@ MonoBehaviour:
   - I wish you luck.
   characterIcon: {fileID: 5409877374513879306, guid: 6c7e76d0462c03742a67d9f5ebc3cffa, type: 3}
   characterName: Heimdall & Ratatoskr
+  disappearAfterDialogue: 1

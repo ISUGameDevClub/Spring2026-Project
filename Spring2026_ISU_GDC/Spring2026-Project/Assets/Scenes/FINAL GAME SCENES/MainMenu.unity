@@ -384,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94c00c1ff631c147b3aa17289b08f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonOnClickSceneTransition
-  sceneToLoad: Midgard(lvl1)
-  levelNameToDisplay: Midgard
+  sceneToLoad: IntroScene
+  levelNameToDisplay: 
   sceneTransitionPrefab: {fileID: 1354743415274903889, guid: 7fcbfd7afd2f6504c919fb159eb27630, type: 3}
 --- !u!1 &1853608450
 GameObject:
