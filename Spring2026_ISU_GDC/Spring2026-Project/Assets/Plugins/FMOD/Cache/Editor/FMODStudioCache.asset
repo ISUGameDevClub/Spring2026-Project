@@ -571,7 +571,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3046665527059696379}
   cacheVersion: 131858
-  cacheTime: 639128279531979649
+  cacheTime: 639130278295833178
   SerializableEventsDict:
   - key: event:/Ambience/Wind
     index: 0
@@ -908,7 +908,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639128279531919665
+  lastModified: 639130278295782428
   FileSizes:
   - Name: 
     Value: 2812
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639128279531979649
+  lastModified: 639130278295833178
   FileSizes: []
   Exists: 1
 --- !u!114 &6611111506156764975
