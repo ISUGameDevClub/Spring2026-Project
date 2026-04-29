@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/WORKING PROTOTYPES (copy from here)/Mountain Level.unity
+    path: Assets/Scenes/FINAL GAME SCENES/Mountain Level.unity
     guid: 313e88e3349d54c4abf168ebe2e9926c
   - enabled: 1
     path: Assets/Scenes/JakeOPrototype/FMOD Pokemon Cry test.unity
