@@ -105,12 +105,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8321312395307282629, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350974663144207076, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350974663144207076, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 8350974663144207076, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1750455750, guid: d56e1d321c288b0419715838252677b3, type: 3}
+      objectReference: {fileID: 4139736088420025778, guid: f152feecc7a6d5746813f116a45f9de1, type: 3}
     - target: {fileID: 8350974663144207076, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -131,7 +139,7 @@ PrefabInstance:
       addedObject: {fileID: 4240008436231064268}
     - targetCorrespondingSourceObject: {fileID: 1699459550712615083, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1567108526520526085}
+      addedObject: {fileID: 1526557344673419815}
   m_SourcePrefab: {fileID: 100100000, guid: d6c868481ab99ad46828735e4028c8f8, type: 3}
 --- !u!4 &2473513975007595068 stripped
 Transform:
@@ -186,10 +194,10 @@ MonoBehaviour:
   enemyRange: 9
   enemyCooldownSeconds: 0
   enemyPauseTime: 0
-  enemyAttack: {fileID: 7400000, guid: 59d2717e5329dd54199ce97a27af21d2, type: 2}
-  enemyMoveAnim: {fileID: 7400000, guid: 3105e2fc74856d6449f7c6196184f872, type: 2}
+  enemyAttack: {fileID: 7400000, guid: 5b66482b5e4eee8499c768d52df0bbf6, type: 2}
+  enemyMoveAnim: {fileID: 7400000, guid: e8b4af2b2cdeb2e4f8739ae9549c7064, type: 2}
   enemyCanvas: {fileID: 5414266895092879262}
---- !u!114 &1567108526520526085
+--- !u!114 &1526557344673419815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,10 +206,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3181813766074087769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 354d5dd9fe7f9f144990b273772f3e67, type: 3}
+  m_Script: {fileID: 11500000, guid: 638d8edcfab539c4a8ed896930a5b900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowFire
-  arrow: {fileID: 5978569274626088128, guid: d56780b84a64a1c47a6b24a422972a6c, type: 3}
+  arrow: {fileID: 1135253208919717172, guid: 3bab21cebce78e84f9ad92ff3e55dee9, type: 3}
   firingPoint: {fileID: 6379915291251048098}
   enemyCanvas: {fileID: 5414266895092879262}
 --- !u!1 &5414266895092879262 stripped
