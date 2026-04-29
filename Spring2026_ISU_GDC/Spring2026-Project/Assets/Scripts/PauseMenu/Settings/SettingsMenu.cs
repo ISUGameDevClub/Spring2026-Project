@@ -3,7 +3,6 @@ using Nomad.Core.Engine.Globals;
 using Nomad.Core.Engine.Services;
 using Nomad.Core.Engine.Windowing;
 using Nomad.Core.ServiceRegistry.Globals;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.UI;
 

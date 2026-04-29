@@ -314,5 +314,10 @@ namespace ISUGameDev.SpearGame.Player.Movement
                 platformLastPosition = pos;
             }
         }
+
+        public void ResetDoubleJumps()
+        {
+            numDoubleJumps = numDoubleJumpsDefault + 1;
+        }
     }
 }

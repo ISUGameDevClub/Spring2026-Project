@@ -1,3 +1,4 @@
+using ISUGameDev.SpearGame.Player.Movement;
 using ISUGameDev.SpearGame.Player.PlayerState;
 using UnityEngine;
 
@@ -129,6 +130,8 @@ namespace ISUGameDev.SpearGame.Player.PlayerAttacks
             spearStuckInWall = false;
             rb.linearVelocity = Vector2.zero;
 
+            FindFirstObjectByType<PlayerMovement>().ResetDoubleJumps();
+            
             if (changeStateToRoamWithSpearAfterSpearPickup)
             {
                 FindFirstObjectByType<PlayerStateMachine>().ChangeState(PlayerStateType.RoamingWithSpear);
