@@ -6,11 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/FINAL GAME SCENES/MainMenu.unity
+    guid: dde64f04117fc1d499166799f5878a26
+  - enabled: 1
+    path: Assets/Scenes/FINAL GAME SCENES/Credits.unity
+    guid: d6ba0b46b79a51e41b2ac6b566cfa77d
+  - enabled: 1
+    path: Assets/Scenes/FINAL GAME SCENES/Midgard(lvl1).unity
+    guid: a982c7a379ee6ba4d8c98b51a9965a03
+  - enabled: 1
+    path: Assets/Scenes/FINAL GAME SCENES/Muspelheim(lvl2).unity
+    guid: 14b8455f7ede27b409b49bf87e7fa14e
   - enabled: 1
     path: Assets/Scenes/FINAL GAME SCENES/Jotunheim(lvl3).unity
     guid: 313e88e3349d54c4abf168ebe2e9926c
+  - enabled: 1
+    path: Assets/Scenes/FINAL GAME SCENES/Loki Boss Scene.unity
+    guid: 535a051809c5dee4a82e1a2a0b38cec9
   - enabled: 1
     path: Assets/Scenes/JakeOPrototype/FMOD Pokemon Cry test.unity
     guid: d6d04b6dd5f82e34bad8afa55a19da86

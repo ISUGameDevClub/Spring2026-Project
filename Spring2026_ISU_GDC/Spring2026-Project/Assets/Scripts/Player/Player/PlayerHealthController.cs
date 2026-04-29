@@ -27,6 +27,9 @@ public class PlayerHealthController : MonoBehaviour
     
     [SerializeField] private float timeTillReloadSceneAfterDeath = 4f;
     [SerializeField] SceneTransition sceneTransitionPrefab;
+
+    [SerializeField] private float refractoryPeriod;
+    [SerializeField] private SpriteRenderer playerSpriteRenderer;
     
     private Material originalMaterial;
 
@@ -69,7 +72,27 @@ public class PlayerHealthController : MonoBehaviour
                 //player death
                 PlayerDeath();
             }
+            
+            //refractory period
+            cannotTakeDamage = true;
+            SetOpacity(0.1f);
+            GetComponent<PlayerAttackController>().enabled = false;
+            Invoke("DisableRefractoryPeriod", refractoryPeriod);
         }
+    }
+
+    private void DisableRefractoryPeriod()
+    {
+        cannotTakeDamage = false;
+        SetOpacity(1f);
+        GetComponent<PlayerAttackController>().enabled = true;
+    }
+    
+    private void SetOpacity(float alpha)
+    {
+        Color c = playerSpriteRenderer.color;
+        c.a = alpha;
+        playerSpriteRenderer.color = c;
     }
     
     private IEnumerator HitFlash()
@@ -79,7 +102,7 @@ public class PlayerHealthController : MonoBehaviour
         playerRenderer.material = originalMaterial;
     }
 
-    private void PlayerDeath()
+    public void PlayerDeath()
     {
         Debug.Log("PLAYER DIED");
         
@@ -90,6 +113,8 @@ public class PlayerHealthController : MonoBehaviour
         Instantiate(playerGhostPrefab, transform.position, Quaternion.identity);
         FMODUnity.RuntimeManager.PlayOneShot(playerDeathSFX);
         
+        FindFirstObjectByType<MusicPlayer>().StopMusicFromExternal();
+        
         Invoke("ReloadSceneAfterDeath", timeTillReloadSceneAfterDeath);
     }
 
@@ -99,5 +124,16 @@ public class PlayerHealthController : MonoBehaviour
         
         SceneTransition sceneTransition = Instantiate(sceneTransitionPrefab).GetComponent<SceneTransition>();
         sceneTransition?.TriggerTransition(SceneManager.GetActiveScene().name, "", playerPos);
+    }
+    
+    public void RestoreAllFeathers()
+    {
+        Debug.Log("Restoring all feathers");
+        
+        for (int i = 0; i < featherList.Count; i++)
+        {
+            featherList[i].isActive = true;
+        }
+        curFeatherIndex = maxHealthFeathers - 1;
     }
 }

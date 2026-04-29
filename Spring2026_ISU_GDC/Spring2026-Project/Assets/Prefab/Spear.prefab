@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2544085724150605826}
   - component: {fileID: 3152479753251847387}
   - component: {fileID: 3756603799884772324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 699
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6108012597462862368, guid: af4ff4d628ae81246a7731cf59367538, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 6937461417728295651}
   - component: {fileID: 3175955455652183058}
   - component: {fileID: 87420152785392296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

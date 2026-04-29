@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3715541594236692439}
   - component: {fileID: 8696003518510278}
   - component: {fileID: 2955854314442900286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8724416572369283201}
   - component: {fileID: 2690266591700248136}
   - component: {fileID: 5062413390304159809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 6759558422502337994}
   - component: {fileID: 8090093491996445642}
   - component: {fileID: 6770170050701357443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6546493555718406680}
   - component: {fileID: 9119508514622894584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LindwormEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 4278646319324631449}
   - component: {fileID: 623249959361592679}
   - component: {fileID: 1128895534690238644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LindwormEnemyCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 1571005073803567079}
   - component: {fileID: 8364611459118834052}
   - component: {fileID: 555944592262497903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyEasingHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 271940022609660514}
   - component: {fileID: 3815897741051712580}
   - component: {fileID: 2173634198393114214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lindworm
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -780,6 +780,7 @@ MonoBehaviour:
       Data3: 658433452
       Data4: 140742798
     Path: event:/EnemySFX/EnemyGettingHit1
+  enemyStunDuration: 0
 --- !u!61 &3815897741051712580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -849,7 +850,7 @@ GameObject:
   - component: {fileID: 8448644286314179834}
   - component: {fileID: 4577733627245672054}
   - component: {fileID: 5585455120243492508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,7 +952,7 @@ GameObject:
   - component: {fileID: 6178184853406989219}
   - component: {fileID: 2586430566652387764}
   - component: {fileID: 2744502596338913616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}

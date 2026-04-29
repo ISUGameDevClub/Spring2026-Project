@@ -226,6 +226,18 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 3654998581691320834, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 762659847}
+    - target: {fileID: 3654998581691320834, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneOnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654998581691320834, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonOnClickSceneTransition, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4490099384375880795, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
       propertyPath: m_Name
       value: MainMenu
@@ -302,6 +314,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931530941484165888, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 762659846}
+    - target: {fileID: 7931530941484165888, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSceneOnButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7931530941484165888, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonOnClickSceneTransition, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8460930407066064558, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -481
@@ -310,11 +334,59 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 374
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 725592407984988038, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+    - {fileID: 382899090493533770, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2954745588100519493, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 762659847}
+    - targetCorrespondingSourceObject: {fileID: 2815736328533590304, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 762659846}
   m_SourcePrefab: {fileID: 100100000, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+--- !u!1 &762659844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2815736328533590304, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+  m_PrefabInstance: {fileID: 762659843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &762659845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2954745588100519493, guid: d9a59a54d6ad46d439f64355bc0a7c66, type: 3}
+  m_PrefabInstance: {fileID: 762659843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &762659846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762659844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94c00c1ff631c147b3aa17289b08f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonOnClickSceneTransition
+  sceneToLoad: Credits
+  levelNameToDisplay: 
+  sceneTransitionPrefab: {fileID: 1354743415274903889, guid: 7fcbfd7afd2f6504c919fb159eb27630, type: 3}
+--- !u!114 &762659847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762659845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94c00c1ff631c147b3aa17289b08f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonOnClickSceneTransition
+  sceneToLoad: Midgard(lvl1)
+  levelNameToDisplay: Midgard
+  sceneTransitionPrefab: {fileID: 1354743415274903889, guid: 7fcbfd7afd2f6504c919fb159eb27630, type: 3}
 --- !u!1 &1853608450
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +399,7 @@ GameObject:
   - component: {fileID: 1853608452}
   - component: {fileID: 1853608451}
   - component: {fileID: 1853608454}
+  - component: {fileID: 1853608455}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -452,6 +525,27 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1853608455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853608450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3005e8ef5ff00c4cafdb00ae7896de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
+  musicEvent:
+    Guid:
+      Data1: 2046409612
+      Data2: 1272410590
+      Data3: -224583504
+      Data4: -960456849
+    Path: event:/MusicSystem/MusicSystemV2
+  startingTrack: 0
+  playOnStart: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ namespace ISUGameDev.SpearGame.Enemy
        [SerializeField] private FMODUnity.EventReference enemyGruntSFX;
        [SerializeField] private FMODUnity.EventReference enemyDeathSFX;
 
+       [SerializeField] private float enemyStunDuration;
+
        private Material originalMaterial;
        private float ghostMoveTimer = 0f;
 
@@ -37,12 +39,26 @@ namespace ISUGameDev.SpearGame.Enemy
           FMODUnity.RuntimeManager.PlayOneShot(enemyGruntSFX);
 
           StartCoroutine(HitFlash());
+          
+          EnemyMovement enemyMovement = GetComponent<EnemyMovement>();
+          if (enemyMovement != null)
+          {
+             enemyMovement.enabled = false;
+             Invoke("ReEnableEnemyMovement", enemyStunDuration);
+          }
 
           if (health <= 0.0f)
           {
              FMODUnity.RuntimeManager.PlayOneShot(enemyDeathSFX);
              Destroy(gameObject, 0.2f);
           }
+       }
+       
+       private void ReEnableEnemyMovement()
+       {
+          EnemyMovement enemyMovement = GetComponent<EnemyMovement>();
+          if (enemyMovement != null)
+             enemyMovement.enabled = true;
        }
 
        private IEnumerator HitFlash()

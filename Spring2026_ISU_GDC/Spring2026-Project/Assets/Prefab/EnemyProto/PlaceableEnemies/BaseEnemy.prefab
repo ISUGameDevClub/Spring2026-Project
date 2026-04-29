@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7078691794846588532}
   - component: {fileID: 1107064496585824159}
   - component: {fileID: 1749116593466508231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -126,6 +126,7 @@ MonoBehaviour:
       Data3: 658433452
       Data4: 140742798
     Path: event:/EnemySFX/EnemyGettingHit1
+  enemyStunDuration: 1
 --- !u!95 &1107064496585824159
 Animator:
   serializedVersion: 7
@@ -171,7 +172,7 @@ GameObject:
   - component: {fileID: 1409866389553673039}
   - component: {fileID: 2125924380262811331}
   - component: {fileID: 4989379353928389749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1219141951833912545}
   - component: {fileID: 295868489835590014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyEasingHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5957601255257633505}
   - component: {fileID: 6920959101230745458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +425,7 @@ GameObject:
   - component: {fileID: 9174780641511705211}
   - component: {fileID: 1189862315439294234}
   - component: {fileID: 2785460267692231591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +501,7 @@ GameObject:
   - component: {fileID: 8284893373310983957}
   - component: {fileID: 1266191295371577883}
   - component: {fileID: 8556968122806719505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseEnemyCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +550,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 312
   m_TargetDisplay: 0
 --- !u!114 &1266191295371577883
 MonoBehaviour:
@@ -602,7 +603,7 @@ GameObject:
   - component: {fileID: 5334271121637467163}
   - component: {fileID: 3850614641107292881}
   - component: {fileID: 2986158626755100154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3916337343842821777}
   - component: {fileID: 8350974663144207076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseEnemyGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +769,7 @@ GameObject:
   - component: {fileID: 7422444002406583174}
   - component: {fileID: 2415991438468027564}
   - component: {fileID: 5162860456618277170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

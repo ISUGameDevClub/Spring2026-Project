@@ -31,6 +31,8 @@ public class CheckpointScript : MonoBehaviour
             totemAnimator.Play("Glow");
             FMODUnity.RuntimeManager.PlayOneShot(checkpointSFX);
             curCheckpointObj = collider.gameObject;
+            
+            GetComponent<PlayerHealthController>().RestoreAllFeathers();
         }
         
     }

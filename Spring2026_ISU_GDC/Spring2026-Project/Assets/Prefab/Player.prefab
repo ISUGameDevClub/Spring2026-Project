@@ -672,7 +672,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 116
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2601287372002230627, guid: d33e5ac8a1074cc4984870072d0f97d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1270,6 +1270,8 @@ MonoBehaviour:
     Path: event:/Player/PlayerDeath
   timeTillReloadSceneAfterDeath: 3
   sceneTransitionPrefab: {fileID: 3536240335683494075, guid: 7fcbfd7afd2f6504c919fb159eb27630, type: 3}
+  refractoryPeriod: 1.5
+  playerSpriteRenderer: {fileID: 4886527534139308763}
 --- !u!1 &6702410588215574469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,8 +1472,8 @@ MonoBehaviour:
   knockbackX: 0
   knockbackY: 0
   hitStun: 0.33
-  defaultDamage: 0
-  overrideGlobalGameData: 0
+  defaultDamage: 10
+  overrideGlobalGameData: 1
   debugMessagesOn: 0
 --- !u!1 &7127022011462146566
 GameObject:

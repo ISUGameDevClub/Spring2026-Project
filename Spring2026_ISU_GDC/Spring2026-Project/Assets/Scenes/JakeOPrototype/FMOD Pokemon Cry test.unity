@@ -2047,10 +2047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354d5dd9fe7f9f144990b273772f3e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowFire
-  arrow: {fileID: 5978569274626088128, guid: d56780b84a64a1c47a6b24a422972a6c, type: 3}
-  firingPoint: {fileID: 1341095992}
-  enemyCanvas: {fileID: 1144356429}
-  playerReference: {fileID: 0}
 --- !u!114 &1427856350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2162,6 +2158,7 @@ MonoBehaviour:
       Data3: 658433452
       Data4: 140742798
     Path: event:/EnemySFX/EnemyGettingHit1
+  enemyStunDuration: 0
 --- !u!61 &1427856354
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7493841895551535527}
   - component: {fileID: 2694625219727140665}
   - component: {fileID: 6705007406688442188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7523998527331314099}
   - component: {fileID: 1637419737509047449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FeetCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
