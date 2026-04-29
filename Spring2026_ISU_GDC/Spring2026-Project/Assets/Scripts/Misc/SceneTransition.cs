@@ -46,13 +46,17 @@ public class SceneTransition : MonoBehaviour
 
         // Load the scene
         Debug.Log("[JAKE_MEM_ACCESS] sceneToLoad: " + (string.IsNullOrEmpty(sceneToLoad) ? "NULL/EMPTY" : sceneToLoad));
-        AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneToLoad);
-        Debug.Log("[JAKE_MEM_ACCESS] loadOp: " + (loadOp == null ? "NULL - scene name likely invalid" : "OK"));
-        while (!loadOp.isDone)
-            yield return null;
+        
+        //FIx?
+        SceneManager.LoadScene(sceneToLoad);
+        
+        //AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneToLoad);
+        //Debug.Log("[JAKE_MEM_ACCESS] loadOp: " + (loadOp == null ? "NULL - scene name likely invalid" : "OK"));
+        /*while (!loadOp.isDone)
+            yield return null;*/
 
         //if player spawn point is not default (0,0,0), then spawn player at that point
-        if (playerSpawnPoint != default && movePlayer)
+        if (playerSpawnPoint != Vector3.zero && movePlayer)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Debug.Log("[JAKE_MEM_ACCESS] player (FindGameObjectWithTag): " + (player == null ? "NULL - no object tagged Player in scene" : "OK"));
